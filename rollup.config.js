@@ -18,12 +18,49 @@ const NODE_ENV = process.env.ROLLUP_WATCH ? 'development' : 'production'
 const production = NODE_ENV === 'production'
 
 if (production) {
-	console.log('Production mode: Building application...')
+  console.log('Production mode: Building application...')
 } else {
-	console.log('Development mode: Watching updates...');
+  console.log('Development mode: Watching updates...')
 }
 
 export default [
+  {
+    input: './src/server/index.js',
+    output: {
+      format: 'cjs',
+      file: './dist/server/server.js',
+      globals: {
+        'react': 'React',
+        'react-dom': 'ReactDOM'
+      }
+    },
+    external,
+    plugins: [
+      clean(),
+      buble({
+        transforms: {
+          dangerousForOf: true
+        },
+        objectAssign: 'Object.assign',
+        jsx: 'createElement'
+      }),
+      babel({
+        exclude: 'node_modules/**'
+      }),
+      globals(),
+      replace({
+        'process.env.NODE_ENV': JSON.stringify(NODE_ENV)
+      }),
+      image(),
+      flow({
+        all: !production,
+        pretty: production
+      }),
+      production && uglify({
+        sourceMap: true
+      })
+    ]
+  },
   {
     input: './src/client/index.js',
     output: {
@@ -36,7 +73,7 @@ export default [
       }
     },
     plugins: [
-	  clean(),
+      clean(),
       postcss({
         modules: true,
         exec: true,
@@ -47,7 +84,7 @@ export default [
           dangerousForOf: true
         },
         objectAssign: 'Object.assign',
-		jsx: 'createElement'
+        jsx: 'createElement'
       }),
       babel({
         exclude: 'node_modules/**'
@@ -84,47 +121,10 @@ export default [
       production && uglify({
         sourceMap: true
       }),
-      !production && browsersync({server: 'dist/client'}),
-	  copy({
-		'src/client/index.html': 'dist/client/index.html'
-	  })
-    ]
-  },
-  {
-    input: './src/server/index.js',
-    output: {
-      format: 'cjs',
-      file: './dist/server/server.js',
-      globals: {
-        'react': 'React',
-        'react-dom': 'ReactDOM'
-      }
-    },
-    external,
-    plugins: [
-	  clean(),
-      buble({
-        transforms: {
-          dangerousForOf: true
-        },
-        objectAssign: 'Object.assign',
-        jsx: 'createElement'
+      copy({
+        'src/client/index.html': 'dist/client/index.html'
       }),
-      babel({
-        exclude: 'node_modules/**'
-      }),
-      globals(),
-      replace({
-        'process.env.NODE_ENV': JSON.stringify(NODE_ENV)
-      }),
-      image(),
-      flow({
-        all: !production,
-        pretty: production
-      }),
-      production && uglify({
-        sourceMap: true
-      })
+      !production && browsersync({server: 'dist/client'})
     ]
   }
 ]

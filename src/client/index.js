@@ -1,6 +1,6 @@
 import { createElement, Component } from 'react'
 import { render } from 'react-dom'
-import style from './style.css'
+import './style.css'
 
 class App extends Component {
   render () {
