@@ -1,4 +1,7 @@
 # rollup-starter-dev-env
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/rollup-starter-dev-env.svg)](https://greenkeeper.io/)
+
 Starter Dev-Env with React, Babel+Buble and Rollup
 
 # Running
