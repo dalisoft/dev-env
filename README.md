@@ -1,5 +1,7 @@
 # CRA-Modified
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/cra-modified-dev-env.svg)](https://greenkeeper.io/)
+
 This project is modified and prepared as Development Environment for Frontend development with Netlify CMS + Netlify support. This project may support SSR, but we do not recommend using SSR, would be best using Netlify Prerendering which works fast and elegant for now (hope in future too works great like now)
 
 ## Target of project
