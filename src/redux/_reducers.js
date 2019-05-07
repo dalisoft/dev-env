@@ -1,5 +1,5 @@
-// import home from 'pages/Home/reducers'
+import counter from 'pages/Counter/reducers';
 
 export default {
-	// home,
+	counter,
 };

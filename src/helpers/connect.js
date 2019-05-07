@@ -1,21 +1,6 @@
 import { connect } from 'react-redux';
-import { mapValues } from 'lodash';
-
-const deepFind = (obj, path) => {
-	const paths = path.split('.');
-	let current = obj;
-
-	for (let i = 0; i < paths.length; ++i) {
-		// eslint-disable-next-line
-		if (current[paths[i]] === undefined) {
-			return undefined;
-		} else {
-			current = current[paths[i]];
-		}
-	}
-
-	return current;
-};
+import mapValues from 'lodash.mapvalues';
+import deepFind from 'lodash.get';
 
 // supports array of strings, strings with dot, or function
 const lookup = (obj, key, args) => {

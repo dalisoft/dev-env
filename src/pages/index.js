@@ -1,3 +1,4 @@
-const Home = 'Home';
+import Home from './Home';
+import Counter from './Counter';
 
-export { Home };
+export { Home, Counter };

@@ -1,4 +1,3 @@
-// import * as home from 'pages/Home/actions'
+import * as counter from 'pages/Counter/actions';
 
-export // home,
-{};
+export { counter };
