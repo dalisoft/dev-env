@@ -15,6 +15,7 @@ This project is modified and prepared as Development Environment for Frontend de
 - Client-side only (no SSR)
 - Netlify + Netlify CMS support
 - Fetch is preferred
+- NPM is preferred (because of speed & module caching)
 - Good browser support
 - Good structured (subjective)
 
