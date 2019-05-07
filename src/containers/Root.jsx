@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { ConnectedRouter as Router } from 'react-router-redux';
+import { ConnectedRouter as Router } from 'connected-react-router';
 import PropTypes from 'prop-types';
 
 import { IntlProvider } from './IntlProvider';
