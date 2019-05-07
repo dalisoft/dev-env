@@ -8,7 +8,7 @@ public_folder: '/static/media/uploads'
 collections:
   - name: 'blog' # Used in routes, e.g., /admin/collections/blog
     label: 'Post' # Used in the UI
-    folder: 'content/blog/posts' # The path to the folder where the documents are stored
+    folder: 'build/blog/posts' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     format: 'json'
@@ -25,3 +25,13 @@ collections:
           required: true,
           pattern: ['^.{50,300}$', 'Must be within 50 and 300 chars'],
         }
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - file: 'build/pages/index.md'
+        label: 'Pages'
+        name: 'pages'
+        fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'lists-page' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }

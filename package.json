@@ -48,7 +48,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && cp _redirects ./build",
+    "build": "react-scripts build",
     "app-test": "react-scripts test",
     "test": "npx eslint ./src",
     "eject": "react-scripts eject"
