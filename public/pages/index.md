@@ -1,8 +1,8 @@
 ---
-templateKey: 'counter-page'
-path: /counter
-title: All Lists
-description: Am counter page
+templateKey: 'lists-page'
+path: /pages
+title: All pages
+description: All pages
 ---
 
 # First Title
