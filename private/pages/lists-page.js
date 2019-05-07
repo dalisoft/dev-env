@@ -1,3 +1,4 @@
+/* globals graphql */
 import React from 'react';
 
 const ListsPage = ({ data }) => {

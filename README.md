@@ -2,7 +2,7 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/cra-modified-dev-env.svg)](https://greenkeeper.io/)
 
-This project is modified and prepared as Development Environment for Frontend development with Netlify CMS + Netlify support. This project may support SSR, but we do not recommend using SSR, would be best using Netlify Prerendering which works fast and elegant for now (hope in future too works great like now)
+This project is modified and prepared as Development Environment for Frontend development with Netlify support. This project may support SSR, but we do not recommend using SSR, would be best using Netlify Prerendering which works fast and elegant for now (hope in future too works great like now)
 
 ## Target of project
 
@@ -15,7 +15,7 @@ This project is modified and prepared as Development Environment for Frontend de
 - Using React PropTypes
 - Redaction instead of Redux dispatching (easy & fun)
 - Client-side only (no SSR)
-- Netlify + Netlify CMS support
+- Netlify support
 - Fetch is preferred
 - NPM is preferred (because of speed & module caching)
 - Good browser support
