@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import { Home, Counter } from 'pages';
+import { Home, Counter, NotFound } from 'pages';
 
 import { PageLayout } from 'components/layouts';
 
@@ -9,7 +9,8 @@ const Routes = ({ someCondition }) =>
 	someCondition ? (
 		<PageLayout>
 			<Switch>
-				<Route exact path="/*" render={() => 'Some condition was passed'} />
+				<Route exact path="/" render={() => 'Some condition was passed'} />
+				<Route exact path="/*" render={NotFound} />
 			</Switch>
 		</PageLayout>
 	) : (
@@ -17,9 +18,9 @@ const Routes = ({ someCondition }) =>
 			<Switch>
 				<Route exact path="/" component={Home} />
 				<Route exact path="/counter" component={Counter} />
-				<Route exact path="/*" render={() => 'Not Found'} />
+				<Route exact path="/*" render={NotFound} />
 			</Switch>
 		</PageLayout>
 	);
 
-export default Routes;
+export default React.memo(Routes);

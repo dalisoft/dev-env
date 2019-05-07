@@ -7,7 +7,7 @@ import { counter as action } from 'redux/actions';
 import './style.css';
 import { change_count__btn } from './style.module.css';
 
-const Counter = ({ counter }) => {
+const Counter = React.memo(({ counter }) => {
 	return (
 		<div>
 			<h1>Counter page</h1>
@@ -28,8 +28,8 @@ const Counter = ({ counter }) => {
 			<Link to="/">Go to home</Link>
 		</div>
 	);
-};
+});
 
 const enhance = connect({ counter: 'counter.counter' });
 
-export default React.memo(enhance(Counter));
+export default enhance(Counter);
