@@ -1,9 +1,9 @@
 import * as commonReducers from '../../helpers/commonReducers';
 
-import { getInitialValue } from 'modules/counter'; // TODO: if this is Async, should be called within `componentDidMount`
+import { counter } from 'redux/rest'; // TODO: if this is Async, should be called within `componentDidMount`
 
 const initialState = {
-	counter: getInitialValue(),
+	counter: counter.getInitialValue(),
 };
 
 const increment = ({ counter }) => ({

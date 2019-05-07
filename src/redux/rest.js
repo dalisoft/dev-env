@@ -1,5 +1,3 @@
-// import * as user from 'modules/user/rest'
+import * as counter from 'modules/counter/rest';
 
-export default {
-	// user,
-};
+export { counter };
