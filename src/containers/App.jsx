@@ -3,13 +3,9 @@ import { Route } from 'react-router-dom';
 
 import Routes from '../routes.jsx';
 import Root from './Root';
-// import { user } from 'redux/actions'; TODO:
-// import { connect } from 'redaction';
+import { connect } from 'redaction';
 
-const App = React.memo(({ locale = 'en' }) => {
-	if (!locale) {
-		// locale = user.processedLocal();
-	}
+const App = React.memo(({ locale }) => {
 	return (
 		<Root locale={locale}>
 			<Route component={Routes} />
@@ -17,4 +13,6 @@ const App = React.memo(({ locale = 'en' }) => {
 	);
 });
 
-export default App;
+const enhance = connect({ locale: 'init.locale' });
+
+export default enhance(App);

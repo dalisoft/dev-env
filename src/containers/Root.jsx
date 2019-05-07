@@ -29,5 +29,6 @@ export default class Root extends PureComponent {
 }
 
 Root.propTypes = {
+	locale: PropTypes.string,
 	children: PropTypes.any,
 };

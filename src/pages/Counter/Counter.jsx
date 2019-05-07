@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'redaction';
 
+import { Text } from 'components/UI';
+import { LangSwitcher } from 'components/common';
+
 import { counter as action } from 'redux/actions';
 
 import './style.css';
@@ -10,7 +13,9 @@ import { change_count__btn } from './style.module.css';
 const Counter = React.memo(({ counter }) => {
 	return (
 		<div>
-			<h1>Counter page</h1>
+			<h1>
+				<Text>COUNTER_PAGE</Text>
+			</h1>
 			<h2>
 				Current: {counter} (
 				<span onClick={action.increment} className={change_count__btn}>
@@ -25,6 +30,7 @@ const Counter = React.memo(({ counter }) => {
 			<h4 onClick={action.reset} className={change_count__btn}>
 				Reset counter
 			</h4>
+			<LangSwitcher />
 			<Link to="/">Go to home</Link>
 		</div>
 	);

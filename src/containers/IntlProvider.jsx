@@ -3,15 +3,15 @@ import { IntlProvider as Provider, addLocaleData } from 'react-intl';
 
 import en from 'react-intl/locale-data/en';
 import ru from 'react-intl/locale-data/ru';
-import id from 'react-intl/locale-data/id';
+import uz from 'react-intl/locale-data/uz';
 import 'intl/locale-data/jsonp/en.js';
 import 'intl/locale-data/jsonp/ru.js';
-import 'intl/locale-data/jsonp/id.js';
+import 'intl/locale-data/jsonp/uz.js';
 
 import { flatten } from 'helpers';
 import messages from 'translations';
 
-addLocaleData([...en, ...ru, ...id]);
+addLocaleData([...en, ...ru, ...uz]);
 
 export const IntlProvider = React.memo(({ children, locale }) => {
 	// console.log(locale)

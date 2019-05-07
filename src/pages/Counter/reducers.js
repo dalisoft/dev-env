@@ -1,18 +1,20 @@
 import * as commonReducers from '../../helpers/commonReducers';
 
-import { counter } from 'redux/rest'; // TODO: if this is Async, should be called within `componentDidMount`
+import { counter } from 'redux/rest';
 
 const initialState = {
 	counter: counter.getInitialValue(),
 };
 
-const increment = ({ counter }) => ({
+const increment = ({ counter, ...state }) => ({
+	...state,
 	counter: counter + 1,
 });
-const decrement = ({ counter }) => ({
+const decrement = ({ counter, ...state }) => ({
+	...state,
 	counter: counter - 1,
 });
-const reset = () => ({ counter: 0 });
+const reset = state => ({ ...state, counter: 0 });
 
 export default {
 	initialState,
