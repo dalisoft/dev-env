@@ -1,76 +1,76 @@
 {
-	"name": "drinkstock-frontend",
-	"version": "0.1.0",
-	"private": true,
-	"sideEffects": false,
-	"dependencies": {
-		"classnames": "^2.2.6",
-		"connected-react-router": "^6.4.0",
-		"history": "^4.9.0",
-		"intl": "^1.2.5",
-		"lodash.get": "^4.4.2",
-		"lodash.mapvalues": "^4.6.0",
-		"node-sass": "^4.12.0",
-		"prop-types": "^15.7.2",
-		"query-string": "^6.5.0",
-		"react": "^16.8.6",
-		"react-dom": "^16.8.6",
-		"react-intl": "^2.8.0",
-		"react-redux": "^7.0.3",
-		"react-router": "^5.0.0",
-		"react-router-dom": "^5.0.0",
-		"react-scripts": "3.0.0",
-		"redaction": "^4.5.4",
-		"redux": "^4.0.1",
-		"redux-batched-subscribe": "^0.1.6",
-		"redux-form": "^8.2.0",
-		"suncalc": "^1.8.0",
-		"unfetch": "^4.1.0"
-	},
-	"devDependencies": {
-		"husky": "^2.2.0",
-		"lint-staged": "^8.1.6",
-		"prettier": "^1.17.0",
-		"stylelint": "^10.0.1",
-		"stylelint-config-sass-guidelines": "^6.0.0"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"src/**/*.{js,jsx,json,css,scss,md}": [
-			"prettier --write",
-			"git add"
-		]
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build && cp _redirects ./build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app"
-		],
-		"rules": {
-			"react/prop-types": true
-		}
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"safari >= 9",
-			"ie >= 11",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	}
+  "name": "cra-modified-dev-env",
+  "version": "0.1.0",
+  "private": true,
+  "sideEffects": false,
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "connected-react-router": "^6.4.0",
+    "history": "^4.9.0",
+    "intl": "^1.2.5",
+    "lodash.get": "^4.4.2",
+    "lodash.mapvalues": "^4.6.0",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "query-string": "^6.5.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-intl": "^2.8.0",
+    "react-redux": "^7.0.3",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.0",
+    "redaction": "^4.5.4",
+    "redux": "^4.0.1",
+    "redux-batched-subscribe": "^0.1.6",
+    "redux-form": "^8.2.0",
+    "suncalc": "^1.8.0",
+    "unfetch": "^4.1.0"
+  },
+  "devDependencies": {
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "prettier": "^1.17.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-sass-guidelines": "^6.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && cp _redirects ./build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ],
+    "rules": {
+      "react/prop-types": true
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "safari >= 9",
+      "ie >= 11",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
