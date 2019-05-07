@@ -1,11 +1,11 @@
 const validate = values => {
-	const errors = {};
+  const errors = {};
 
-	if (values.password !== values.password_repeat) {
-		errors.password_repeat = 'passwordIsNotIdentical';
-	}
+  if (values.password !== values.password_repeat) {
+    errors.password_repeat = 'passwordIsNotIdentical';
+  }
 
-	return errors;
+  return errors;
 };
 
 export default validate;

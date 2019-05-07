@@ -1,5 +1,5 @@
 const initialState = {
-	locale: 'en',
+  locale: 'en',
 };
 
 const setLocale = (state, locale) => ({ ...state, locale });

@@ -9,12 +9,12 @@ import reducers from './_reducers';
 export const history = createBrowserHistory();
 
 export const store = createStore({
-	initialState: window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-	reducers: {
-		...combineReducers(reducers),
-		router: connectRouter(history),
-		form,
-	},
-	middleware: [routerMiddleware(history)],
-	enhancers: [batchedSubscribe(unstable_batchedUpdates)],
+  initialState: window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  reducers: {
+    ...combineReducers(reducers),
+    router: connectRouter(history),
+    form,
+  },
+  middleware: [routerMiddleware(history)],
+  enhancers: [batchedSubscribe(unstable_batchedUpdates)],
 });

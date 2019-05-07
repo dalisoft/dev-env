@@ -11,29 +11,29 @@ import './style.css';
 import style from './style.module.css';
 
 const Counter = React.memo(({ counter }) => {
-	return (
-		<div>
-			<h1>
-				<Text>COUNTER_PAGE</Text>
-			</h1>
-			<h2>
-				Current: {counter} (
-				<span onClick={action.increment} className={style['change-count--btn']}>
-					+
-				</span>
-				/
-				<span onClick={action.decrement} className={style['change-count--btn']}>
-					-
-				</span>
-				)
-			</h2>
-			<h4 onClick={action.reset} className={style['change-count--btn']}>
-				Reset counter
-			</h4>
-			<LangSwitcher />
-			<Link to="/">Go to home</Link>
-		</div>
-	);
+  return (
+    <div>
+      <h1>
+        <Text>COUNTER_PAGE</Text>
+      </h1>
+      <h2>
+        Current: {counter} (
+        <span onClick={action.increment} className={style['change-count--btn']}>
+          +
+        </span>
+        /
+        <span onClick={action.decrement} className={style['change-count--btn']}>
+          -
+        </span>
+        )
+      </h2>
+      <h4 onClick={action.reset} className={style['change-count--btn']}>
+        Reset counter
+      </h4>
+      <LangSwitcher />
+      <Link to="/">Go to home</Link>
+    </div>
+  );
 });
 
 const enhance = connect({ counter: 'counter.counter' });
