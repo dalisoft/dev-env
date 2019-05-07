@@ -1,5 +1,11 @@
 backend:
   name: git-gateway
+  repo: dalisoft/cra-modified-dev-env
+  accept_roles:
+    - superadmin
+    - admin
+    - moderator
+    - editor
   branch: master # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
 media_folder: 'build/static/media/uploads'
