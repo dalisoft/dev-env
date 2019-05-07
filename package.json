@@ -6,6 +6,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "connected-react-router": "^6.4.0",
+    "core-js": "^3.0.1",
     "history": "^4.9.0",
     "intl": "^1.2.5",
     "lodash.get": "^4.4.2",
@@ -20,7 +21,7 @@
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.0",
-    "redaction": "^4.5.4",
+    "redaction": "^5.0.0",
     "redux": "^4.0.1",
     "redux-batched-subscribe": "^0.1.6",
     "redux-form": "^8.2.0",
@@ -54,10 +55,7 @@
   "eslintConfig": {
     "extends": [
       "react-app"
-    ],
-    "rules": {
-      "react/prop-types": true
-    }
+    ]
   },
   "browserslist": {
     "production": [
