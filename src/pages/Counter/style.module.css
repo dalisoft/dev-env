@@ -1,8 +1,9 @@
-.change_count__btn {
+.change-count--btn {
 	color: #777;
-	transition: linear 150ms;
 	font-weight: 200;
+	transition: linear 150ms;
 }
-.change_count__btn:hover {
+
+.change-count--btn:hover {
 	color: #aaa;
 }

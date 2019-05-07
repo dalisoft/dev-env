@@ -8,7 +8,7 @@ import { LangSwitcher } from 'components/common';
 import { counter as action } from 'redux/actions';
 
 import './style.css';
-import { change_count__btn } from './style.module.css';
+import style from './style.module.css';
 
 const Counter = React.memo(({ counter }) => {
 	return (
@@ -18,16 +18,16 @@ const Counter = React.memo(({ counter }) => {
 			</h1>
 			<h2>
 				Current: {counter} (
-				<span onClick={action.increment} className={change_count__btn}>
+				<span onClick={action.increment} className={style['change-count--btn']}>
 					+
 				</span>
 				/
-				<span onClick={action.decrement} className={change_count__btn}>
+				<span onClick={action.decrement} className={style['change-count--btn']}>
 					-
 				</span>
 				)
 			</h2>
-			<h4 onClick={action.reset} className={change_count__btn}>
+			<h4 onClick={action.reset} className={style['change-count--btn']}>
 				Reset counter
 			</h4>
 			<LangSwitcher />
