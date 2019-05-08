@@ -1,0 +1,73 @@
+{
+  "name": "fastify-crud-dev-env",
+  "version": "1.0.0",
+  "description": "An modern development environment with Fastify",
+  "main": "build/server.js",
+  "module": "src/server.js",
+  "scripts": {
+    "dev": "NODE_ENV=development npx rollup -c -w",
+    "start": "node dist/server.js",
+    "build": "npx rollup -c",
+    "test": "npx ava",
+    "lint": "npx eslint ./src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,json,md,yml}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalisoft/fastify-crud-dev-env.git"
+  },
+  "keywords": [
+    "fastify",
+    "modern",
+    "dev-env"
+  ],
+  "author": "dalisoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dalisoft/fastify-crud-dev-env/issues"
+  },
+  "homepage": "https://github.com/dalisoft/fastify-crud-dev-env#readme",
+  "dependencies": {
+    "@dalisoft/cache-ttl": "^0.3.10",
+    "@dalisoft/cookie": "^0.0.2",
+    "@dalisoft/ws-events-sync": "^0.0.9",
+    "consolemd": "^0.2.1",
+    "dotenv-safe": "^6.1.0",
+    "fastify": "^2.3.0",
+    "fastify-compress": "^0.9.0",
+    "fastify-cookie": "^3.0.2",
+    "fastify-cors": "^2.1.3",
+    "fastify-helmet": "^3.0.0",
+    "fastify-jwt": "^0.10.0",
+    "fastify-normalize-request-reply": "^2.1.0",
+    "fastify-oas": "^2.1.3",
+    "fastify-plugin": "^1.5.0",
+    "fastify-rate-limit": "^2.1.1",
+    "ws": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "ava": "^1.4.1",
+    "eslint": "^5.16.0",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "prettier": "^1.17.0",
+    "rollup": "^1.11.3",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-run": "^1.1.0",
+    "rollup-plugin-terser": "^4.0.4"
+  }
+}
