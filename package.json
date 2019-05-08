@@ -52,12 +52,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && npm run docz:build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "lint": "npx eslint ./src",
     "eject": "react-scripts eject",
-    "docz:dev": "npx docz dev",
-    "docz:build": "npx docz build"
+    "docs": "npx docz dev"
   },
   "eslintConfig": {
     "extends": [
