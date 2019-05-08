@@ -6,7 +6,7 @@ export default {
   codeSandbox: false,
   typescript: false,
   propsParser: true,
-  wrapper: 'src/wrap-el.test.jsx',
+  wrapper: 'src/wrap-el.docs.jsx',
   dest: './build/docs/',
   onCreateWebpackChain: (config) => {
     if (config.resolve.alias.set) {
