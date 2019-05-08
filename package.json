@@ -52,7 +52,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && npm run docz:build",
     "test": "react-scripts test",
     "lint": "npx eslint ./src",
     "eject": "react-scripts eject",

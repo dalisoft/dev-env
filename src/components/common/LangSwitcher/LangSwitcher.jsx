@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import reducers from '../../../redux/reducers';
+import reducers from 'redux/reducers';
 import { connect } from 'redaction';
 
 import style from './style.module.css';
