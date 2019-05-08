@@ -23,6 +23,43 @@ This project is modified and prepared as Development Environment for Frontend de
 - Good browser support
 - Good structured (subjective)
 
+## Features Map
+
+### Documentations
+
+One of component was documented with docz and works good for now.
+Showing docs available only for DEV as frontend-devs works in localhost most-time
+
+Command to run
+
+```bash
+npm run docs
+```
+
+### Testing
+
+For one of component was created test using `Jest` + `react-test-renderer` and works good for now.
+
+Note: _If you install Jest to your Editor, works without any commands at editor level with good performance_
+
+Command to run
+
+```bash
+npm test
+```
+
+### Linting
+
+ESLint + Prettier + Stylelint is very good combo to keep project as high quality, clean and maintainable.
+
+Note: _If you install Plug-ins of these linters to your Editor, works without any commands at editor level with good performance_
+
+Command to run
+
+```bash
+npm lint
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
