@@ -20,7 +20,7 @@
     "react-redux": "^7.0.3",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.0",
+    "react-scripts": "3.0.1",
     "redaction": "^5.0.2",
     "redux": "^4.0.1",
     "redux-batched-subscribe": "^0.1.6",
