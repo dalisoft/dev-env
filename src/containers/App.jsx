@@ -6,11 +6,11 @@ import Root from './Root';
 import { connect } from 'redaction';
 
 const App = React.memo(({ locale }) => {
-	return (
-		<Root locale={locale}>
-			<Route component={Routes} />
-		</Root>
-	);
+  return (
+    <Root locale={locale}>
+      <Route component={Routes} />
+    </Root>
+  );
 });
 
 const enhance = connect({ locale: 'init.locale' });

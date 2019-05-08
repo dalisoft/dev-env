@@ -14,11 +14,9 @@ import messages from 'translations';
 addLocaleData([...en, ...ru, ...uz]);
 
 export const IntlProvider = React.memo(({ children, locale }) => {
-	// console.log(locale)
-
-	return (
-		<Provider locale={locale} messages={flatten(messages[locale])}>
-			{children}
-		</Provider>
-	);
+  return (
+    <Provider locale={locale} messages={flatten(messages[locale])}>
+      {children}
+    </Provider>
+  );
 });
