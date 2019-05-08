@@ -1,6 +1,6 @@
 import * as commonReducers from '../../helpers/commonReducers';
 
-import { counter } from 'redux/rest';
+import { counter } from '../../redux/rest';
 
 const initialState = {
   counter: counter.getInitialValue(),
@@ -14,7 +14,7 @@ const decrement = ({ counter, ...state }) => ({
   ...state,
   counter: counter - 1,
 });
-const reset = state => ({ ...state, counter: 0 });
+const reset = (state) => ({ ...state, counter: 0 });
 
 export default {
   initialState,

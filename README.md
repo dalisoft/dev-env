@@ -18,6 +18,7 @@ This project is modified and prepared as Development Environment for Frontend de
 - Netlify support
 - Fetch is preferred
 - NPM is preferred (because of speed & module caching)
+- Components are documented with docz (with basic example)
 - Components are tests with react-test-renderer and Jest (with basic example)
 - Good browser support
 - Good structured (subjective)
