@@ -16,6 +16,7 @@ This project is modified and prepared as Development Environment for Frontend de
 - Redaction instead of Redux dispatching (easy & fun)
 - Client-side only (no SSR)
 - Netlify support
+- Github Pages support (via `npm run deploy`)
 - Fetch is preferred
 - NPM is preferred (because of speed & module caching)
 - Components are documented with docz (with basic example)

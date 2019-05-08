@@ -32,6 +32,7 @@
     "docz": "^1.0.0-rc.9",
     "docz-plugin-css": "^0.11.0",
     "docz-theme-default": "^1.0.0-rc.9",
+    "gh-pages": "^2.0.1",
     "husky": "^2.2.0",
     "lint-staged": "^8.1.6",
     "prettier": "^1.17.0",
@@ -56,12 +57,17 @@
     "test": "react-scripts test",
     "lint": "npx eslint ./src",
     "eject": "react-scripts eject",
-    "docs": "npx docz dev"
+    "docs": "npx docz dev",
+    "predeploy": "npm run build",
+    "deploy": "npx gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
       "react-app"
     ]
+  },
+  "resolutions": {
+    "tar": "^4.4.8"
   },
   "browserslist": {
     "production": [
