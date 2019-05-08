@@ -29,9 +29,12 @@
     "unfetch": "^4.1.0"
   },
   "devDependencies": {
+    "docz": "^1.1.0",
+    "docz-theme-default": "^1.1.0",
     "husky": "^2.2.0",
     "lint-staged": "^8.1.6",
     "prettier": "^1.17.0",
+    "react-test-renderer": "^16.8.6",
     "stylelint": "^10.0.1",
     "stylelint-config-sass-guidelines": "^6.0.0"
   },
@@ -49,9 +52,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "app-test": "react-scripts test",
-    "test": "npx eslint ./src",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test",
+    "lint": "npx eslint ./src",
+    "eject": "react-scripts eject",
+    "docz:dev": "npx docz dev",
+    "docz:build": "npx docz build"
   },
   "eslintConfig": {
     "extends": [
