@@ -1,5 +1,7 @@
 # fastify-dev-env
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/fastify-dev-env.svg)](https://greenkeeper.io/)
+
 An modern development environment for Backend development with Fastify
 
 ## Requires
