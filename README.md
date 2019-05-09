@@ -11,7 +11,7 @@ An fast & modern GraphQL development environment for with GraphiQL
 
 ## Features
 
-- Blazing fast performance
+- Blazing fast performance (up to 100x faster than express-graphql)
 - Low-level HTTP with turbo-http
 - Pure call, no layer (like express-graphql)
 - Speeds up development time
