@@ -1,7 +1,6 @@
-import * as translations from '../../translations';
-import fs from 'fs';
+import * as translations from '../translations';
 
-export default (error, request, res) => {
+export default async (error, request, res) => {
   if (
     error.validation ||
     error.code ||
@@ -23,35 +22,28 @@ export default (error, request, res) => {
         });
     }
 
-    return res.send({
+    return {
       status: 'error',
-      message: map.httpErrors[code || 'BadRequest'],
+      message:
+        map.httpErrors[code] ||
+        map.customErrors[code] ||
+        map.httpErrors.BadRequest,
       errors
-    });
+    };
   }
 
-  if (!fs.existsSync('./errors')) {
-    fs.mkdirSync('./errors');
-  }
+  const stack = error.stack
+    ? error.stack
+        .split('\n')
+        .map((e) => e.trim())
+        .filter((e, i, s) => s.indexOf(e) === i)
+    : error.stack_trace;
 
-  console
-    .log({
-      stack: error.stack
-        ? error.stack
-            .split('\n')
-            .map((e) => e.trim())
-            .filter((e, i, s) => s.indexOf(e) === i)
-        : error.stack_trace,
-      message: error.message,
-      headers: request.headers,
-      query: request.query,
-      body: request.body,
-      params: request.params
-    })
-    .then(() => {
-      res.send({
-        status: 'error',
-        message: 'Server error, please contact to server '
-      });
-    });
+  console.log('#red([*Server*]: error was happened)', '\n');
+  console.log('#red(' + stack + ')');
+
+  return {
+    status: 'error',
+    message: 'Server error, please contact to server '
+  };
 };

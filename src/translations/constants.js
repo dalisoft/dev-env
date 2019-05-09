@@ -1,1 +1,1 @@
-export const ONLY_STRING_LETTERS = '([0-9A-Za-z]+)';
+export const CONST_A = 'CONST_A';

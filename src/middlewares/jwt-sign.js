@@ -4,7 +4,7 @@ const { keyGenerator } = require('../helpers');
 const crypto = require('crypto');
 
 const secureFields = ['email', 'role', 'clientSignature'];
-module.exports = async function(req, _res, payload, next) {
+export default async function(req, _res, payload, next) {
   if (payload.status === 'success') {
     const clientSignature = crypto
       .createHash('sha256')
@@ -20,4 +20,4 @@ module.exports = async function(req, _res, payload, next) {
     payload.accessToken = accessToken;
   }
   next(null, payload);
-};
+}

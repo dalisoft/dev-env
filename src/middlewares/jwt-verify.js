@@ -1,7 +1,7 @@
 const { keyGenerator } = require('../helpers');
 const crypto = require('crypto');
 
-module.exports = async function(req) {
+export default async function(req) {
   const { headers } = req;
 
   if (!headers.authorization) {
@@ -32,4 +32,4 @@ module.exports = async function(req) {
     err.code = 'TokenExpiredOrInvalid';
     throw err;
   }
-};
+}
