@@ -1,7 +1,7 @@
 {
-  "name": "fastify-crud-dev-env",
+  "name": "fastify-dev-env",
   "version": "0.1.0",
-  "description": "An modern development environment with Fastify",
+  "description": "An modern development environment for Backend development with Fastify",
   "main": "build/server.js",
   "module": "src/server.js",
   "private": true,
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dalisoft/fastify-crud-dev-env.git"
+    "url": "git+https://github.com/dalisoft/fastify-dev-env.git"
   },
   "keywords": [
     "fastify",
@@ -36,9 +36,9 @@
   "author": "dalisoft",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dalisoft/fastify-crud-dev-env/issues"
+    "url": "https://github.com/dalisoft/fastify-dev-env/issues"
   },
-  "homepage": "https://github.com/dalisoft/fastify-crud-dev-env#readme",
+  "homepage": "https://github.com/dalisoft/fastify-dev-env#readme",
   "dependencies": {
     "@dalisoft/cache-ttl": "^0.3.10",
     "@dalisoft/cookie": "^0.0.2",

@@ -6,8 +6,8 @@ export default {
   // addModels: true,
   swagger: {
     info: {
-      title: 'Fastify CRUD',
-      description: 'Fastify CRUD Dev Env documentation',
+      title: 'Fastify Dev Env',
+      description: 'Fastify Dev Env documentation',
       version: '0.1.0'
     },
     servers: [
