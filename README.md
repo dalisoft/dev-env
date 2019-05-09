@@ -4,6 +4,10 @@
 
 An fast & modern GraphQL development environment for with GraphiQL
 
+## Note
+
+This dev-env is very new/young project, not complex (as i'm focused on simplicity & performance) and may contain bugs. PR are welcome. Hope you help me improve this DEV env
+
 ## Requires
 
 - Node.js server / Machine supports Node.js
