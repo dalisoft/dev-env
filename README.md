@@ -25,6 +25,38 @@ An fast & modern GraphQL development environment for with GraphiQL
 - Travis CI configured
 - Husky & Lint-staged is configured
 
+## Endpoints
+
+- `/graphql` - Your main GraphQL path
+- `/graphiql` - GraphiQL path
+
+## Query
+
+```js
+fetch('http://your-endpoint.tld/graphql', {
+  method: 'POST',
+  body: 'query { hello }'
+});
+// or
+fetch('http://your-endpoint.tld/graphql', {
+  method: 'POST',
+  body: JSON.stringify({ query: 'query { hello }' })
+});
+// or
+fetch('http://your-endpoint.tld/graphql', {
+  method: 'POST',
+  body: JSON.stringify({
+    mutation: 'mutation ($foo: String) { hello(foo: $foo) { response } }',
+    variables: { foo: 'bar' }
+  })
+});
+```
+
+## Env Variables
+
+- `GRAPHIQL?: string = undefined` - Define whether enable GraphiQL or not. If you don't enable GraphiQL, please don't define this env variable
+- `ORIGIN?: string = undefined` - CORS-like origin checked, will declide request to `/graphql` if origin does not match
+
 ## License
 
 This project are licensed under MIT, but `renderGraphiQL` [license](https://github.com/graphql/express-graphql/blob/master/LICENSE) may differ from MIT license

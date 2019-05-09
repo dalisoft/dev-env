@@ -4,7 +4,7 @@ import console from 'consolemd';
 import turbo from 'turbo-http';
 import { graphql } from 'graphql';
 import querystring from 'query-string';
-import { port, graphiql } from './env';
+import { port, graphiql, origin } from './env';
 
 import schema from './schema';
 
@@ -26,6 +26,20 @@ const server = turbo.createServer(async (req, res) => {
       res
     );
   } else if (url === '/graphql') {
+    if (origin && headers.has('origin')) {
+      const headerOrigin = headers.get('origin');
+
+      if (origin !== headerOrigin) {
+        res.statusCode = 403;
+        return jsonRes(
+          {
+            status: 'error',
+            message: 'Declined by CORS'
+          },
+          res
+        );
+      }
+    }
     if (method === 'GET') {
       jsonRes(
         {
