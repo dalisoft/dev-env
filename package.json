@@ -45,7 +45,7 @@
   "homepage": "https://github.com/dalisoft/fastify-dev-env#readme",
   "dependencies": {
     "@dalisoft/cache-ttl": "^0.3.10",
-    "@dalisoft/cookie": "^0.0.2",
+    "@dalisoft/cookie": "^0.0.3",
     "@dalisoft/ws-events-sync": "^0.0.9",
     "consolemd": "^0.2.1",
     "dotenv-safe": "^6.1.0",
