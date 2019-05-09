@@ -1,3 +1,3 @@
-import SomeController from './SomeController';
+import Controller1 from './Controller1';
 
-export { SomeController };
+export { Controller1 };

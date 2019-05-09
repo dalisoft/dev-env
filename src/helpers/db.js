@@ -1,3 +1,5 @@
-const dbHelper = () => {};
-
-export default dbHelper;
+export default class dbHelpers {
+  getValue() {
+    return 'somevalue';
+  }
+}

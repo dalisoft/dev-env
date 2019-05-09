@@ -1,5 +1,10 @@
+import { Controller1 } from '../controllers';
+
 export default {
   get: async () => 'hello',
+  '/hello': {
+    get: async (req) => new Controller1(req).Hello()
+  },
   '/get': {
     '/:id': {
       get: async (req) => 'get called on /get/' + req.params.id
