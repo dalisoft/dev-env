@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "dev": "NODE_ENV=development npx rollup -c -w",
-    "start": "node dist/server.js",
+    "start": "node build/server.js",
     "build": "npx rollup -c",
     "test": "npx ava",
     "lint": "npx eslint ./src"
