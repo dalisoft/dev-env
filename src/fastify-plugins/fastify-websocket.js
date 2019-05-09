@@ -26,7 +26,7 @@ export default fastifyPlugin((fastify, options, next) => {
         reject(
           new Error(
             'Initial request to server is required ' +
-              "to be WebSocket and it's verify mechanism"
+              'to be WebSocket and it\'s verify mechanism'
           )
         );
       } else {

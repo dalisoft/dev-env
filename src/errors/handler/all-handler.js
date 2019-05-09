@@ -34,9 +34,9 @@ export default async (error, request, res) => {
 
   const stack = error.stack
     ? error.stack
-        .split('\n')
-        .map((e) => e.trim())
-        .filter((e, i, s) => s.indexOf(e) === i)
+      .split('\n')
+      .map((e) => e.trim())
+      .filter((e, i, s) => s.indexOf(e) === i)
     : error.stack_trace;
 
   console.log('#red([*Server*]: error was happened)', '\n');
