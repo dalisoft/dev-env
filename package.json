@@ -1,0 +1,69 @@
+{
+  "name": "graphql-dev-env",
+  "version": "0.1.0",
+  "description": "An fast & modern GraphQL development environment for with GraphiQL",
+  "main": "build/server.js",
+  "module": "src/server.js",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development npx rollup -c -w",
+    "start": "node build/server.js",
+    "build": "npx rollup -c",
+    "test": "npx ava",
+    "lint": "npx eslint ./src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --write",
+      "eslint ./src --fix",
+      "git add"
+    ],
+    "src/**/*.{json,md,yml}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalisoft/graphql-dev-env.git"
+  },
+  "keywords": [
+    "graphql",
+    "fast",
+    "dev-env"
+  ],
+  "author": "dalisoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dalisoft/graphql-dev-env/issues"
+  },
+  "homepage": "https://github.com/dalisoft/graphql-dev-env#readme",
+  "dependencies": {
+    "cluster": "^0.7.7",
+    "consolemd": "^0.2.1",
+    "dotenv-safe": "^6.1.0",
+    "graphql": "^14.3.0",
+    "query-string": "^6.5.0",
+    "turbo-http": "^0.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "ava": "^1.4.1",
+    "eslint": "^5.16.0",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "prettier": "^1.17.0",
+    "rollup": "^1.11.3",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-run": "^1.1.0",
+    "rollup-plugin-terser": "^4.0.4"
+  }
+}
