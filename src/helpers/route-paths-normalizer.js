@@ -17,15 +17,15 @@ const pathKeyNormalizer = (path) =>
 const transformMiddlewares = (fastify, middlewares, hooks) =>
   Array.isArray(hooks)
     ? hooks.map((key) =>
-        typeof key === 'function'
-          ? key
-          : Array.isArray(key)
+      typeof key === 'function'
+        ? key
+        : Array.isArray(key)
           ? middlewares[key[0]](fastify, ...key[1])
           : middlewares[key].bind(fastify)
-      )
+    )
     : typeof hooks === 'function'
-    ? hooks
-    : middlewares[hooks];
+      ? hooks
+      : middlewares[hooks];
 const mapTransforms = (fastify, middlewares, middlewareMap) => {
   for (const key in middlewareMap) {
     middlewareMap[key] = transformMiddlewares(
