@@ -24,6 +24,7 @@ An modern development environment for Backend development with Fastify
 - Clean code by Prettier + ESLint (at editor level too)
 - Travis CI configured
 - Husky & Lint-staged is configured
+- i18n & Custom error messages are implemented
 
 ## License
 
