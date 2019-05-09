@@ -1,3 +1,4 @@
+import openapi from './fastify-oas';
 import normalize from './fastify-normalize';
 import helmet from './fastify-helmet';
 import rateLimiter from './fastify-rate-limiter';
@@ -9,6 +10,7 @@ import ws from './fastify-websocket';
 
 export default async (fastify) =>
   fastify
+    .register(openapi)
     .register(normalize)
     .register(helmet)
     .register(rateLimiter)
