@@ -14,8 +14,7 @@ export default {
             put: () => console.log('put on /post/profile/:id/verify/{id}')
           },
           delete: () => console.log('post on /post/profile/:id/verify')
-        },
-        '/null': { post: null }
+        }
       }
     }
   }
