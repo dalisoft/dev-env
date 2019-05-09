@@ -4,6 +4,7 @@
   "description": "An modern development environment with Fastify",
   "main": "build/server.js",
   "module": "src/server.js",
+  "private": true,
   "scripts": {
     "dev": "NODE_ENV=development npx rollup -c -w",
     "start": "node dist/server.js",
