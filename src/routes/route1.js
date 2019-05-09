@@ -8,13 +8,13 @@ export default {
     '/profile': {
       get: async () => 'get called on /post/profile',
       '/:id': {
-        patch: async (req) => 'post on /post/profile/' + req.params.id,
+        post: async (req) => 'post on /post/profile/' + req.params.id,
         '/verify': {
           '/{id}': {
             put: async (req) =>
               'put on /post/profile/:id/verify/' + req.params.id
           },
-          delete: async () => 'post on /post/profile/:id/verify'
+          post: async () => 'post on /post/profile/:id/verify'
         }
       }
     }
