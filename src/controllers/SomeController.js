@@ -1,7 +1,7 @@
 import Controller from './Default';
 
 // HTTP Controller
-module.exports = class SomeController extends Controller {
+export default class SomeController extends Controller {
   get name() {
     return 'SomeController';
   }
@@ -14,4 +14,4 @@ module.exports = class SomeController extends Controller {
       };
     }
   }
-};
+}

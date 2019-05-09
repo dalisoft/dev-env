@@ -1,5 +1,5 @@
 const Model = require('./model');
 
-module.exports = {
+export default {
   Model
 };

@@ -1,6 +1,6 @@
 const DBControllers = require('../db/controllers');
 
-module.exports = class Controller {
+export default class Controller {
   get email() {
     return this.cookies['user-email'];
   }
@@ -50,4 +50,4 @@ module.exports = class Controller {
   init() {
     // Initialization
   }
-};
+}
