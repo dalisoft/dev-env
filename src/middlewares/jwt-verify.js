@@ -1,5 +1,5 @@
-const { keyGenerator } = require('../helpers');
-const crypto = require('crypto');
+import { keyGenerator } from '../helpers';
+import crypto from 'crypto';
 
 export default async function(req) {
   const { headers } = req;

@@ -1,4 +1,4 @@
-const DBControllers = require('../db/controllers');
+import DBControllers from '../db/controllers';
 
 export default class Controller {
   get email() {

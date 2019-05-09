@@ -1,23 +1,27 @@
-const { HTTPS, PORT, NODE_ENV, BACKEND_URL } = process.env;
+const { HTTPS, PORT, NODE_ENV, BACKEND_URL, TEST_BACKEND_URL } = process.env;
 const secure = HTTPS ? JSON.parse(HTTPS) : false;
 const dev = NODE_ENV === 'development';
 
-module.exports = {
+export default {
   // addModels: true,
   swagger: {
     info: {
       title: 'Fastify CRUD',
-      description: 'Fastify CRUD Dev Env',
+      description: 'Fastify CRUD Dev Env documentation',
       version: '0.1.0'
     },
     servers: [
       {
         url: `${secure ? 'https' : 'http'}://0.0.0.0:` + PORT,
-        description: 'Локальный путь разработки API'
+        description: 'Local development'
+      },
+      {
+        url: TEST_BACKEND_URL,
+        description: 'Production on test-server'
       },
       {
         url: BACKEND_URL,
-        description: 'Боевой продакшн путь API'
+        description: 'Production on real-server'
       }
     ].filter((f) => f.url),
     host: dev ? '0.0.0.0:' + PORT : BACKEND_URL,
@@ -26,41 +30,19 @@ module.exports = {
     produces: ['application/json'],
     tags: [
       {
-        name: 'admin',
-        description:
-          'Администраторы и безопасный путь только для' +
-          ' разработчиков, который позволяет изменять данные БД'
+        name: 'route-1',
+        description: 'Route category 1'
       },
       {
-        name: 'auth',
-        description: 'Аутентификация пользователя'
-      },
-      {
-        name: 'message',
-        description: 'Обмен сообщениями'
-      },
-      {
-        name: 'category',
-        description: 'Категории приза'
-      },
-      {
-        name: 'adversite',
-        description: 'Приз объявления'
-      },
-      {
-        name: 'profile',
-        description: 'Профиль пользователя'
-      },
-      {
-        name: 'bookmark',
-        description: 'Закладка пользователя'
+        name: 'route-2',
+        description: 'Route category 2'
       }
     ],
     components: {
       securitySchemes: {
         bearerAuth: {
           type: 'http',
-          description: 'Токен авторизации',
+          description: 'Authorization Token',
           scheme: 'bearer',
           bearerFormat: 'JWT'
         }

@@ -1,5 +1,3 @@
-const Model = require('./model');
+import Model1 from './Model1';
 
-export default {
-  Model
-};
+export { Model1 };

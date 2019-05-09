@@ -1,5 +1,5 @@
-const { dbHelper } = require('../../helpers');
-const Models = require('../models');
+import { dbHelper } from '../../helpers';
+import * as Models from '../models';
 
 const Controllers = {};
 
