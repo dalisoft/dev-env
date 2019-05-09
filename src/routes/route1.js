@@ -1,4 +1,5 @@
 export default {
+  get: async () => 'hello',
   '/get': {
     '/:id': {
       get: async (req) => 'get called on /get/' + req.params.id
@@ -14,7 +15,8 @@ export default {
             put: async (req) =>
               'put on /post/profile/:id/verify/' + req.params.id
           },
-          post: async () => 'post on /post/profile/:id/verify'
+          post: async (req) =>
+            'post on /post/profile/' + req.params.id + '/verify'
         }
       }
     }
