@@ -27,13 +27,13 @@ const transformMiddlewares = (fastify, middlewares, hooks) =>
     ? hooks
     : middlewares[hooks];
 const mapTransforms = (fastify, middlewares, middlewareMap) => {
-  Object.keys(middlewareMap).forEach((key) => {
+  for (const key in middlewareMap) {
     middlewareMap[key] = transformMiddlewares(
       fastify,
       middlewares,
       middlewareMap[key]
     );
-  });
+  }
   return middlewareMap;
 };
 
