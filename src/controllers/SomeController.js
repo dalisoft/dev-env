@@ -13,5 +13,9 @@ export default class SomeController extends Controller {
         hello: 'world'
       };
     }
+    return {
+      hello: 'world',
+      exists: false
+    };
   }
 }
