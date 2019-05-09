@@ -1,6 +1,7 @@
 import console from 'consolemd';
 
 // Constants
+const specialWebSocket = 'ws';
 const fastifyMethods = [
   'get',
   'post',
@@ -8,7 +9,8 @@ const fastifyMethods = [
   'patch',
   'delete',
   'head',
-  'options'
+  'options',
+  specialWebSocket
 ];
 
 // Utils
