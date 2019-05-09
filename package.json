@@ -18,9 +18,13 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,json,md,yml}": [
+    "src/**/*.js": [
       "prettier --write",
       "eslint ./src --fix",
+      "git add"
+    ],
+    "src/**/*.{json,md,yml}": [
+      "prettier --write",
       "git add"
     ]
   },
