@@ -1,3 +1,4 @@
+import json from 'rollup-plugin-json';
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 import run from 'rollup-plugin-run';
@@ -17,11 +18,14 @@ export default {
   },
   external: Object.keys(pkg.dependencies).concat(['fs', 'crypto']),
   plugins: [
-    commonjs({
-      sourceMap: false
-    }),
+    json(),
     resolve({
-      mainFields: ['module', 'main']
+      mainFields: ['module', 'main'],
+      preferBuiltins: true
+    }),
+    commonjs({
+      sourceMap: false,
+      namedExports: { ws: ['Server', 'Client'] }
     }),
     !dev &&
       babel({
@@ -31,8 +35,15 @@ export default {
     dev
       ? run()
       : terser({
-        compress: true,
-        mangle: true
+        compress: {
+          unsafe_comps: true,
+          unsafe_math: true,
+          unsafe_methods: true,
+          unsafe_proto: true,
+          toplevel: true
+        },
+        mangle: true,
+        safari10: true
       })
   ]
 };

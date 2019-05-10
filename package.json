@@ -10,7 +10,9 @@
     "start": "node build/server.js",
     "build": "npx rollup -c",
     "test": "npx ava",
-    "lint": "npx eslint ./src"
+    "lint": "npx eslint ./src",
+    "netlify-lambda:server": "netlify-lambda serve build",
+    "netlify-lamba:build": "netlify-lambda build build"
   },
   "husky": {
     "hooks": {
@@ -45,7 +47,7 @@
   "homepage": "https://github.com/dalisoft/fastify-dev-env#readme",
   "dependencies": {
     "@dalisoft/cache-ttl": "^0.3.10",
-    "@dalisoft/cookie": "^0.0.3",
+    "@dalisoft/cookie": "0.0.4",
     "@dalisoft/ws-events-sync": "^0.0.9",
     "aws-serverless-express": "^3.3.6",
     "consolemd": "^0.2.1",
@@ -71,12 +73,18 @@
     "eslint": "^5.16.0",
     "husky": "^2.2.0",
     "lint-staged": "^8.1.6",
+    "netlify-lambda": "^1.4.7",
     "prettier": "^1.17.0",
     "rollup": "^1.11.3",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^4.2.3",
     "rollup-plugin-run": "^1.1.0",
     "rollup-plugin-terser": "^4.0.4"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.1",
+    "utf-8-validate": "^5.0.2"
   }
 }
