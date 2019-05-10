@@ -6,7 +6,7 @@ import fastifyHandler from './errors';
 
 import { routePathsNormalizer } from './helpers';
 
-import * as appRoutes from './routes';
+import appRoutes from './routes';
 import * as appMiddlewares from './middlewares';
 
 export default (serverFactory) => {
@@ -22,10 +22,6 @@ export default (serverFactory) => {
     .register(routePathsNormalizer(appMiddlewares, appRoutes), {
       prefix: '.netlify/functions/server' // Netlify Serverless compatibility
     });
-
-  app.get('/', async () => {
-    return { status: 'success' };
-  });
 
   return app;
 };
