@@ -1,4 +1,4 @@
-import console from 'consolemd';
+import consolemd from 'consolemd';
 
 // Constants
 const specialWebSocket = 'ws';
@@ -73,7 +73,7 @@ export default (middlewares, frozenRoutes, specialRoutes = ['ws']) => async (
           };
         }
       } else {
-        console.error(
+        (process.env.ROLLUP_WATCH ? consolemd : console).error(
           `#red([*Server*]: The Schema of _*${path}*_ ` +
             'is *missing*, please add schema!)'
         );

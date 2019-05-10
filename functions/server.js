@@ -1,5 +1,5 @@
-const awsServerlessExpress = require('aws-serverless-express');
-const fastify = require('../build/server');
+import awsServerlessExpress from 'aws-serverless-express';
+import fastify from '../src/server';
 
 let server;
 const serverFactory = (handler) => {

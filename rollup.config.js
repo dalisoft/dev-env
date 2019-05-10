@@ -8,6 +8,7 @@ import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
 
 const dev = process.env.NODE_ENV === 'development';
+const watch = process.env.ROLLUP_WATCH;
 
 export default {
   input: './src/server.js',
@@ -28,22 +29,24 @@ export default {
       namedExports: { ws: ['Server', 'Client'] }
     }),
     !dev &&
+      !watch &&
       babel({
         babelrc: true,
         exclude: 'node_modules/**'
       }),
     dev
       ? run()
-      : terser({
-        compress: {
-          unsafe_comps: true,
-          unsafe_math: true,
-          unsafe_methods: true,
-          unsafe_proto: true,
-          toplevel: true
-        },
-        mangle: true,
-        safari10: true
-      })
+      : !watch &&
+        terser({
+          compress: {
+            unsafe_comps: true,
+            unsafe_math: true,
+            unsafe_methods: true,
+            unsafe_proto: true,
+            toplevel: true
+          },
+          mangle: true,
+          safari10: true
+        })
   ]
 };
