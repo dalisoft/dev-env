@@ -20,7 +20,7 @@ export default (serverFactory) => {
     .register(fastifyPlugins)
     .register(routePathsNormalizer(appMiddlewares, appRoutes))
     .register(routePathsNormalizer(appMiddlewares, appRoutes), {
-      prefix: '/.netlify/functions/server' // Netlify Serverless compatibility
+      prefix: '.netlify/functions/server' // Netlify Serverless compatibility
     });
 
   app.get('/', async () => {
