@@ -20,6 +20,7 @@ docker-compose up
 
 - Speeds-up your development time
 - URL connection type available at top of `docker-compose.yml` as comment
+- Prettified templates (thanks to Prettier)
 - Redis template
 - MongoDB template
 - Postgres template
