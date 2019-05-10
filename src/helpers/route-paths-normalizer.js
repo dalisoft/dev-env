@@ -73,7 +73,7 @@ export default (middlewares, frozenRoutes, specialRoutes = ['ws']) => async (
           };
         }
       } else {
-        (process.env.ROLLUP_WATCH ? consolemd : console).error(
+        consolemd.error(
           `#red([*Server*]: The Schema of _*${path}*_ ` +
             'is *missing*, please add schema!)'
         );

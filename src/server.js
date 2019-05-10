@@ -6,7 +6,7 @@ import app from './instance';
 async function start() {
   const port = process.env.PORT || 3000;
   await app().listen(port, '0.0.0.0');
-  (process.env.ROLLUP_WATCH ? consolemd : console).log(
+  consolemd.log(
     `#green([*Server*]: started successfully at *localhost:${port}* in *${Date.now() -
       time}ms*)`
   );
