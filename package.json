@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "NODE_ENV=development npx -p node@10 npx rollup -c -w",
     "start": "npx -p node@10 node build/server.js",
-    "build": "npx -p node@10 npx rollup -c",
+    "build": "npx rollup -c",
     "test": "npx -p node@10 npx ava",
     "lint": "npx eslint ./src"
   },
