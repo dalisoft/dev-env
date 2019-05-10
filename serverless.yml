@@ -1,0 +1,16 @@
+service: fastify-dev-env-serverless
+
+provider:
+  name: aws
+  runtime: nodejs8
+
+# Functions
+functions:
+  fastify-serverless-api:
+    name: ${self:service}-${self:provider.stage}-fastify-serverless-api
+    handler: lambda.handler
+    timeout: 30
+    events:
+      - http:
+          path: '{proxy+}'
+          method: any

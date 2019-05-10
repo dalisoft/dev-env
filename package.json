@@ -47,6 +47,7 @@
     "@dalisoft/cache-ttl": "^0.3.10",
     "@dalisoft/cookie": "^0.0.3",
     "@dalisoft/ws-events-sync": "^0.0.9",
+    "aws-serverless-express": "^3.3.6",
     "consolemd": "^0.2.1",
     "dotenv-safe": "^6.1.0",
     "fastify": "^2.3.0",
