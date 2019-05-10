@@ -6,10 +6,10 @@
   "module": "src/server.js",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development npx rollup -c -w",
-    "start": "node build/server.js",
+    "dev": "NODE_ENV=development npx -p node@10 npx rollup -c -w",
+    "start": "npx -p node@10 node build/server.js",
     "build": "npx rollup -c",
-    "test": "npx ava",
+    "test": "npx -p node@10 npx ava",
     "lint": "npx eslint ./src"
   },
   "husky": {
@@ -49,7 +49,7 @@
     "dotenv-safe": "^6.1.0",
     "graphql": "^14.3.0",
     "query-string": "^6.5.0",
-    "turbo-http": "^0.3.2"
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v15.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",

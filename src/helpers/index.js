@@ -1,4 +1,4 @@
 import hasKeyObj from './has-key-obj';
-import jsonRes from './json-res';
+import readBody from './read-body';
 
-export { hasKeyObj, jsonRes };
+export { hasKeyObj, readBody };

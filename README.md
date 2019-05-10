@@ -10,13 +10,14 @@ This dev-env is very new/young project, not complex (as i'm focused on simplicit
 
 ## Requires
 
+- Node.js v10 (limits refers to uWebSockets.js)
 - Node.js server / Machine supports Node.js
 - An good developer (like you) that already know about Node.js and ES6 Syntax
 
 ## Features
 
-- Blazing fast performance (up to 100x faster than express-graphql)
-- Low-level HTTP with turbo-http
+- Blazing fast performance (up to 150x faster than express-graphql)
+- Low-level HTTP with uWebSockets.js
 - Pure call, no layer (like express-graphql)
 - Speeds up development time
 - GraphiQL supported
@@ -63,4 +64,7 @@ fetch('http://your-endpoint.tld/graphql', {
 
 ## License
 
-This project are licensed under MIT, but `renderGraphiQL` [license](https://github.com/graphql/express-graphql/blob/master/LICENSE) may differ from MIT license
+This project is licensed under MIT, but
+
+- `renderGraphiQL` [license](https://github.com/graphql/express-graphql/blob/master/LICENSE) may/is differs from MIT license
+- `uWebSockets.js` [license](https://github.com/uNetworking/uWebSockets.js/blob/master/LICENSE) may/is differs from MIT license
