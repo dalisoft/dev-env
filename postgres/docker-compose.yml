@@ -1,0 +1,23 @@
+# Can be connected via url postgres://postgres:postgres-password@localhost:5432/postgres-db
+version: '3'
+
+services:
+  postgres:
+    container_name: postgres-db-template
+    restart: always
+    build: ./postgres/
+    ports:
+      - '5432:5432'
+    environment:
+      - 'POSTGRES_PASSWORD=postgres-password'
+      - 'POSTGRES_DB=postgres-db'
+    volumes:
+      - ./postgres/data/:/var/lib/postgresql/data/
+      - ./postgres/sql/:/docker-entrypoint-initdb.d/
+      - ./logs/postgres/:/var/log/postgres/
+    networks:
+      - postgres-connect
+
+networks:
+  postgres-connect:
+    driver: bridge
