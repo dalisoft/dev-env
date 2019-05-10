@@ -84,5 +84,11 @@
     "rollup-plugin-terser": "^4.0.4",
     "shebang-loader": "0.0.1"
   },
-  "optionalDependencies": {}
+  "optionalDependencies": {
+    "bufferutil": "^4.0.1",
+    "long": "^4.0.0",
+    "pino-pretty": "^3.0.0",
+    "uglify-es": "^3.3.9",
+    "utf-8-validate": "^5.0.2"
+  }
 }

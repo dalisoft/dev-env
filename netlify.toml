@@ -2,6 +2,6 @@
   # This will be run the site build
   command = "npm run netlify-lamba-prepare"
   # This is the directory is publishing to netlify's CDN
-  publish = "build"
+  publish = "functions-build"
   # functions build directory
   functions = "functions-build"
