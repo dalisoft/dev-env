@@ -12,13 +12,13 @@ An modern development environment for Backend development with Fastify
 
 ## Note
 
-When enabling turbo mode (up to 50% performance improvement), cluster-mode will be unavailable, so, your app should work in single thread to working properly and avoiding crash. In single-thread mode your app will be improved!
+When enabling turbo mode (up to 50% performance improvement), cluster-mode will be unavailable (`turbo-http` limit), so, your app should work in single thread to working properly and avoiding crash.
 
 ## Features
 
 - Speeds-up your development time
 - Fast backend (very good performance)
-- Can be enable Turbo mode (by specify TURBO_HTTP=true env variable)
+- Can be enable Turbo mode (by specify `TURBO_HTTP=true` env variable)
 - Async/Await support (with Fastify & Babel)
 - Validation / Serialization support (with Fastify)
 - Fast build with Rollup & Babel
