@@ -21,7 +21,7 @@
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
-    "redaction": "^5.0.2",
+    "redaction": "^5.1.1",
     "redux": "^4.0.1",
     "redux-batched-subscribe": "^0.1.6",
     "redux-form": "^8.2.0",
@@ -72,7 +72,8 @@
     ]
   },
   "resolutions": {
-    "tar": "^4.4.8"
+    "tar": "^4.4.8",
+    "core-js": "^3.0.1"
   },
   "browserslist": {
     "production": [

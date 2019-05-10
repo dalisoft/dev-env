@@ -18,7 +18,7 @@ This project is modified and prepared as Development Environment for Frontend de
 - Netlify support
 - Github Pages support (via `npm run deploy`)
 - Fetch is preferred
-- NPM is preferred (because of speed & module caching)
+- Yarn is preferred (because of security)
 - Components are documented with docz (with basic example)
 - Components are tests with react-test-renderer and Jest (with basic example)
 - Good browser support

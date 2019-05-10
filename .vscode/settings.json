@@ -6,7 +6,7 @@
   "prettier.stylelintIntegration": true,
   "prettier.requireConfig": true,
   "eslint.enable": true,
-  "eslint.packageManager": "npm",
+  "eslint.packageManager": "yarn",
   "files.associations": {
     "*.js": "javascript",
     "*.jsx": "javascriptreact"
