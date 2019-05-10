@@ -39,12 +39,13 @@ const mapTransforms = (fastify, middlewares, middlewareMap) => {
   return middlewareMap;
 };
 
-export default (middlewares, frozenRoutes, specialRoutes = ['ws']) => async (
+export default (middlewares, routes, specialRoutes = ['ws']) => async (
   fastify
 ) => {
-  const routes = { ...frozenRoutes };
-
   (function normalizeRoutes(path, appRoutes, route = false) {
+    if (appRoutes.normalized) {
+      return;
+    }
     if (route && path) {
       routes[path] = appRoutes;
       return;
@@ -54,7 +55,20 @@ export default (middlewares, frozenRoutes, specialRoutes = ['ws']) => async (
       const keysOfValue = value && Object.keys(value);
       const normalisedKey = pathKeyNormalizer(key);
 
-      if (!path || path === '/' || key.startsWith('/')) {
+      if (
+        path === '/' &&
+        keysOfValue.every((key) => fastifyMethods.includes(key.toLowerCase()))
+      ) {
+        for (const method in value) {
+          const routeCallback = value[method];
+          value[method] =
+            typeof routeCallback === 'function'
+              ? { callback: routeCallback }
+              : routeCallback;
+        }
+
+        normalizeRoutes(path, value, true);
+      } else if (!path || path === '/' || key.startsWith('/')) {
         normalizeRoutes(path + normalisedKey, value);
         delete appRoutes[key];
       } else if (
@@ -80,6 +94,9 @@ export default (middlewares, frozenRoutes, specialRoutes = ['ws']) => async (
       }
     }
   })('/', routes, false);
+
+  // This prevents from N+1 normalize
+  routes.normalized = true;
 
   for (const path in routes) {
     const route = routes[path];

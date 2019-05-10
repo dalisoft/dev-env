@@ -1,7 +1,9 @@
 import route1 from './route1';
 
 const app = {
-  '/': async () => ({ status: 'success' }),
+  '/': {
+    get: async () => ({ status: 'success' })
+  },
   route1
 };
 
