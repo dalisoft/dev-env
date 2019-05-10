@@ -1,4 +1,4 @@
-# Can be connected via url mongodb://mongo_user:mongo_pass@mongo
+# Can be connected via url mongodb://mongo_user:mongo_pass@127.0.0.1:27017
 version: '3'
 
 services:
