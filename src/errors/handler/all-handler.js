@@ -44,6 +44,7 @@ export default async (error, request, res) => {
 
   return {
     status: 'error',
-    message: 'Server error, please contact to server '
+    message: 'Server error, please contact to server ',
+    stack
   };
 };
