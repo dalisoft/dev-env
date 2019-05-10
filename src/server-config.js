@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-const { LOGGER, HTTPS, HTTP2, PURE } = process.env;
+const { LOGGER, HTTPS, HTTP2, PURE, TURBO_HTTP } = process.env;
 
 const fastifyConfig = {
   logger: JSON.parse(LOGGER || false),
@@ -21,6 +21,15 @@ if (PURE && HTTP2 && JSON.parse(HTTP2)) {
     fastifyConfig.http = {};
     fastifyConfig.http.allowHTTP1 = true;
   }
+}
+
+if (TURBO_HTTP && JSON.parse(TURBO_HTTP)) {
+  const Server = require('turbo-http/lib/server');
+  fastifyConfig.createServer = (httpHandler, options = {}) => {
+    const server = new Server(options);
+    server.on('request', httpHandler);
+    return server;
+  };
 }
 
 export default fastifyConfig;
