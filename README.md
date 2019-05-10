@@ -64,7 +64,7 @@ fetch('http://your-endpoint.tld/graphql', {
 
 ## License
 
-This project are licensed under MIT, but
+This project is licensed under MIT, but
 
 - `renderGraphiQL` [license](https://github.com/graphql/express-graphql/blob/master/LICENSE) may/is differs from MIT license
 - `uWebSockets.js` [license](https://github.com/uNetworking/uWebSockets.js/blob/master/LICENSE) may/is differs from MIT license
