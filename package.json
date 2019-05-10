@@ -73,7 +73,8 @@
   },
   "resolutions": {
     "tar": "^4.4.8",
-    "core-js": "^3.0.1"
+    "core-js": "^3.0.1",
+    "webpack": "^4.29.6"
   },
   "browserslist": {
     "production": [
