@@ -1,0 +1,16 @@
+service: serverless-dev-env-sample
+
+provider:
+  name: aws
+  runtime: nodejs8
+
+# Functions
+functions:
+  serverless-api-sample:
+    name: ${self:service}-${self:provider.stage}-serverless-api-sample
+    handler: handler.handler
+    timeout: 30
+    events:
+      - http:
+          path: '{proxy+}'
+          method: any
