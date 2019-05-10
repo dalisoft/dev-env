@@ -5,6 +5,10 @@
   "main": "build/server.js",
   "module": "src/server.js",
   "private": true,
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.5.0"
+  },
   "scripts": {
     "dev": "NODE_ENV=development npx -p node@10 npx rollup -c -w",
     "start": "npx -p node@10 node build/server.js",
