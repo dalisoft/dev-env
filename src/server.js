@@ -19,6 +19,10 @@ app
   .register(fastifyPlugins)
   .register(routePathsNormalizer(appMiddlewares, appRoutes));
 
+app.get('/', async () => {
+  return { status: 'success' };
+});
+
 async function start() {
   const port = process.env.PORT || 3000;
   await app.listen(port, '0.0.0.0');

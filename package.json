@@ -60,6 +60,7 @@
     "fastify-plugin": "^1.5.0",
     "fastify-rate-limit": "^2.1.1",
     "lodash.pick": "^4.4.0",
+    "turbo-http": "github:tinchoz49/turbo-http",
     "ws": "^7.0.0"
   },
   "devDependencies": {
