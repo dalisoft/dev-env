@@ -14,7 +14,8 @@ An modern development environment for Backend development with Fastify
 
 - Speeds-up your development time
 - Fast backend (very good performance)
-- Async/Await support (by Fastify & Babel)
+- Async/Await support (with Fastify & Babel)
+- Validation / Serialization support (with Fastify)
 - Fast build with Rollup & Babel
 - Latest JS things can be used
 - Configured all security & essential plugins
