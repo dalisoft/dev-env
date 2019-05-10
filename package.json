@@ -6,13 +6,13 @@
   "module": "src/server.js",
   "private": true,
   "scripts": {
-    "test": "npx ava",
-    "lint": "npx eslint ./src",
+    "test": "ava",
+    "lint": "eslint ./src",
     "start": "cross-env NODE_ENV=development npm-run-all --parallel start:bundle start:functions",
-    "start:bundle": "npx rollup -c -w",
+    "start:bundle": "rollup -c -w",
     "start:functions": "netlify-lambda -c webpack.functions.js serve functions",
     "build": "cross-env NODE_ENV=production npm-run-all --parallel build:**",
-    "build:bundle": "npx rollup -c",
+    "build:bundle": "rollup -c",
     "build:functions": "netlify-lambda -c webpack.functions.js build functions"
   },
   "husky": {
