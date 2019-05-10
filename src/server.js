@@ -1,17 +1,29 @@
 const time = Date.now(); // For better managing start-time / lags
 import console from 'consolemd';
 
-import turbo from 'turbo-http';
-import { graphql } from 'graphql';
-import querystring from 'query-string';
-import { port, graphiql, origin } from './env';
+import uWS from 'uWebSockets.js';
+// import { graphql } from 'graphql';
+// import querystring from 'query-string';
+// import { port, graphiql, origin } from './env';
+import { port } from './env';
 
-import schema from './schema';
+// import schema from './schema';
 
-import renderGraphiQL from './render-graphiql';
-import { jsonRes } from './helpers';
+// import renderGraphiQL from './render-graphiql';
+// import { jsonRes } from './helpers';
 
-const server = turbo.createServer(async (req, res) => {
+const app = uWS.App({});
+
+app.get('/', (res) => {
+  res.writeHeader('content-type', 'application/json');
+  res.end(JSON.stringify({ status: 'ok' }));
+});
+app.post('/graphql', (res) => {
+  res.writeHeader('content-type', 'application/json');
+  res.end({ status: 'ok' });
+});
+
+/* const server = turbo.createServer(async (req, res) => {
   const { method, url } = req;
   const headers = req.getAllHeaders();
 
@@ -138,11 +150,15 @@ const server = turbo.createServer(async (req, res) => {
       );
     }
   }
+}); */
+
+app.listen(port, (token) => {
+  if (token) {
+    console.log(
+      `#green([*Server*]: started successfully at *localhost:${port}* in *${Date.now() -
+        time}ms*)`
+    );
+  } else {
+    console.log(`#red([*Server*]: failed to host at *localhost:${port}*)`);
+  }
 });
-
-server.listen(port);
-
-console.log(
-  `#green([*Server*]: started successfully at *localhost:${port}* in *${Date.now() -
-    time}ms*)`
-);

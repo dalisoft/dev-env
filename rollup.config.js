@@ -30,9 +30,9 @@ export default {
         babelrc: true,
         exclude: 'node_modules/**'
       }),
-    dev
-      ? run()
-      : terser({
+    dev && run(),
+    false &&
+      terser({
         compress: true,
         mangle: true
       })
