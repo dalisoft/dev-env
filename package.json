@@ -6,8 +6,6 @@
   "module": "src/server.js",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development npx rollup -c -w",
-    "build": "npx rollup -c",
     "test": "npx ava",
     "lint": "npx eslint ./src",
     "netlify-lambda:server": "netlify-lambda -c webpack.functions.js serve functions",
@@ -48,7 +46,6 @@
   "homepage": "https://github.com/dalisoft/lambda-api-dev-env#readme",
   "dependencies": {
     "aws-sdk": "^2.452.0",
-    "consolemd": "^0.2.1",
     "lambda-api": "^0.10.1"
   },
   "devDependencies": {

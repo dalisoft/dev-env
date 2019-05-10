@@ -1,4 +1,4 @@
-const app = require('../build/server');
+import app from '../src/server';
 
 exports.handler = async (event, context) => {
   context.callbackWaitsForEmptyEventLoop = false;
