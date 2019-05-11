@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@now/static"
+    },
+    {
+      "src": "lambda.js",
+      "use": "@now/node"
+    },
+    {
+      "src": "build/server.js",
+      "use": "@now/node-server"
+    }
+  ]
+}
