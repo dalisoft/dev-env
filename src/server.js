@@ -14,9 +14,9 @@ const app = lambda(appConfig);
 app.register(middlewares);
 
 // Register routes
-app.register(routes, { prefix: 'server' });
+app.register(routes, { prefix: 'server' }); // Netlify development Serverless compatibility
 app.register(routes, {
-  prefix: '.netlify/functions/server' // Netlify Serverless compatibility
+  prefix: '.netlify/functions/server' // Netlify production Serverless compatibility
 });
 
 // Log into console, shows how much takes initialization time
