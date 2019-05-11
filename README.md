@@ -16,6 +16,7 @@ When enabling turbo mode (up to 50% performance improvement), cluster-mode will 
 
 ## Features
 
+- [NEW]: now.sh serverless works out-of-the-box (tested)
 - [NEW]: Netlify Functions works out-of-the-box (tested)
 - [NEW]: On Serverless servers (like AWS) should work (not tested)
 - Speeds-up your development time
