@@ -1,0 +1,12 @@
+{
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@now/static"
+    },
+    {
+      "src": "handler.js",
+      "use": "@now/node"
+    }
+  ]
+}
