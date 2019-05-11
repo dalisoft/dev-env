@@ -6,9 +6,7 @@ An modern development environment for Serverless development with Lambda API
 
 ## Requires
 
-- Lambda API
-- Serverless technique
-- Node.js server / Machine supports Node.js
+- Serverless / Lambda technique
 - An good developer (like you) that already know about all of above and ES6 Syntax
 
 ## Features
@@ -17,8 +15,8 @@ An modern development environment for Serverless development with Lambda API
 - [NEW]: Netlify Functions works out-of-the-box (tested)
 - [NEW]: On Serverless servers (like AWS) should work (tested locally with Serverless)
 - Speeds-up your development time
-- Fast backend (very good performance)
-- Fast build with Rollup & Babel
+- No prepared builds
+- Focused to Serverless/Lambda architecture
 - Latest JS things can be used
 - Testing with Ava
 - Always latest dependecies with Greenkeeper
