@@ -14,6 +14,7 @@ const app = lambda(appConfig);
 app.register(middlewares);
 
 // Register routes
+app.register(routes); // AWS Lambda/now serverless compatibility
 app.register(routes, { prefix: 'server' }); // Netlify development Serverless compatibility
 app.register(routes, {
   prefix: '.netlify/functions/server' // Netlify production Serverless compatibility

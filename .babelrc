@@ -1,11 +1,11 @@
 {
+  "plugins": ["source-map-support"],
   "presets": [
     [
       "@babel/preset-env",
       {
         "targets": {
-          "esmodules": false,
-          "node": 8
+          "node": "8.10"
         }
       }
     ]

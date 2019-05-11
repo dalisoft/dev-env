@@ -8,9 +8,25 @@ provider:
 functions:
   serverless-api-sample:
     name: ${self:service}-${self:provider.stage}-serverless-api-sample
-    handler: handler.handler
+    handler: handler.default
     timeout: 30
     events:
       - http:
           path: '{proxy+}'
           method: any
+
+# Plugins
+plugins:
+  # - serverless-dotenv-plugin
+  - serverless-webpack
+  - serverless-offline
+
+# serverless optimization
+package:
+  individually: true
+# serverless-webpack configuration
+# Enable auto-packing of external modules
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
