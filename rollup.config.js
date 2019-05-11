@@ -17,7 +17,7 @@ export default {
     file: './build/server.js',
     esModule: false
   },
-  external: Object.keys(pkg.dependencies).concat(['fs', 'crypto']),
+  external: Object.keys(pkg.dependencies).concat(['crypto']),
   plugins: [
     json(),
     resolve({

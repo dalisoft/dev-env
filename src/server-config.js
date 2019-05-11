@@ -23,13 +23,22 @@ if (PURE && HTTP2 && JSON.parse(HTTP2)) {
   }
 }
 
-if (TURBO_HTTP && JSON.parse(TURBO_HTTP)) {
-  const Server = require('turbo-http/lib/server');
-  fastifyConfig.createServer = (httpHandler, options = {}) => {
-    const server = new Server(options);
-    server.on('request', httpHandler);
-    return server;
-  };
+if (TURBO_HTTP && JSON.parse(TURBO_HTTP) === true) {
+  // This prevents module to be loading when
+  // variable is FALSE or turbo-http module
+  // is not installed
+  try {
+    const Server = require.resolve('turbo-http/lib/server');
+    if (Server) {
+      fastifyConfig.createServer = (httpHandler, options = {}) => {
+        const server = new Server(options);
+        server.on('request', httpHandler);
+        return server;
+      };
+    }
+  } catch (e) {
+    // Module unavailable
+  }
 }
 
 export default fastifyConfig;
