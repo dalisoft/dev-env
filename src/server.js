@@ -39,12 +39,10 @@ app.post('/graphql', async (res, req) => {
     res.writeHeader('Access-Control-Allow-Origin', origin);
 
     if (origin !== originHeader) {
-      return res.end(
-        JSON.stringify({
-          status: 'error',
-          message: 'Declined by CORS'
-        })
-      );
+      return {
+        status: 'error',
+        message: 'Declined by CORS'
+      };
     }
   }
 
