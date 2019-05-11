@@ -1,5 +1,5 @@
 import cors from './cors';
 
-export default async (app) => {
+export default (app) => {
   app.options('*', cors);
 };
