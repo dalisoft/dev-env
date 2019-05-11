@@ -6,13 +6,16 @@
   "module": "src/server.js",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development npx rollup -c -w",
     "start": "node build/server.js",
-    "build": "npx rollup -c",
-    "test": "npx ava",
-    "lint": "npx eslint ./src",
-    "netlify-lambda:server": "netlify-lambda -c webpack.functions.js serve functions",
-    "netlify-lamba:prepare": "NODE_ENV=production netlify-lambda -c webpack.functions.js build functions"
+    "test": "ava",
+    "lint": "eslint ./src",
+    "dev": "cross-env NODE_ENV=development npm-run-all --parallel dev:server dev:serverless",
+    "dev:server": "rollup -c -w",
+    "dev:watch-server": "cross-env NODE_ENV=development rollup -c -w",
+    "dev:serverless": "netlify-lambda -c webpack.functions.js serve functions",
+    "build": "cross-env NODE_ENV=production npm-run-all --parallel build:**",
+    "build:server": "rollup -c",
+    "build:serverless": "netlify-lambda -c webpack.functions.js build functions"
   },
   "husky": {
     "hooks": {
@@ -70,10 +73,12 @@
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "ava": "^1.4.1",
+    "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
     "husky": "^2.2.0",
     "lint-staged": "^8.1.6",
     "netlify-lambda": "^1.4.7",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.17.0",
     "rollup": "^1.11.3",
     "rollup-plugin-babel": "^4.3.2",
