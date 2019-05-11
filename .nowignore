@@ -1,6 +1,6 @@
 functions
 functions-build
-src
+build
 node_modules
 .vscode
 .env.example

@@ -2,8 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "build/server.js",
-      "use": "@now/node-server"
+      "src": "src/now-lambda.js",
+      "use": "@now/node"
     },
     {
       "src": "public/*.html",
@@ -13,7 +13,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/build/server.js"
+      "dest": "/src/now-lambda.js"
     }
   ]
 }
