@@ -6,7 +6,7 @@
   "prettier.stylelintIntegration": false,
   "prettier.requireConfig": true,
   "eslint.enable": true,
-  "eslint.packageManager": "yarn",
+  "eslint.packageManager": "npm",
   "files.associations": {
     "*.js": "javascript"
   },
