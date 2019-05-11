@@ -9,13 +9,15 @@
     "start": "node build/server.js",
     "test": "ava",
     "lint": "eslint ./src",
-    "dev": "cross-env NODE_ENV=development npm-run-all --parallel dev:server dev:serverless",
+    "dev": "cross-env NODE_ENV=development npm-run-all --parallel dev:server dev:functions dev:serverless dev:now",
     "dev:server": "rollup -c -w",
     "dev:watch-server": "cross-env NODE_ENV=development rollup -c -w",
-    "dev:serverless": "netlify-lambda -c webpack.functions.js serve functions",
+    "dev:functions": "netlify-lambda -c webpack.functions.js serve functions",
+    "dev:serverless": "sls offline",
+    "dev:now": "now dev",
     "build": "cross-env NODE_ENV=production npm-run-all --parallel build:**",
     "build:server": "rollup -c",
-    "build:serverless": "netlify-lambda -c webpack.functions.js build functions"
+    "build:functions": "netlify-lambda -c webpack.functions.js build functions"
   },
   "husky": {
     "hooks": {
@@ -84,6 +86,8 @@
     "rollup-plugin-node-resolve": "^4.2.3",
     "rollup-plugin-run": "^1.1.0",
     "rollup-plugin-terser": "^4.0.4",
+    "serverless-dotenv-plugin": "^2.1.1",
+    "serverless-offline": "^4.10.0",
     "shebang-loader": "0.0.1"
   },
   "optionalDependencies": {

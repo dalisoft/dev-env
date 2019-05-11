@@ -14,3 +14,8 @@ functions:
       - http:
           path: '{proxy+}'
           method: any
+
+# Plugins
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-offline
