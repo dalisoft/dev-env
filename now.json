@@ -1,5 +1,9 @@
 {
   "version": 2,
+  "env": {
+    "secretKey": "some-secret-password-at-least-32-characters-long",
+    "jwtSecretKey": "some-secret-password-at-least-32-characters-long-2"
+  },
   "builds": [
     {
       "src": "src/now-lambda.js",
