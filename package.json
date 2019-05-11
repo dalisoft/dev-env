@@ -51,7 +51,6 @@
   "dependencies": {
     "@dalisoft/cache-ttl": "^0.3.10",
     "@dalisoft/cookie": "0.0.4",
-    "@dalisoft/ws-events-sync": "^0.0.9",
     "aws-serverless-express": "^3.3.6",
     "consolemd": "^0.2.1",
     "dotenv-safe": "^6.1.0",
@@ -65,9 +64,7 @@
     "fastify-oas": "^2.1.3",
     "fastify-plugin": "^1.5.0",
     "fastify-rate-limit": "^2.1.1",
-    "lodash.pick": "^4.4.0",
-    "turbo-http": "github:tinchoz49/turbo-http",
-    "ws": "^7.0.0"
+    "lodash.pick": "^4.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -90,10 +87,13 @@
     "shebang-loader": "0.0.1"
   },
   "optionalDependencies": {
+    "@dalisoft/ws-events-sync": "0.0.9",
     "bufferutil": "^4.0.1",
     "long": "^4.0.0",
     "pino-pretty": "^3.0.0",
+    "turbo-http": "github:tinchoz49/turbo-http",
     "uglify-es": "^3.3.9",
-    "utf-8-validate": "^5.0.2"
+    "utf-8-validate": "^5.0.2",
+    "ws": "^7.0.0"
   }
 }

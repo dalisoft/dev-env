@@ -1,0 +1,10 @@
+functions
+functions-build
+src
+node_modules
+.vscode
+.env.example
+rollup.config.js
+serverless.yml
+test.js
+webpack.functions.js
