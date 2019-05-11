@@ -12,7 +12,11 @@ An modern development environment for Backend development with Fastify
 
 ## Note
 
+### Turbo mode
+
 When enabling turbo mode (up to 50% performance improvement), cluster-mode will be unavailable (`turbo-http` limit), so, your app should work in single thread to working properly and avoiding crash.
+For enabling turbo mode you should install `turbo-http` (i prefer this [fork](github:tinchoz49/turbo-http)).
+For Serverless/Lamba we don't recomment using `turbo` mode
 
 ## Features
 
