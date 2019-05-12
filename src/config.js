@@ -1,5 +1,3 @@
-const { ALLOWED_DOMAIN } = process.env;
-
-const CORS_DOMAIN = ALLOWED_DOMAIN || 'https://your-cors-domain.tld';
+const { CORS_DOMAIN } = process.env;
 
 export { CORS_DOMAIN };
