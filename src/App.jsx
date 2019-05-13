@@ -1,6 +1,6 @@
 import React from 'react';
 import { Root, Routes } from 'react-static';
-import { reachHistory } from 'redux/store';
+import { reachHistory } from './redux/store';
 
 //
 import { Link, Router } from 'components/Router';
