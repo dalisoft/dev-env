@@ -1,5 +1,5 @@
 {
-  "src/**/*.*rc": [
+  "src/**/.*rc": [
     "prettier --write",
     "git add"
   ],
