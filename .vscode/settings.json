@@ -10,7 +10,7 @@
   "files.associations": {
     "*.js": "javascript",
     "*.jsx": "javascriptreact",
-    "*.*rc": "json"
+    "*rc": "json"
   },
   "tslint.jsEnable": false,
   "typescript.tsdk": null,
