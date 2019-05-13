@@ -16,6 +16,7 @@
   "dependencies": {
     "@reach/router": "^1.2.1",
     "classnames": "^2.2.6",
+    "core-js": "^3.0.1",
     "history": "^4.9.0",
     "intl": "^1.2.5",
     "lodash.get": "^4.4.2",
