@@ -13,6 +13,8 @@
     "git add"
   ],
   "ignore": [
-    "**/build/*.js"
+    "**/build/*.js",
+    "**/tmp/*.js",
+    "**/artifacts/*.js"
   ]
 }

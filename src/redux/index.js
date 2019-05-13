@@ -1,1 +1,1 @@
-export * from "redux/src/index";
+export * from '../node_modules/redux/src/index';
