@@ -19,22 +19,6 @@
     "build:server": "rollup -c",
     "build:functions": "netlify-lambda -c webpack.functions.js build functions"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.js": [
-      "prettier --write",
-      "eslint ./src --fix",
-      "git add"
-    ],
-    "src/**/*.{json,md,yml}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dalisoft/fastify-dev-env.git"
