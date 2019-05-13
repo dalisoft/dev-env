@@ -50,4 +50,8 @@ $ cd ../
 $ npm start
 ```
 
+#### or
+
+Manually go-to `react-hot-loader` `dist` folder and see [from this project, branch patch-1](https://github.com/dalisoft/react-hot-loader.git) what i've changed, you also can change that line
+
 For more information/docs, please check `react-static` repository

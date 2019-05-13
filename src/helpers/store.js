@@ -4,4 +4,6 @@ export const getState = () => store.getState();
 
 export const dispatch = (...params) => store.dispatch(...params);
 
-window.getState = getState;
+if (typeof window !== 'undefined') {
+  window.getState = getState;
+}
