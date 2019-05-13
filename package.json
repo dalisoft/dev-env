@@ -40,22 +40,6 @@
     "stylelint": "^10.0.1",
     "stylelint-config-sass-guidelines": "^6.0.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{json,css,scss,md,yml}": [
-      "prettier --write",
-      "git add"
-    ],
-    "src/**/*.{js,jsx}": [
-      "prettier --write",
-      "eslint ./src --fix",
-      "git add"
-    ]
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -65,28 +49,5 @@
     "docs": "npx docz dev",
     "predeploy": "npm run build",
     "deploy": "npx gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "resolutions": {
-    "tar": "^4.4.8",
-    "core-js": "^3.0.1"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "safari >= 9",
-      "ie >= 11",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }
