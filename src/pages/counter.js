@@ -1,2 +1,1 @@
-import Counter from 'containers/counter';
-export default Counter;
+export { default } from 'containers/counter/Counter';

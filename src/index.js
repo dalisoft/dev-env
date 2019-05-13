@@ -4,15 +4,9 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
-import { IntlProvider } from './IntlProvider';
-import { connect } from 'redaction';
 
 // Your top level component
 import App from './App';
-
-const LanguageProvider = connect({ locale: 'init.locale' })(({ locale, children }) => (
-  <IntlProvider locale={locale}>{children}</IntlProvider>
-));
 
 global.Intl = intl; // polyfill for ios 9
 
@@ -26,16 +20,7 @@ if (typeof document !== 'undefined') {
   const renderMethod = target.hasChildNodes() ? ReactDOM.hydrate : ReactDOM.render;
 
   const render = (Comp) => {
-    renderMethod(
-      <Provider store={store}>
-        <LanguageProvider>
-          <AppContainer>
-            <Comp />
-          </AppContainer>
-        </LanguageProvider>
-      </Provider>,
-      target
-    );
+    renderMethod(<Comp HotLoader={AppContainer} Provider={Provider} store={store} />, target);
   };
 
   // Render!

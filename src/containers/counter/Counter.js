@@ -10,7 +10,9 @@ import { counter as action } from 'redux/actions';
 import './style.css';
 import style from './style.module.css';
 
-const Counter = React.memo(({ counter }) => {
+const enhance = connect({ counter: 'counter.counter' });
+
+export default enhance(({ counter }) => {
   return (
     <div>
       <h1>
@@ -35,7 +37,3 @@ const Counter = React.memo(({ counter }) => {
     </div>
   );
 });
-
-const enhance = connect({ counter: 'counter.counter' });
-
-export default enhance(Counter);
