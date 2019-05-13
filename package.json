@@ -44,10 +44,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "npx eslint ./src",
+    "lint": "eslint ./src",
     "eject": "react-scripts eject",
-    "docs": "npx docz dev",
+    "docs": "docz dev",
     "predeploy": "npm run build",
-    "deploy": "npx gh-pages -d build"
+    "deploy": "gh-pages -d build"
   }
 }
