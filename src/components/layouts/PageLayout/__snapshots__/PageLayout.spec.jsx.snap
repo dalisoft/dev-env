@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Button component render correctly component 1`] = `
-<div
-  className="layout"
->
-  MY_CHILD_TEXT
-</div>
-`;
