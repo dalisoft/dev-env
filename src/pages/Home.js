@@ -4,7 +4,7 @@ import { Link } from '@reach/router';
 import { Text } from 'components/UI';
 import { LangSwitcher } from 'components/common';
 
-const Home = () => (
+export default () => (
   <div>
     <h1>
       <Text>HOME_PAGE</Text>
@@ -13,5 +13,3 @@ const Home = () => (
     <Link to="/counter">Go to counter</Link>
   </div>
 );
-
-export default Home;

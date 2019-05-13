@@ -8,8 +8,6 @@
   "eslint.enable": true,
   "eslint.packageManager": "yarn",
   "files.associations": {
-    "*.js": "javascript",
-    "*.jsx": "javascriptreact",
     "*rc": "json"
   },
   "tslint.jsEnable": false,
