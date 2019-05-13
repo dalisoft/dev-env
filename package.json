@@ -55,7 +55,7 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "test": "jest",
     "lint": "eslint ./src",
     "docs": "docz dev",
     "predeploy": "npm run build",
