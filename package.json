@@ -16,22 +16,6 @@
     "test": "npx -p node@10 npx ava",
     "lint": "npx eslint ./src"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.js": [
-      "prettier --write",
-      "eslint ./src --fix",
-      "git add"
-    ],
-    "src/**/*.{json,md,yml}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dalisoft/graphql-dev-env.git"
