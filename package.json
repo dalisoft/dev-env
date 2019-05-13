@@ -40,15 +40,15 @@
     "unfetch": "^4.1.0"
   },
   "devDependencies": {
-    "babel-eslint": "^9.x",
+    "babel-eslint": "9.x",
     "cross-env": "^5.2.0",
     "docz": "^1.0.0-rc.9",
     "docz-plugin-css": "^0.11.0",
     "docz-theme-default": "^1.0.0-rc.9",
     "eslint": "5.x",
-    "eslint-config-react-app": "^4.0.1",
+    "eslint-config-react-app": "^3.0.8",
     "eslint-config-react-tools": "1.x.x",
-    "eslint-plugin-flowtype": "^3.8.2",
+    "eslint-plugin-flowtype": "2.x",
     "eslint-plugin-import": "2.x",
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": "7.x",
@@ -58,7 +58,7 @@
     "prettier": "^1.17.0",
     "react-scripts": "^3.0.1",
     "react-test-renderer": "^16.8.6",
-    "serve": "11.0.0",
+    "serve": "10.1.2",
     "stylelint": "^10.0.1",
     "stylelint-config-sass-guidelines": "^6.0.0"
   },
