@@ -15,22 +15,6 @@
     "build": "cross-env NODE_ENV=production npm-run-all --parallel build:**",
     "build:functions": "netlify-lambda -c webpack.functions.js build functions"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.js": [
-      "prettier --write",
-      "eslint ./src --fix",
-      "git add"
-    ],
-    "src/**/*.{json,md,yml}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dalisoft/lambda-api-dev-env.git"
