@@ -1,6 +1,7 @@
-import path from "path";
+import path from 'path';
 
 export default {
+  target: 'web',
   /* getRoutes: async () => {
     const { data: posts } = await axios.get(
       'https://jsonplaceholder.typicode.com/posts'
@@ -24,14 +25,14 @@ export default {
   },*/
   plugins: [
     [
-      require.resolve("react-static-plugin-source-filesystem"),
+      require.resolve('react-static-plugin-source-filesystem'),
       {
-        location: path.resolve("./src/pages")
-      }
+        location: path.resolve('./src/pages'),
+      },
     ],
-    require.resolve("react-static-plugin-reach-router"),
-    require.resolve("react-static-plugin-sitemap"),
-    require.resolve("react-static-plugin-sass"),
-    require.resolve("react-static-plugin-css-modules")
-  ]
+    require.resolve('react-static-plugin-reach-router'),
+    require.resolve('react-static-plugin-sitemap'),
+    require.resolve('react-static-plugin-sass'),
+    require.resolve('react-static-plugin-css-modules'),
+  ],
 };

@@ -1,2 +1,4 @@
 *.js
 .docz
+dist
+build
