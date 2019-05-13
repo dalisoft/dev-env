@@ -1,5 +1,5 @@
 import { createReduxHistoryContext, reachify } from 'redux-first-history';
-import createBrowserHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from 'history';
 import { createStore, combineReducers } from 'redaction';
 import { batchedSubscribe } from 'redux-batched-subscribe';
 import { unstable_batchedUpdates } from 'react-dom';

@@ -20,6 +20,7 @@
     "intl": "^1.2.5",
     "lodash.get": "^4.4.2",
     "lodash.mapvalues": "^4.6.0",
+    "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-intl": "^2.8.0",
@@ -38,7 +39,7 @@
     "unfetch": "^4.1.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^9.x",
     "cross-env": "^5.2.0",
     "docz": "^1.0.0-rc.9",
     "docz-plugin-css": "^0.11.0",
