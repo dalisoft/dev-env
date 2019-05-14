@@ -1,7 +1,6 @@
 import path from 'path';
 
 export default {
-  webpack: (config) => Object.assign(config, { target: 'web' }),
   /* getRoutes: async () => {
     const { data: posts } = await axios.get(
       'https://jsonplaceholder.typicode.com/posts'
