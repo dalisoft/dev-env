@@ -1,7 +1,7 @@
 import path from 'path';
 
 export default {
-  siteRoot: process.env.SITE_URL,
+  siteRoot: process.env.FRONT_URL,
   /* getRoutes: async () => {
     const { data: posts } = await axios.get(
       'https://jsonplaceholder.typicode.com/posts'
