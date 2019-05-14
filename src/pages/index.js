@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '@reach/router';
+import { Link } from 'components/Router';
 
 import { Text } from 'components/UI';
 import { LangSwitcher } from 'components/common';

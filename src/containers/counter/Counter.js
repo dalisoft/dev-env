@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from '@reach/router';
+import { Link } from 'components/Router';
 import { connect } from 'redaction';
 
 import { Text } from 'components/UI';
 import { LangSwitcher } from 'components/common';
 
-import { counter as action } from 'redux/actions';
+import { counter as action } from '../../redux/actions';
 
 import './style.css';
 import style from './style.module.css';
