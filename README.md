@@ -6,6 +6,7 @@ This project is modified and prepared as Development Environment for Frontend de
 
 ## Target of project
 
+- Better error logs when `npm run stage` than original `react-static`
 - React PropTypes instead of TypeScript
 - Latest dependecies (stable)
 - i18n support configured
@@ -24,11 +25,9 @@ This project is modified and prepared as Development Environment for Frontend de
 - Good browser support
 - Good structured (subjective)
 
-## Don't use this ENV on production yet (it has bugs!!!)
+## Solution for bugs
 
 1. [`require` is not defined](https://github.com/nozzle/react-static/issues/1164) (See solution below)
-
-2. On Build, `index.html` file is not generating
 
 To use this template, run `react-static create` and use the `basic` template.
 
@@ -39,6 +38,7 @@ To use this template, run `react-static create` and use the `basic` template.
 ### 1. `require` is not defined
 
 ```bash
+$
 $ cd my-react-static-app-folder
 $ cd node_modules
 $ rm -rf react-hot-loader
