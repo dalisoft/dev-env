@@ -2,6 +2,7 @@ import intl from 'intl';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
+
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 
@@ -11,7 +12,11 @@ import App from './App';
 global.Intl = intl; // polyfill for ios 9
 
 // Export your top level component as JSX (for static rendering)
-export default App;
+export default (props) => (
+  <Provider store={store}>
+    <App {...props} />
+  </Provider>
+);
 
 // Render your app
 if (typeof document !== 'undefined') {
@@ -20,7 +25,14 @@ if (typeof document !== 'undefined') {
   const renderMethod = target.hasChildNodes() ? ReactDOM.hydrate : ReactDOM.render;
 
   const render = (Comp) => {
-    renderMethod(<Comp HotLoader={AppContainer} Provider={Provider} store={store} />, target);
+    renderMethod(
+      <Provider store={store}>
+        <AppContainer>
+          <Comp />
+        </AppContainer>
+      </Provider>,
+      target
+    );
   };
 
   // Render!
