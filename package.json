@@ -1,0 +1,52 @@
+{
+  "name": "nextjs-dev-env",
+  "version": "0.1.0",
+  "private": true,
+  "sideEffects": false,
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "classnames": "^2.2.6",
+    "core-js": "^3.0.1",
+    "intl": "^1.2.5",
+    "isomorphic-unfetch": "^3.0.0",
+    "lodash.get": "^4.4.2",
+    "lodash.mapvalues": "^4.6.0",
+    "next": "^8.1.0",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "query-string": "^6.5.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-intl": "^2.8.0",
+    "react-redux": "^7.0.3",
+    "redaction": "^5.1.1",
+    "redux": "^4.0.1",
+    "redux-batched-subscribe": "^0.1.6",
+    "redux-form": "^8.2.0",
+    "suncalc": "^1.8.0"
+  },
+  "devDependencies": {
+    "docz": "^1.0.0-rc.9",
+    "docz-plugin-css": "^0.11.0",
+    "docz-theme-default": "^1.0.0-rc.9",
+    "gh-pages": "^2.0.1",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "prettier": "^1.17.0",
+    "react-scripts": "^3.0.1",
+    "react-test-renderer": "^16.8.6",
+    "stylelint": "^10.0.1",
+    "stylelint-config-sass-guidelines": "^6.0.0"
+  },
+  "scripts": {
+    "dev": "next ./src",
+    "build:server": "next build ./src",
+    "start": "next start ./src",
+    "build:static": "next build && next export -o dist",
+    "test": "SKIP_PREFLIGHT_CHECK=true react-scripts test",
+    "docs": "docz dev",
+    "predeploy": "npm run build:static",
+    "deploy": "gh-pages -d build"
+  },
+  "optionalDependencies": {}
+}
