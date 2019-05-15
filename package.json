@@ -46,7 +46,7 @@
     "eslint": "5.x",
     "eslint-config-react-app": "^3.0.8",
     "eslint-config-react-tools": "1.x.x",
-    "eslint-plugin-flowtype": "2.x",
+    "eslint-plugin-flowtype": "^3.9.0",
     "eslint-plugin-import": "2.x",
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": "7.x",
