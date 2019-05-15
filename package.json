@@ -67,7 +67,7 @@
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-node-resolve": "^5.0.0",
     "rollup-plugin-run": "^1.1.0",
     "rollup-plugin-terser": "^4.0.4",
     "serverless-dotenv-plugin": "^2.1.1",
