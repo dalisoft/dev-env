@@ -1,6 +1,6 @@
 import mapValues from 'lodash.mapvalues';
 
-const { SERVER_URL, FRONT_URL } = process.env;
+const { SERVER_URL } = process.env;
 
 const createLinks = (links, base) => mapValues(links, (link) => `${base}${link}`);
 
@@ -13,4 +13,3 @@ export const api = createLinks(
 );
 
 export const REsitekey = 'YOUR_RESITE_KEY';
-export const DOMAIN = FRONT_URL;
