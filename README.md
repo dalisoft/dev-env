@@ -16,13 +16,14 @@ An modern development environment for Backend development with Fastify
 
 When enabling turbo mode (up to 50% performance improvement), cluster-mode will be unavailable (`turbo-http` limit), so, your app should work in single thread to working properly and avoiding crash.
 For enabling turbo mode you should install `turbo-http` (i prefer this [fork](github:tinchoz49/turbo-http)).
-For Serverless/Lamba we don't recomment using `turbo` mode
+For Serverless/Lamba we don't recommend using `turbo` mode
 
 ## Features
 
-- [NEW]: now.sh serverless works out-of-the-box (tested)
-- [NEW]: Netlify Functions works out-of-the-box (tested)
-- [NEW]: On Serverless servers (like AWS) should work (tested locally with Serverless)
+- [NEW] GraphQL Apollo Server was implemented (no Subscription works)
+- now.sh serverless works out-of-the-box (tested)
+- Netlify Functions works out-of-the-box (tested)
+- On Serverless servers (like AWS) should work (tested locally with Serverless)
 - Speeds-up your development time
 - Fast backend (very good performance)
 - Can be enable Turbo mode (by specify `TURBO_HTTP=true` env variable)

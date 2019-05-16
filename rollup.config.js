@@ -17,7 +17,21 @@ export default {
     file: './build/server.js',
     esModule: false
   },
-  external: Object.keys(pkg.dependencies).concat(['crypto']),
+  external: Object.keys(pkg.dependencies).concat([
+    'crypto',
+    'fs',
+    'events',
+    'url',
+    'http',
+    'https',
+    'http2',
+    'path',
+    'os',
+    'stream',
+    'tls',
+    'net',
+    'zlib'
+  ]),
   plugins: [
     json(),
     resolve({
