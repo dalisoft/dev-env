@@ -1,10 +1,13 @@
 import { ApolloServer } from 'apollo-server-fastify';
 import schema from '../graphql/schema';
+import { dev } from '../config.js';
 
 export default async (fastify) => {
-  const server = new ApolloServer({
+  const apollo = new ApolloServer({
     schema,
-    playground: { version: '1.7.25' }
+    playground: dev && { version: '1.7.25' }
   });
-  fastify.register(server.createHandler());
+  // Add subscription support
+  apollo.installSubscriptionHandlers(fastify.server);
+  return fastify.register(apollo.createHandler());
 };

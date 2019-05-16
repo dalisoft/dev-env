@@ -20,7 +20,7 @@ For Serverless/Lamba we don't recommend using `turbo` mode
 
 ## Features
 
-- [NEW] GraphQL Apollo Server was implemented (no Subscription works)
+- [NEW] GraphQL Apollo Server was implemented (with Subscription feature)
 - now.sh serverless works out-of-the-box (tested)
 - Netlify Functions works out-of-the-box (tested)
 - On Serverless servers (like AWS) should work (tested locally with Serverless)
