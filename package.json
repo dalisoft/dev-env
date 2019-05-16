@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/dalisoft/fastify-dev-env#readme",
   "dependencies": {
-    "@dalisoft/cache-ttl": "^0.3.11",
+    "@dalisoft/cache-ttl": "^0.3.12",
     "@dalisoft/cookie": "0.0.4",
     "apollo-server-fastify": "^2.5.0",
     "aws-serverless-express": "^3.3.6",
