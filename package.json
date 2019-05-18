@@ -2,9 +2,10 @@
   "name": "react-static-dev-env",
   "private": true,
   "scripts": {
-    "start": "react-static start",
+    "clean": "rm -rf dist artifacts tmp",
+    "start": "npm run clean && react-static start",
     "stage": "cross-env NODE_ENV=development react-static build --staging",
-    "build": "react-static build",
+    "build": "npm run clean && react-static build",
     "analyze": "react-static build --analyze",
     "serve": "serve dist -p 3000",
     "test": "cross-env SKIP_PREFLIGHT_CHECK=true react-scripts test",
