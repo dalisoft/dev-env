@@ -12,4 +12,10 @@ if (process.env.NODE_ENV === 'development') {
   } catch (e) {
     // Zeit now server failed
   }
+
+  // Catch warnings at process
+  typeof process !== 'undefined' &&
+    process.on('warning', (warning) => {
+      consolemd.log('!#yellow([*Server*]:)', warning.stack);
+    });
 }

@@ -3,6 +3,7 @@ service: fastify-dev-env-serverless
 provider:
   name: aws
   runtime: nodejs8
+  websocketsApiRouteSelectionExpression: '$request.body.type'
 
 # Functions
 functions:
@@ -14,8 +15,23 @@ functions:
       - http:
           path: '{proxy+}'
           method: any
+      - websocket:
+          routeKey: $connect
+      - websocket:
+          routeKey: $disconnect
+  connect:
+    handler: handler.connect
+    events:
+      - websocket:
+          route: $connect
+  disconnect:
+    handler: handler.disconnect
+    events:
+      - websocket:
+          route: $disconnect
 
 # Plugins
 plugins:
   - serverless-dotenv-plugin
   - serverless-offline
+  - serverless-websockets-plugin

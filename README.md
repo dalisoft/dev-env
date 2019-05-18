@@ -16,11 +16,17 @@ An modern development environment for Backend development with Fastify
 
 When enabling turbo mode (up to 50% performance improvement), cluster-mode will be unavailable (`turbo-http` limit), so, your app should work in single thread to working properly and avoiding crash.
 For enabling turbo mode you should install `turbo-http` (i prefer this [fork](github:tinchoz49/turbo-http)).
-For Serverless/Lamba we don't recommend using `turbo` mode
+For Serverless/Lamba we don't recommend using `turbo` mode as turbo mode may not work properly or even crash
 
 ### Websocket and Lambda/Serverless
 
 When using Netlify, now.sh v2 (serverless) - WebSocket (and GraphQL subscription) may not work until providers implements WebSocket. I am sorry
+
+WebSocket not working in Serverless mode (even on AWS/GCloud), even i tried to configure, PR is welcome
+
+### GraphQL / Apollo
+
+I don't know why, but it doesn't work in Serverless mode and i don't know how to configure right, PR is welcome
 
 ## Features
 
