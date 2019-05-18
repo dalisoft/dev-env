@@ -3,17 +3,6 @@
   "version": "0.1.0",
   "description": "Docker templates for most commonly used DB",
   "private": true,
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{json,md,yml}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dalisoft/docker-db-templates.git"
@@ -34,8 +23,8 @@
   },
   "homepage": "https://github.com/dalisoft/docker-db-templates#readme",
   "devDependencies": {
-    "husky": "^2.2.0",
-    "lint-staged": "^8.1.6",
-    "prettier": "^1.17.0"
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "prettier": "^1.17.1"
   }
 }
