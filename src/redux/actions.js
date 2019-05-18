@@ -1,3 +1,3 @@
-import * as counter from "pages/counter/actions"
+import * as counter from "components/Counter/actions"
 
 export { counter }
