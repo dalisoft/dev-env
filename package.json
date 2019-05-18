@@ -11,7 +11,7 @@
     "test": "ava",
     "lint": "eslint ./src",
     "dev": "cross-env NODE_ENV=development npm-run-all --parallel dev:server dev:functions dev:serverless dev:now",
-    "dev:server": "rollup -c -w --trace-warnings",
+    "dev:server": "rollup -c -w",
     "dev:watch-server": "cross-env NODE_ENV=development rollup -c -w",
     "dev:functions": "netlify-lambda -c webpack.functions.js serve functions",
     "dev:serverless": "sls offline",
