@@ -18,9 +18,13 @@ When enabling turbo mode (up to 50% performance improvement), cluster-mode will 
 For enabling turbo mode you should install `turbo-http` (i prefer this [fork](github:tinchoz49/turbo-http)).
 For Serverless/Lamba we don't recommend using `turbo` mode
 
+### Websocket and Lambda/Serverless
+
+When using Netlify, now.sh v2 (serverless) - WebSocket (and GraphQL subscription) may not work until providers implements WebSocket. I am sorry
+
 ## Features
 
-- [NEW] GraphQL Apollo Server was implemented (with Subscription feature)
+- GraphQL Apollo Server was implemented (with Subscription feature)
 - now.sh serverless works out-of-the-box (tested)
 - Netlify Functions works out-of-the-box (tested)
 - On Serverless servers (like AWS) should work (tested locally with Serverless)
