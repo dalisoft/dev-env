@@ -71,6 +71,11 @@
     "max-len": [
       "error",
       120
-    ]
+    ],
+    "no-dupe-args": "error",
+    "no-dupe-keys": "error",
+    "no-duplicate-imports": "error",
+    "no-duplicate-case": "error",
+    "no-dupe-class-members": "error"
   }
 }

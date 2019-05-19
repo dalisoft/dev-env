@@ -17,30 +17,30 @@ export default {
     file: './build/server.js',
     esModule: false
   },
-  external: Object.keys(pkg.dependencies).concat([
-    'crypto',
-    'fs',
-    'events',
-    'url',
-    'http',
-    'https',
-    'http2',
-    'path',
-    'os',
-    'stream',
-    'tls',
-    'net',
-    'zlib'
-  ]),
+  external: Object.keys(pkg.dependencies)
+    .concat(Object.keys(pkg.devDependencies))
+    .concat([
+      'crypto',
+      'fs',
+      'events',
+      'url',
+      'http',
+      'https',
+      'http2',
+      'path',
+      'os',
+      'stream',
+      'tls',
+      'net',
+      'zlib'
+    ]),
   plugins: [
     json(),
     resolve({
-      mainFields: ['module', 'main'],
-      preferBuiltins: true
+      mainFields: ['module']
     }),
     commonjs({
-      sourceMap: false,
-      namedExports: { ws: ['Server', 'Client'] }
+      sourceMap: false
     }),
     !dev &&
       !watch &&

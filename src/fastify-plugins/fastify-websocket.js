@@ -1,6 +1,6 @@
 import { corsWhitelist } from '../config';
 import { wsWrap } from '../helpers';
-import { Server } from 'ws';
+import Server from 'ws/lib/websocket-server';
 import fastifyPlugin from 'fastify-plugin';
 
 export default fastifyPlugin((fastify, options, next) => {
