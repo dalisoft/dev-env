@@ -13,12 +13,12 @@
     "dev": "cross-env NODE_ENV=development npm-run-all --parallel dev:server dev:functions dev:serverless dev:now",
     "dev:server": "rollup -c -w",
     "dev:watch-server": "cross-env NODE_ENV=development rollup -c -w",
-    "dev:functions": "netlify-lambda -c webpack.functions.js serve functions",
+    "dev:functions": "cross-env NETLIFY_ENV=true netlify-lambda -c webpack.functions.js serve functions",
     "dev:serverless": "sls offline",
     "dev:now": "now dev",
     "build": "cross-env NODE_ENV=production npm-run-all --parallel build:**",
     "build:server": "rollup -c",
-    "build:functions": "netlify-lambda -c webpack.functions.js build functions"
+    "build:functions": "cross-env NETLIFY_ENV=true netlify-lambda -c webpack.functions.js build functions"
   },
   "repository": {
     "type": "git",
