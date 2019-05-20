@@ -8,3 +8,4 @@ rollup.config.js
 serverless.yml
 test.js
 webpack.functions.js
+.webpack
