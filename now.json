@@ -2,7 +2,8 @@
   "version": 2,
   "env": {
     "secretKey": "some-secret-password-at-least-32-characters-long",
-    "jwtSecretKey": "some-secret-password-at-least-32-characters-long-2"
+    "jwtSecretKey": "some-secret-password-at-least-32-characters-long-2",
+    "GRAPHIQL": true
   },
   "builds": [
     {

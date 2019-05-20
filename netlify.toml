@@ -3,6 +3,6 @@
   command = "npm run build:functions"
   # This is the directory is publishing to netlify's CDN
   # and this is directory of your front of your app
-  publish = "build"
+  # publish = "build"
   # functions build directory
   functions = "functions-build"
