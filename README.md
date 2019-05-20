@@ -26,7 +26,7 @@ WebSocket not working in Serverless mode (even on AWS/GCloud), even i tried to c
 
 ### GraphQL / Apollo
 
-I don't know why, but it doesn't work in Serverless mode and i don't know how to configure right, PR is welcome
+I don't know why, but it doesn't work in Serverless (Netlify Functions, GCloud, AWS Lambda, etc) mode and i don't know how to configure right, PR is welcome
 
 ## Features
 

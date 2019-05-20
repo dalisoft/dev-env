@@ -13,12 +13,12 @@
     "dev": "cross-env NODE_ENV=development npm-run-all --parallel dev:server dev:functions dev:serverless dev:now",
     "dev:server": "rollup -c -w",
     "dev:watch-server": "cross-env NODE_ENV=development rollup -c -w",
-    "dev:functions": "cross-env netlify-lambda -c webpack.functions.js serve functions",
+    "dev:functions": "cross-env NETLIFY_ENV=true netlify-lambda -c webpack.functions.js serve functions",
     "dev:serverless": "sls offline",
     "dev:now": "now dev",
     "build": "cross-env NODE_ENV=production npm-run-all --parallel build:**",
     "build:server": "rollup -c",
-    "build:functions": "cross-env netlify-lambda -c webpack.functions.js build functions"
+    "build:functions": "netlify-lambda -c webpack.functions.js build functions"
   },
   "repository": {
     "type": "git",
@@ -63,7 +63,7 @@
     "eslint": "^5.16.0",
     "husky": "^2.3.0",
     "lint-staged": "^8.1.7",
-    "netlify-lambda": "^1.4.11",
+    "netlify-lambda": "^1.4.7",
     "nodemon": "^1.19.0",
     "now": "^15.2.0",
     "npm-run-all": "^4.1.5",

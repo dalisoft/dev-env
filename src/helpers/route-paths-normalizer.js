@@ -1,4 +1,4 @@
-import consolemd from 'consolemd';
+import { consolemd } from '../helpers';
 
 // Constants
 const specialWebSocket = 'ws';

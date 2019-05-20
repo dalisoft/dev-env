@@ -1,4 +1,4 @@
-import console from 'consolemd';
+import { consolemd } from '../../helpers';
 import * as translations from '../translations';
 
 export default async (error, request, res) => {
@@ -40,8 +40,8 @@ export default async (error, request, res) => {
       .filter((e, i, s) => s.indexOf(e) === i)
     : error.stack_trace;
 
-  console.log('#red([*Server*]: error was happened', '\n');
-  console.log('#red(' + stack + ')');
+  consolemd.log('#red([*Server*]: error was happened', '\n');
+  consolemd.log('#red(' + stack + ')');
 
   return {
     status: 'error',

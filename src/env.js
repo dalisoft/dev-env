@@ -1,5 +1,5 @@
 import dotenvSafe from 'dotenv-safe';
-import consolemd from 'consolemd';
+import { consolemd } from './helpers';
 
 if (process.env.NODE_ENV === 'development') {
   // Zeit now can cause fail this method

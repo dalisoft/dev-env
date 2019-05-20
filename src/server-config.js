@@ -23,7 +23,13 @@ if (PURE && HTTP2 && JSON.parse(HTTP2)) {
   }
 }
 
-if (TURBO_HTTP && JSON.parse(TURBO_HTTP) === true) {
+if (
+  TURBO_HTTP &&
+  JSON.parse(TURBO_HTTP) === true &&
+  typeof require !== 'undefined' &&
+  require.main === module &&
+  process.env.NETLIFY_ENV === undefined
+) {
   // This prevents module to be loading when
   // variable is FALSE or turbo-http module
   // is not installed

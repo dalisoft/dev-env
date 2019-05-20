@@ -1,5 +1,5 @@
 import awsServerlessExpress from 'aws-serverless-express';
-import fastify from '../src/server';
+import fastify from '../src/instance';
 
 let server;
 const serverFactory = (handler) => {
@@ -11,8 +11,10 @@ const app = fastify(serverFactory);
 
 exports.handler = (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
-  app.ready((e) => {
-    if (e) return console.error(e.stack || e);
+  app.ready((err) => {
+    if (err) {
+      return console.error(err.stack || err);
+    }
     awsServerlessExpress.proxy(server, event, context, 'CALLBACK', callback);
   });
 };

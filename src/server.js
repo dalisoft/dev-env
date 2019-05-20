@@ -1,5 +1,5 @@
 const time = Date.now(); // For better managing start-time / lags
-import consolemd from 'consolemd';
+import { consolemd } from './helpers';
 
 import app from './instance';
 
