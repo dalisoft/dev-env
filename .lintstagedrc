@@ -10,9 +10,7 @@
       "git add"
     ],
     "ignore": [
-      "**/build/*.js",
-      "**/tmp/*.js",
-      "**/artifacts/*.js"
+      "**/build/*.js"
     ]
   }
 }
