@@ -18,6 +18,9 @@ export default (serverFactory) => {
   app
     .register(fastifyHandler)
     .register(fastifyPlugins)
+    .register(fastifyPlugins, {
+      prefix: '.netlify/functions/server' // Netlify Serverless compatibility
+    })
     .register(routePathsNormalizer(appMiddlewares, appRoutes))
     .register(routePathsNormalizer(appMiddlewares, appRoutes), {
       prefix: '.netlify/functions/server' // Netlify Serverless compatibility

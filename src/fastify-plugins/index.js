@@ -9,7 +9,7 @@ import jwt from './fastify-jwt';
 import ws from './fastify-websocket';
 import apollo from './fastify-apollo-server';
 
-export default async (fastify) =>
+export default async (fastify, options) =>
   fastify
     .register(openapi)
     .register(normalize)
@@ -20,4 +20,4 @@ export default async (fastify) =>
     .register(compress)
     .register(jwt)
     .register(ws)
-    .register(apollo);
+    .register(apollo, options);
