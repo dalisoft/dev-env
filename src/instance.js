@@ -20,10 +20,10 @@ export default (serverFactory) => {
   if (process.env.NETLIFY_ENV !== undefined) {
     app
       .register(fastifyPlugins, {
-        prefix: '.netlify/functions/server' // Netlify Serverless compatibility
+        prefix: '.netlify/functions/server' // Netlify Functions compatibility
       })
       .register(routePathsNormalizer(appMiddlewares, appRoutes), {
-        prefix: '.netlify/functions/server' // Netlify Serverless compatibility
+        prefix: '.netlify/functions/server' // Netlify Functions compatibility
       });
   } else {
     app
