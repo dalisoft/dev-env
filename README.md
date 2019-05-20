@@ -22,11 +22,7 @@ For Serverless/Lamba we don't recommend using `turbo` mode as turbo mode may not
 
 When using Netlify, now.sh v2 (serverless) - WebSocket (and GraphQL subscription) may not work until providers implements WebSocket. I am sorry
 
-WebSocket not working in Serverless mode (even on AWS/GCloud), even i tried to configure, PR is welcome
-
-### GraphQL / Apollo
-
-I don't know why, but it doesn't work in Serverless (Netlify Functions, GCloud, AWS Lambda, etc) mode and i don't know how to configure right, PR is welcome
+WebSocket not working in Serverless mode (even on AWS/GCloud), even i tried to configure, but can't get it work. PR is welcome
 
 ## Features
 
