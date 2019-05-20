@@ -1,5 +1,5 @@
-const awsServerlessExpress = require('aws-serverless-express');
-const fastify = require('./build/server');
+import awsServerlessExpress from 'aws-serverless-express';
+import fastify from './src/server';
 
 let server;
 const serverFactory = (handler) => {
@@ -9,7 +9,7 @@ const serverFactory = (handler) => {
 
 const app = fastify(serverFactory);
 
-exports.handler = (event, context, callback) => {
+export default (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
   app.ready((e) => {
     if (e) return console.error(e.stack || e);

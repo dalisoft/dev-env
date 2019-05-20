@@ -14,25 +14,22 @@ export default (serverFactory) => {
   if (serverFactory) {
     fastifyConfig.serverFactory = serverFactory;
   }
+  const config = {};
   const app = fastify(fastifyConfig);
 
   app.register(fastifyHandler);
 
   if (process.env.NETLIFY_ENV) {
     if (dev) {
-      app.register(routePathsNormalizer(appMiddlewares, appRoutes), {
-        prefix: 'server' // Netlify Functions compatibility
-      });
-      app.register(fastifyPlugins, {
-        prefix: 'server' // Netlify Functions compatibility
-      });
+      // Netlify Functions DEV-mode compatibility
+      config.prefix = 'server';
+      app.register(fastifyPlugins, config);
+      app.register(routePathsNormalizer(appMiddlewares, appRoutes), config);
     } else {
-      app.register(routePathsNormalizer(appMiddlewares, appRoutes), {
-        prefix: '.netlify/functions/server' // Netlify Functions compatibility
-      });
-      app.register(fastifyPlugins, {
-        prefix: '.netlify/functions/server' // Netlify Functions compatibility
-      });
+      // Netlify Functions PROD-mode compatibility
+      config.prefix = '.netlify/functions/server';
+      app.register(fastifyPlugins, config);
+      app.register(routePathsNormalizer(appMiddlewares, appRoutes), config);
     }
   } else {
     app

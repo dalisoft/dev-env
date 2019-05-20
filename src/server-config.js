@@ -28,7 +28,7 @@ if (
   JSON.parse(TURBO_HTTP) === true &&
   typeof require !== 'undefined' &&
   require.main === module &&
-  process.env.NETLIFY_ENV === undefined
+  process.env.NETLIFY_ENV
 ) {
   // This prevents module to be loading when
   // variable is FALSE or turbo-http module

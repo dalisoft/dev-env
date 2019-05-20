@@ -5,6 +5,7 @@
   "main": "build/server.js",
   "module": "src/server.js",
   "private": true,
+  "sideEffects": false,
   "scripts": {
     "start": "node build/server.js",
     "start:dev": "cross-env NODE_ENV=development nodemon build/server.js",
@@ -13,7 +14,7 @@
     "dev": "cross-env NODE_ENV=development npm-run-all --parallel dev:server dev:functions dev:serverless dev:now",
     "dev:server": "rollup -c -w",
     "dev:watch-server": "cross-env NODE_ENV=development rollup -c -w",
-    "dev:functions": "cross-env NETLIFY_ENV=true netlify-lambda -c webpack.functions.js serve functions",
+    "dev:functions": "netlify-lambda -c webpack.functions.js serve functions",
     "dev:serverless": "sls offline",
     "dev:now": "now dev",
     "build": "cross-env NODE_ENV=production npm-run-all --parallel build:**",
@@ -39,6 +40,7 @@
     "@dalisoft/cache-ttl": "^0.3.12",
     "@dalisoft/cookie": "0.0.4",
     "apollo-server-fastify": "^2.5.0",
+    "apollo-server-lambda": "^2.5.0",
     "aws-serverless-express": "^3.3.6",
     "consolemd": "^0.2.1",
     "dotenv-safe": "^6.1.0",
@@ -59,6 +61,7 @@
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "ava": "^1.4.1",
+    "babel-loader": "^8.0.6",
     "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
     "husky": "^2.3.0",
@@ -78,8 +81,10 @@
     "serverless": "^1.42.3",
     "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^4.10.0",
+    "serverless-webpack": "^5.3.0",
     "serverless-websockets-plugin": "^1.0.0",
-    "shebang-loader": "0.0.1"
+    "shebang-loader": "0.0.1",
+    "webpack-node-externals": "^1.7.2"
   },
   "optionalDependencies": {
     "@dalisoft/ws-events-sync": "0.0.9",

@@ -7,9 +7,16 @@ provider:
 
 # Functions
 functions:
+  fastify-graphql-api:
+    name: ${self:service}-${self:provider.stage}-fastify-graphql-api
+    handler: graphql.default
+    events:
+      - http:
+          path: graphql
+          method: any
   fastify-serverless-api:
     name: ${self:service}-${self:provider.stage}-fastify-serverless-api
-    handler: lambda.handler
+    handler: lambda.default
     timeout: 30
     events:
       - http:
@@ -20,12 +27,12 @@ functions:
       - websocket:
           routeKey: $disconnect
   connect:
-    handler: handler.connect
+    handler: lambda.connect
     events:
       - websocket:
           route: $connect
   disconnect:
-    handler: handler.disconnect
+    handler: lambda.disconnect
     events:
       - websocket:
           route: $disconnect
@@ -33,5 +40,16 @@ functions:
 # Plugins
 plugins:
   - serverless-dotenv-plugin
+  - serverless-webpack
   - serverless-offline
   - serverless-websockets-plugin
+
+# serverless optimization
+package:
+  individually: true
+# serverless-webpack configuration
+# Enable auto-packing of external modules
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true

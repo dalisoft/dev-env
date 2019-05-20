@@ -6,16 +6,13 @@ if (process.env.NODE_ENV === 'development') {
   // So we just wrapped it within try/catch
   // To avoid error and avoid crash of server
   // Now.sh local server
+  consolemd.log('!#green([*Server*]: started in *DEVELOPMENT* mode)');
   try {
-    dotenvSafe.config();
-    consolemd.log('!#green([*Server*]: started in *DEVELOPMENT* mode)');
+    dotenvSafe.config({ allowEmptyValues: true });
   } catch (e) {
-    // Zeit now server failed
+    consolemd.log(
+      '!#red([*Server*]: error while setting ENV variables, ' +
+        'i think you using Zeit NOW hosting, don\'t worry, your backend still works)'
+    );
   }
-
-  // Catch warnings at process
-  typeof process !== 'undefined' &&
-    process.on('warning', (warning) => {
-      consolemd.log('!#yellow([*Server*]:)', warning.stack);
-    });
 }
