@@ -17,7 +17,7 @@ export default (serverFactory) => {
 
   app.register(fastifyHandler);
 
-  if (process.env.NETLIFY_ENV !== undefined) {
+  if (process.env.NETLIFY_ENV) {
     app
       .register(fastifyPlugins, {
         prefix: '.netlify/functions/server' // Netlify Functions compatibility
