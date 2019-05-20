@@ -1,5 +1,6 @@
 const {
   NODE_ENV,
+  GRAPHIQL,
   DB_HOST: host,
   DB_NAME: db,
   DB_USER: username,
@@ -51,9 +52,12 @@ const cookie = {
   path: COOKIE_PATH
 };
 
+const graphiql = dev || GRAPHIQL;
+
 export {
   dbConfig,
   dev,
+  graphiql,
   log,
   test,
   prod,
