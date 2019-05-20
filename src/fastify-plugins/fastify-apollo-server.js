@@ -10,7 +10,5 @@ export default async (fastify, { prefix = '' } = {}) => {
   // Add subscription support
   apollo.installSubscriptionHandlers(fastify.server);
 
-  console.log('Logged graphql path', { path: prefix + '/graphql' });
-
   return fastify.register(apollo.createHandler({ path: prefix + '/graphql' }));
 };
