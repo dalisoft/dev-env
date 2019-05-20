@@ -15,16 +15,21 @@ export default (serverFactory) => {
   }
   const app = fastify(fastifyConfig);
 
-  app
-    .register(fastifyHandler)
-    .register(fastifyPlugins)
-    .register(fastifyPlugins, {
-      prefix: '.netlify/functions/server' // Netlify Serverless compatibility
-    })
-    .register(routePathsNormalizer(appMiddlewares, appRoutes))
-    .register(routePathsNormalizer(appMiddlewares, appRoutes), {
-      prefix: '.netlify/functions/server' // Netlify Serverless compatibility
-    });
+  app.register(fastifyHandler);
+
+  if (process.env.NETLIFY_ENV !== undefined) {
+    app
+      .register(fastifyPlugins, {
+        prefix: '.netlify/functions/server' // Netlify Serverless compatibility
+      })
+      .register(routePathsNormalizer(appMiddlewares, appRoutes), {
+        prefix: '.netlify/functions/server' // Netlify Serverless compatibility
+      });
+  } else {
+    app
+      .register(fastifyPlugins)
+      .register(routePathsNormalizer(appMiddlewares, appRoutes));
+  }
 
   return app;
 };
