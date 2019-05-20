@@ -2,7 +2,6 @@
   "name": "fastify-dev-env",
   "version": "0.1.0",
   "description": "An modern development environment for Backend development with Fastify",
-  "main": "build/server.js",
   "module": "src/server.js",
   "private": true,
   "sideEffects": false,

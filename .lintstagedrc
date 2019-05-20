@@ -12,7 +12,8 @@
     "ignore": [
       "**/build/*.js",
       "**/tmp/*.js",
-      "**/artifacts/*.js"
+      "**/functions-build/*.js",
+      "**/.webpack/*.js"
     ]
   }
 }
