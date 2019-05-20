@@ -2,7 +2,7 @@ import { ApolloServer } from 'apollo-server-fastify';
 import schema from '../graphql/schema';
 import { dev } from '../config.js';
 
-export default (fastify, { prefix = '' } = {}) => {
+export default async (fastify, { prefix = '' } = {}) => {
   const apollo = new ApolloServer({
     schema,
     playground: dev && { version: '1.7.25' }
