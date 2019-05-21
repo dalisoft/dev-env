@@ -4,7 +4,6 @@
   "description": "An modern development environment for Backend development with Fastify",
   "module": "src/server.js",
   "private": true,
-  "sideEffects": false,
   "scripts": {
     "start": "node build/server.js",
     "start:dev": "cross-env NODE_ENV=development nodemon build/server.js",

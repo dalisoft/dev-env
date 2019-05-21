@@ -1,3 +1,5 @@
+import './env';
+
 const {
   NODE_ENV,
   GRAPHIQL,

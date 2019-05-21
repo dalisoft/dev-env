@@ -1,4 +1,3 @@
-import './env';
 import fastify from 'fastify';
 import fastifyConfig from './server-config';
 import fastifyPlugins from './fastify-plugins';
