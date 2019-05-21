@@ -1,16 +1,39 @@
 import { ApolloServer } from 'apollo-server-fastify';
 import schema from '../graphql/schema';
-import { dev, corsWhitelist } from '../config.js';
+import { dev, graphiql, corsWhitelist } from '../config.js';
 
 export default async (fastify) => {
   // Create instance
   const apollo = new ApolloServer({
     schema,
-    playground: dev && { version: '1.7.25' }
+    playground: graphiql && { version: '1.7.25' }
   });
 
   // Add subscription support
-  apollo.installSubscriptionHandlers(fastify.server);
+  if (fastify.server) {
+    apollo.installSubscriptionHandlers(fastify.server);
+  }
 
-  return fastify.register(apollo.createHandler({ origin: corsWhitelist }));
+  let path = '';
+  if (process.env.NETLIFY_ENV) {
+    if (dev) {
+      path = '/graphql';
+    } else {
+      path = '.netlify/functions/graphql';
+    }
+  } else {
+    path = '/graphql';
+  }
+
+  return fastify.register(
+    apollo.createHandler({
+      path,
+      cors: {
+        origin: [...corsWhitelist], // Avoid side-effects as this variable can be used elsewhere
+        methods: ['GET', 'POST'],
+        allowedHeaders: ['Content-Type', 'Origin', 'Accept'],
+        credentials: true
+      }
+    })
+  );
 };

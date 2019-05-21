@@ -23,12 +23,12 @@ export default (serverFactory) => {
     if (dev) {
       // Netlify Functions DEV-mode compatibility
       config.prefix = 'server';
-      app.register(fastifyPlugins, config);
+      app.register(fastifyPlugins);
       app.register(routePathsNormalizer(appMiddlewares, appRoutes), config);
     } else {
       // Netlify Functions PROD-mode compatibility
       config.prefix = '.netlify/functions/server';
-      app.register(fastifyPlugins, config);
+      app.register(fastifyPlugins);
       app.register(routePathsNormalizer(appMiddlewares, appRoutes), config);
     }
   } else {

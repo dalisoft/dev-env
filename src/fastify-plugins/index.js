@@ -4,12 +4,11 @@ import helmet from './fastify-helmet';
 import rateLimiter from './fastify-rate-limiter';
 import cookie from 'fastify-cookie';
 import cors from './fastify-cors';
-import compress from 'fastify-compress';
 import jwt from './fastify-jwt';
 import ws from './fastify-websocket';
 import apollo from './fastify-apollo-server';
 
-export default async (fastify, options) =>
+export default async (fastify) =>
   fastify
     .register(openapi)
     .register(normalize)
@@ -17,7 +16,6 @@ export default async (fastify, options) =>
     .register(rateLimiter)
     .register(cookie)
     .register(cors)
-    .register(compress)
     .register(jwt)
     .register(ws)
-    .register(apollo, options);
+    .register(apollo);

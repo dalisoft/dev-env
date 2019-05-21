@@ -9,7 +9,7 @@ const serverFactory = (handler) => {
 
 const app = fastify(serverFactory);
 
-exports.handler = (event, context, callback) => {
+export const handler = (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
   app.ready((err) => {
     if (err) {

@@ -1,11 +1,13 @@
 const time = Date.now(); // For better managing start-time / lags
 import { consolemd } from './helpers';
+import compress from 'fastify-compress';
 
 import app from './instance';
 
 async function start() {
   const port = process.env.PORT || 3000;
   const appInit = app();
+  appInit.register(compress);
   await appInit.listen(port, '0.0.0.0');
   consolemd.log(
     `#green([*Server*]: started successfully at *localhost:${port}* in *${Date.now() -

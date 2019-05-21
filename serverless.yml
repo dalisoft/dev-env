@@ -7,13 +7,6 @@ provider:
 
 # Functions
 functions:
-  fastify-graphql-api:
-    name: ${self:service}-${self:provider.stage}-fastify-graphql-api
-    handler: graphql.default
-    events:
-      - http:
-          path: graphql
-          method: any
   fastify-serverless-api:
     name: ${self:service}-${self:provider.stage}-fastify-serverless-api
     handler: lambda.default
@@ -22,17 +15,18 @@ functions:
       - http:
           path: '{proxy+}'
           method: any
+          cors: true
       - websocket:
           routeKey: $connect
       - websocket:
           routeKey: $disconnect
   connect:
-    handler: lambda.connect
+    handler: lambda.app
     events:
       - websocket:
           route: $connect
   disconnect:
-    handler: lambda.disconnect
+    handler: lambda.app
     events:
       - websocket:
           route: $disconnect
