@@ -8,14 +8,17 @@ import jwt from './fastify-jwt';
 import ws from './fastify-websocket';
 import apollo from './fastify-apollo-server';
 
-export default async (fastify) =>
+import pluginsWrap from 'fastify-plugin';
+
+export default pluginsWrap(async (fastify) =>
   fastify
-    .register(openapi)
     .register(normalize)
-    .register(helmet)
     .register(rateLimiter)
     .register(cookie)
     .register(cors)
+    .register(helmet)
     .register(jwt)
     .register(ws)
-    .register(apollo);
+    .register(apollo)
+    .register(openapi)
+);

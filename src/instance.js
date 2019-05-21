@@ -1,8 +1,8 @@
 import fastify from 'fastify';
+import { dev } from './config';
 import fastifyConfig from './server-config';
 import fastifyPlugins from './fastify-plugins';
 import fastifyHandler from './errors';
-import { dev } from './config';
 
 import { routePathsNormalizer } from './helpers';
 
@@ -17,23 +17,20 @@ export default (serverFactory) => {
   const app = fastify(fastifyConfig);
 
   app.register(fastifyHandler);
+  app.register(fastifyPlugins);
 
   if (process.env.NETLIFY_ENV) {
     if (dev) {
       // Netlify Functions DEV-mode compatibility
       config.prefix = 'server';
-      app.register(fastifyPlugins);
       app.register(routePathsNormalizer(appMiddlewares, appRoutes), config);
     } else {
       // Netlify Functions PROD-mode compatibility
       config.prefix = '.netlify/functions/server';
-      app.register(fastifyPlugins);
       app.register(routePathsNormalizer(appMiddlewares, appRoutes), config);
     }
   } else {
-    app
-      .register(fastifyPlugins)
-      .register(routePathsNormalizer(appMiddlewares, appRoutes));
+    app.register(routePathsNormalizer(appMiddlewares, appRoutes));
   }
 
   return app;
