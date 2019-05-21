@@ -74,7 +74,7 @@
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.0.0",
     "rollup-plugin-run": "^1.1.0",
-    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-terser": "^5.0.0",
     "serverless": "^1.43.0",
     "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^4.10.5",
