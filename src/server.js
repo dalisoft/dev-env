@@ -1,8 +1,9 @@
 const time = Date.now(); // For better managing start-time / lags
-import { consolemd } from './helpers';
-import compress from 'fastify-compress';
 
 import app from './instance';
+
+import compress from 'fastify-compress';
+import { consolemd } from './helpers';
 
 async function start() {
   const port = process.env.PORT || 3000;
