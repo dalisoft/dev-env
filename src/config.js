@@ -34,7 +34,9 @@ const dbConfig = {
 };
 const test = NODE_ENV === 'test';
 const prod = NODE_ENV === 'production' || !NODE_ENV;
-const corsWhitelist = [FRONT_URL || '*'];
+const corsWhitelist = [FRONT_URL, dev && 'http://localhost:' + port].filter(
+  (url) => url
+);
 const jwt = {
   expiresIn: 7200000 /* 2 hour */
 };

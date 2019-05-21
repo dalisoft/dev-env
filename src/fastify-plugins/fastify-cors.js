@@ -4,6 +4,7 @@ import fastifyPlugin from 'fastify-plugin';
 
 export default fastifyPlugin(async (fastify) =>
   fastify.addHook('onRequest', (req, res, next) => {
+    // eslint-disable-next-line no-unused-vars
     const { headers, cookies, raw } = req;
     const requestAllowedHeaders = headers['access-control-request-headers'];
     const { origin, host, vary } = headers;
@@ -34,7 +35,7 @@ export default fastifyPlugin(async (fastify) =>
           : `https://${host}`;
         const httpOrigin = host.startsWith('http://') ? host : `http://${host}`;
 
-        if (raw.method === 'GET' || corsWhitelist.includes(httpsOrigin)) {
+        if (corsWhitelist.includes(httpsOrigin)) {
           return next();
         } else if (!cookie.secure && corsWhitelist.includes(httpOrigin)) {
           return next();

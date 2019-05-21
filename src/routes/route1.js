@@ -20,9 +20,13 @@ export default {
           message: 'post on /post/profile/' + req.params.id
         }),
         '/verify': {
-          '/{id}': {
+          '/{token}': {
             put: async (req) => ({
-              message: 'put on /post/profile/:id/verify/' + req.params.id
+              message:
+                'put on /post/profile/' +
+                req.params.id +
+                '/verify/' +
+                req.params.token
             })
           },
           post: async (req) => ({
