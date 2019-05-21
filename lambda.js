@@ -9,10 +9,12 @@ const serverFactory = (handler) => {
 
 const app = fastify(serverFactory);
 
-export default (event, context, callback) => {
+export const handler = (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
-  app.ready((e) => {
-    if (e) return console.error(e.stack || e);
+  app.ready((err) => {
+    if (err) {
+      return console.error(err.stack || err);
+    }
     awsServerlessExpress.proxy(server, event, context, 'CALLBACK', callback);
   });
 };

@@ -9,7 +9,7 @@ provider:
 functions:
   fastify-serverless-api:
     name: ${self:service}-${self:provider.stage}-fastify-serverless-api
-    handler: lambda.default
+    handler: lambda.handler
     timeout: 30
     events:
       - http:
@@ -21,12 +21,12 @@ functions:
       - websocket:
           routeKey: $disconnect
   connect:
-    handler: lambda.app
+    handler: lambda.handler
     events:
       - websocket:
           route: $connect
   disconnect:
-    handler: lambda.app
+    handler: lambda.handler
     events:
       - websocket:
           route: $disconnect
