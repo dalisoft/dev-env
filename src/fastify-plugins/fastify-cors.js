@@ -4,7 +4,7 @@ import fastifyPlugin from 'fastify-plugin';
 
 export default fastifyPlugin(async (fastify) =>
   fastify.addHook('onRequest', (req, res, next) => {
-    const { headers, cookies } = req;
+    const { headers, cookies, method } = req;
     const requestAllowedHeaders = headers['access-control-request-headers'];
     const { origin, host, vary } = headers;
 
@@ -34,7 +34,7 @@ export default fastifyPlugin(async (fastify) =>
           : `https://${host}`;
         const httpOrigin = host.startsWith('http://') ? host : `http://${host}`;
 
-        if (corsWhitelist.includes(httpsOrigin)) {
+        if (method === 'GET' || corsWhitelist.includes(httpsOrigin)) {
           return next();
         } else if (!cookie.secure && corsWhitelist.includes(httpOrigin)) {
           return next();
