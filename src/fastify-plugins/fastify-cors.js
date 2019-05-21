@@ -2,7 +2,7 @@ import { corsWhitelist, cookie } from '../config';
 import { hasKeyObj } from '../helpers';
 import fastifyPlugin from 'fastify-plugin';
 
-export default fastifyPlugin(async (fastify, options, next) => {
+export default fastifyPlugin(async (fastify) =>
   fastify.addHook('onRequest', (req, res, next) => {
     const { headers, cookies } = req;
     const requestAllowedHeaders = headers['access-control-request-headers'];
@@ -53,6 +53,5 @@ export default fastifyPlugin(async (fastify, options, next) => {
     err.statusCode = 403;
 
     next(err);
-  });
-  next();
-});
+  })
+);
