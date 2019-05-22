@@ -11,6 +11,14 @@ if (dev) {
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
   devtool: dev ? 'eval-source-map' : 'none',
+  devServer: {
+    proxy: {
+      '/.netlify': {
+        target: 'http://localhost:9000',
+        pathRewrite: { '^/.netlify/functions': '' }
+      }
+    }
+  },
   module: {
     rules: [
       {
