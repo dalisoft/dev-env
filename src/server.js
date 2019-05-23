@@ -13,84 +13,90 @@ import { readBody } from './helpers';
 
 const app = uWS.App({});
 
-app.get('/', (res) => {
-  // res.experimental_cork(() => {
-  res.writeHeader('content-type', 'application/json');
-  res.end(JSON.stringify({ status: 'ok' }));
-  // });
+app.get('/', async (res) => {
+  res.experimental_cork(() => {
+    res.writeHeader('Content-Type', 'application/json');
+    res.end('{"status":"ok"}');
+  });
 });
 app.get('/graphql', (res) => {
-  res.writeHeader('content-type', 'application/json');
-  res.end(
-    JSON.stringify({
-      status: 'error',
-      message: 'Only POST method allowed for this route'
-    })
-  );
-});
-app.post('/graphql', async (res, req) => {
-  const originHeader = req.getHeader('origin');
-
-  res.writeHeader('content-type', 'application/json');
-  res.writeHeader(
-    'Access-Control-Allow-Headers',
-    'origin, content-type, accept'
-  );
-  res.writeHeader('Access-Control-Allow-Methods', 'POST');
-
-  if (origin) {
-    res.writeHeader('Access-Control-Allow-Origin', origin);
-
-    if (origin !== originHeader) {
-      return {
+  res.experimental_cork(() => {
+    res.writeHeader('content-type', 'application/json');
+    res.end(
+      JSON.stringify({
         status: 'error',
-        message: 'Declined by CORS'
-      };
-    }
-  }
-
+        message: 'Only POST method allowed for this route'
+      })
+    );
+  });
+});
+app.post('/graphql', (res, req) => {
   let graphqlQuery = '';
   let variables = {};
   let operationName;
 
-  let body = await readBody(res);
+  const originHeader = req.getHeader('origin');
 
-  if (body.startsWith('{')) {
-    body = JSON.parse(body);
+  res.experimental_cork(async () => {
+    res.writeHeader('content-type', 'application/json');
+    res.writeHeader(
+      'Access-Control-Allow-Headers',
+      'origin, content-type, accept'
+    );
+    res.writeHeader('Access-Control-Allow-Methods', 'POST');
 
-    for (const key in body) {
-      const value = body[key];
-      if (!value) {
-        continue;
-      } else if (key === 'query' || key === 'mutation') {
-        if (value.includes(key)) {
-          graphqlQuery += value;
-        } else {
-          graphqlQuery += key + ' ' + value;
-        }
-      } else if (key === 'variables') {
-        variables = value;
-      } else if (key === 'operationName') {
-        operationName = value;
+    if (origin) {
+      res.writeHeader('Access-Control-Allow-Origin', origin);
+
+      if (origin !== originHeader) {
+        return res.end(
+          JSON.stringify({
+            status: 'error',
+            message: 'Declined by CORS'
+          })
+        );
       }
     }
-  } else {
-    graphqlQuery = body;
-  }
 
-  const context = { res, req: { body } };
-  const response = await graphql(
-    schema,
-    graphqlQuery,
-    undefined,
-    context,
-    variables,
-    operationName
-  );
+    let body = await readBody(res);
 
-  const responseJSONEncoded = JSON.stringify(response);
+    if (body.startsWith('{')) {
+      body = JSON.parse(body);
 
-  res.end(responseJSONEncoded);
+      for (const key in body) {
+        const value = body[key];
+        if (!value) {
+          continue;
+        } else if (key === 'query' || key === 'mutation') {
+          if (value.includes(key)) {
+            graphqlQuery += value;
+          } else {
+            graphqlQuery += key + ' ' + value;
+          }
+        } else if (key === 'variables') {
+          variables = value;
+        } else if (key === 'operationName') {
+          operationName = value;
+        }
+      }
+    } else {
+      graphqlQuery = body;
+    }
+
+    const context = { res, req: { body } };
+    const response = await graphql(
+      schema,
+      graphqlQuery,
+      undefined,
+      context,
+      variables,
+      operationName
+    );
+
+    const responseJSONEncoded = JSON.stringify(response);
+
+    res.end(responseJSONEncoded);
+  });
 });
 app.get('/graphiql', async (res, req) => {
   if (graphiql) {
@@ -107,20 +113,23 @@ app.get('/graphiql', async (res, req) => {
       );
       urlParsed.result = initialResponse;
     }
-
-    const payload = renderGraphiQL(urlParsed);
-    res.end(payload);
+    res.experimental_cork(() => {
+      const payload = renderGraphiQL(urlParsed);
+      res.end(payload);
+    });
   } else {
-    res.end(
-      JSON.stringify({
-        status: 'error',
-        message: 'GraphiQL is not enabled on server'
-      })
-    );
+    res.experimental_cork(() => {
+      res.end(
+        JSON.stringify({
+          status: 'error',
+          message: 'GraphiQL is not enabled on server'
+        })
+      );
+    });
   }
 });
 
-app.listen(port, (token) => {
+app.listen('0.0.0.0', port, (token) => {
   if (token) {
     console.log(
       `#green([*Server*]: started successfully at *localhost:${port}* in *${Date.now() -
