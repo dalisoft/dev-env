@@ -25,3 +25,6 @@ yarn-error.log*
 __snapshots__
 .snap
 .docz
+
+package-lock.json
+yarn.lock
