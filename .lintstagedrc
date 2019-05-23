@@ -4,15 +4,21 @@
       "prettier --write",
       "git add"
     ],
-    "src/**/*.{js,jsx}": [
+    "src/**/*.js": [
+      "prettier --write",
+      "eslint ./src/*.js --fix",
+      "git add"
+    ],
+    "src/**/*.jsx": [
       "prettier --write",
       "eslint ./src/*.jsx --fix",
       "git add"
     ],
     "ignore": [
-      "**/build/*.js",
-      "**/tmp/*.js",
-      "**/artifacts/*.js"
+      "**/build/*.*",
+      "**/dist/*.*",
+      "**/tmp/*.*",
+      "**/artifacts/*.*"
     ]
   }
 }
