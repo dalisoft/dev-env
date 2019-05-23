@@ -6,15 +6,15 @@
   "module": "src/server.js",
   "private": true,
   "engines": {
-    "node": ">=10.0.0",
-    "npm": ">=6.5.0"
+    "node": "10.15.3",
+    "npm": "6.4.1"
   },
   "scripts": {
-    "dev": "NODE_ENV=development npx -p node@10 npx rollup -c -w",
-    "start": "npx -p node@10 node build/server.js",
-    "build": "npx rollup -c",
-    "test": "npx -p node@10 npx ava",
-    "lint": "npx eslint ./src"
+    "dev": "NODE_ENV=development rollup -c -w",
+    "start": "node build/server.js",
+    "build": "rollup -c",
+    "test": "ava",
+    "lint": "eslint ./src"
   },
   "repository": {
     "type": "git",
@@ -37,19 +37,19 @@
     "dotenv-safe": "^6.1.0",
     "graphql": "^14.3.0",
     "query-string": "^6.5.0",
-    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v15.10.0"
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#15.10.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "ava": "^1.4.1",
     "eslint": "^5.16.0",
-    "husky": "^2.2.0",
-    "lint-staged": "^8.1.6",
-    "prettier": "^1.17.0",
-    "rollup": "^1.11.3",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "prettier": "^1.17.1",
+    "rollup": "^1.12.3",
     "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-commonjs": "^10.0.0",
     "rollup-plugin-node-resolve": "^5.0.0",
     "rollup-plugin-run": "^1.1.0",
     "rollup-plugin-terser": "^5.0.0"

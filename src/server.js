@@ -14,8 +14,10 @@ import { readBody } from './helpers';
 const app = uWS.App({});
 
 app.get('/', (res) => {
+  // res.experimental_cork(() => {
   res.writeHeader('content-type', 'application/json');
   res.end(JSON.stringify({ status: 'ok' }));
+  // });
 });
 app.get('/graphql', (res) => {
   res.writeHeader('content-type', 'application/json');
