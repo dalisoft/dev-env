@@ -1,0 +1,15 @@
+{
+  "extends": "eslint-config-synacor",
+  "globals": {
+    "Preact": "readonly"
+  },
+  "rules": {
+    "no-unused-vars": [
+      2,
+      {
+        "args": "none",
+        "varsIgnorePattern": "^Preact$"
+      }
+    ]
+  }
+}
