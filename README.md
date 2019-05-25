@@ -22,4 +22,4 @@ This project is modified and prepared as Development Environment for Frontend de
 - Good browser support
 - Good structured (subjective)
 
-For more information/docs, please check `react-static` repository
+For more information/docs, please check `preact-cli` repository
