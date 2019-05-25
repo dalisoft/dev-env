@@ -11,7 +11,6 @@ This project is modified and prepared as Development Environment for Frontend de
 - Prettier configured
 - Stylelint configured
 - VS Code configuration configured (for best performance)
-- Using React PropTypes
 - Redaction instead of Redux dispatching (easy & fun)
 - Client-side only (no SSR)
 - Netlify support
