@@ -1,0 +1,14 @@
+{
+  "name": "docker-multistage-backend",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "dalisoft",
+  "license": "MIT",
+  "dependencies": {
+    "nanoexpress": "^0.7.5"
+  }
+}
