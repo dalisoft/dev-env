@@ -33,7 +33,7 @@
     "prettier": "^1.17.1",
     "sass-loader": "^7.1.0",
     "stylelint": "^10.0.1",
-    "webpack": "^4.32.2"
+    "webpack": "^4.33.0"
   },
   "dependencies": {
     "classnames": "^2.2.6",
