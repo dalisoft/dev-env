@@ -28,6 +28,7 @@ services:
     container_name: docker-multistage-demo-frontend
     ports:
       - 80:80
+      - 443:443
     volumes:
       - ./frontend/static:/usr/share/nginx/html
     networks:
