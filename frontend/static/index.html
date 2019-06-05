@@ -17,7 +17,7 @@
       })
         .then((res) => res.json())
         .then(({ time }) => {
-          console.log('time', time);
+          console.log('time', new Date(time));
           timeEl.textContent = time;
         });
     </script>
