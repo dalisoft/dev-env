@@ -14,6 +14,8 @@ nginx + nodejs + postgres - fullstack Docker multi-stage app example
 
 ### Database
 
+[See DB templates](https://github.com/dalisoft/docker-db-templates) for Docker for your next project
+
 - Popular Postgres DB
 - `Alpine` version, so build will be smaller
 - Well structured folders within DB
@@ -48,8 +50,6 @@ nginx + nodejs + postgres - fullstack Docker multi-stage app example
 
 - `./compose.build.dev.sh` - For DEVELOPMENT only, live-reload support on backend
 - `./compose.build.prod.sh` - For PRODUCTION only, smaller target builds
-
-### Building
 
 ## License
 
