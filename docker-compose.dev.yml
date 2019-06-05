@@ -3,7 +3,7 @@ version: "3"
 services:
   database:
     build: ./database/postgres
-    container_name: docker-multistage-demo-database
+    container_name: docker-fullstack-app-multistage-demo-database
     restart: always
     ports:
       - "5432:5432"
@@ -24,7 +24,7 @@ services:
     environment:
       - "NODE_ENV=development"
     networks:
-      - docker-multistage-demo-connect
+      - docker-fullstack-app-multistage-demo-connect
     depends_on:
       - database
     volumes:
@@ -32,7 +32,7 @@ services:
       - /usr/src/app/node_modules # Remove this if you have pure JS dependencies
   frontend:
     image: nginx:alpine
-    container_name: docker-multistage-demo-frontend
+    container_name: docker-fullstack-app-multistage-demo-frontend
     restart: always
     ports:
       - 80:80
@@ -40,11 +40,11 @@ services:
     volumes:
       - ./frontend/static:/usr/share/nginx/html
     networks:
-      - docker-multistage-demo-connect
+      - docker-fullstack-app-multistage-demo-connect
     depends_on:
       - database
       - backend
 
 networks:
-  docker-multistage-demo-connect:
+  docker-fullstack-app-multistage-demo-connect:
     driver: bridge

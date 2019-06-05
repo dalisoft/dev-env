@@ -3,7 +3,7 @@ version: "3"
 services:
   database:
     build: ./database/postgres
-    container_name: docker-multistage-demo-database
+    container_name: docker-fullstack-app-multistage-demo-database
     ports:
       - "5432:5432"
     environment:
@@ -20,23 +20,23 @@ services:
     environment:
       - "NODE_ENV=production"
     networks:
-      - docker-multistage-demo-connect
+      - docker-fullstack-app-multistage-demo-connect
     depends_on:
       - database
   frontend:
     image: nginx:alpine
-    container_name: docker-multistage-demo-frontend
+    container_name: docker-fullstack-app-multistage-demo-frontend
     ports:
       - 80:80
       - 443:443
     volumes:
       - ./frontend/static:/usr/share/nginx/html
     networks:
-      - docker-multistage-demo-connect
+      - docker-fullstack-app-multistage-demo-connect
     depends_on:
       - database
       - backend
 
 networks:
-  docker-multistage-demo-connect:
+  docker-fullstack-app-multistage-demo-connect:
     driver: bridge
