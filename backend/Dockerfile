@@ -9,7 +9,9 @@
 # and required tools such as git, npm
 #
 
-FROM mhart/alpine-node:12 as builder
+FROM mhart/alpine-node:12 as build
+
+LABEL autodelete="true"
 
 RUN apk update && apk add --no-cache git
 
@@ -32,6 +34,6 @@ RUN ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
 
 WORKDIR /usr/src/app
 
-COPY --from=builder usr/src/app /usr/src/app
+COPY --from=build usr/src/app /usr/src/app
 
 ENTRYPOINT ["node", "/usr/src/app/server.js"]
