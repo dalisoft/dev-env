@@ -28,3 +28,7 @@ __snapshots__
 
 .next
 dist
+
+# lockfiles
+package-lock.json
+yarn.lock
