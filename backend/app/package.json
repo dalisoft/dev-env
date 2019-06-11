@@ -9,6 +9,6 @@
   "author": "dalisoft",
   "license": "MIT",
   "dependencies": {
-    "nanoexpress": "^0.7.5"
+    "nanoexpress": "^0.7.7"
   }
 }

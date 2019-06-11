@@ -2,11 +2,12 @@ const nanoexpress = require('nanoexpress');
 
 const app = nanoexpress();
 
-app.use(async (req, res, next) => {
+app.use((req, res, next) => {
   res.writeHeader('Access-Control-Allow-Origin', 'http://localhost');
   res.writeHeader('Access-Control-Allow-Headers', 'Content-Type, Origin');
   res.writeHeader('Access-Control-Request-Method', '*');
   res.writeHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
+  next();
 });
 
 app.options('/*', (req, res) => {
