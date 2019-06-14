@@ -1,10 +1,10 @@
-import qs from 'query-string';
+import { parse } from 'querystring';
 import app from './server';
 
 // Declare your Lambda handler
 export default async (request, response) => {
   const { url, method, headers, body } = request;
-  const queryParams = qs.parse(url.substr(url.indexOf('/') + 1));
+  const queryParams = parse(url.substr(url.indexOf('/') + 2));
 
   const event = {
     httpMethod: method.toUpperCase(),

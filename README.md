@@ -11,7 +11,8 @@ An modern development environment for Serverless development with Lambda API
 
 ## Features
 
-- [NEW]: Env supported (create `.env` file and ship it to server securely)
+- [NEW]: HTTP Server now supported who needs this feature
+- Env supported (create `.env` file and ship it to server securely)
 - now.sh serverless works out-of-the-box (tested)
 - Netlify Functions works out-of-the-box (tested)
 - On Serverless servers (like AWS) should work (tested locally with Serverless)

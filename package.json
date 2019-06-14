@@ -4,6 +4,7 @@
   "description": "An modern development environment for Serverless development with Lambda API",
   "main": "build/server.js",
   "module": "src/server.js",
+  "type": "module",
   "private": true,
   "scripts": {
     "test": "ava",
@@ -12,8 +13,10 @@
     "start:functions": "netlify-lambda -c webpack.functions.js serve functions",
     "start:serverless": "sls offline",
     "start:now": "now dev",
+    "start:http-server": "node build/http-server.js",
     "build": "cross-env NODE_ENV=production npm-run-all --parallel build:**",
-    "build:functions": "netlify-lambda -c webpack.functions.js build functions"
+    "build:functions": "netlify-lambda -c webpack.functions.js build functions",
+    "build:http-server": "cross-env NODE_ENV=production rollup -c"
   },
   "repository": {
     "type": "git",
@@ -33,9 +36,8 @@
   },
   "homepage": "https://github.com/dalisoft/lambda-api-dev-env#readme",
   "dependencies": {
-    "aws-sdk": "^2.461.0",
+    "aws-sdk": "^2.476.0",
     "lambda-api": "^0.10.1",
-    "query-string": "^6.5.0",
     "source-map-support": "^0.5.12"
   },
   "devDependencies": {
@@ -46,16 +48,19 @@
     "babel-plugin-source-map-support": "^2.0.1",
     "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
-    "husky": "^2.3.0",
-    "lint-staged": "^8.1.7",
+    "husky": "^2.4.1",
+    "lint-staged": "^8.2.1",
     "netlify-lambda": "^1.4.13",
-    "now": "^15.3.0",
+    "now": "^15.5.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.17.1",
-    "rollup-plugin-node-resolve": "^5.0.0",
+    "prettier": "^1.18.2",
+    "rollup": "^1.15.5",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.0.2",
     "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^5.0.0",
-    "serverless-webpack": "^5.3.0",
+    "serverless-webpack": "^5.3.1",
     "shebang-loader": "0.0.1",
     "webpack-node-externals": "^1.7.2"
   }
