@@ -12,9 +12,6 @@
     "*.jsx": "javascriptreact",
     "*rc": "json"
   },
-  "tslint.jsEnable": false,
-  "typescript.tsdk": null,
-  "javascript.implicitProjectConfig.checkJs": false,
   "jest.autoEnable": true,
   "jest.showCoverageOnLoad": true,
   "jest.pathToJest": "npm run test --"
