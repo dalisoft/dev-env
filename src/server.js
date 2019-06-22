@@ -111,6 +111,7 @@ app.get('/graphiql', async (res, req) => {
         urlParsed.variables,
         urlParsed.operationName
       );
+      // eslint-disable-next-line require-atomic-updates
       urlParsed.result = initialResponse;
     }
     res.experimental_cork(() => {
