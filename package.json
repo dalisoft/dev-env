@@ -38,7 +38,7 @@
     "docz": "^1.0.0-rc.9",
     "docz-plugin-css": "^0.11.0",
     "docz-theme-default": "^1.0.0-rc.9",
-    "eslint": "5.x",
+    "eslint": "6.x",
     "eslint-config-react-app": "^3.0.8",
     "eslint-config-react-tools": "1.x.x",
     "eslint-plugin-flowtype": "^3.9.1",
@@ -61,9 +61,5 @@
     "serve": "11.0.2",
     "stylelint": "^10.0.1",
     "stylelint-config-sass-guidelines": "^6.0.0"
-  },
-  "resolutions": {
-    "tar": "^4.4.8",
-    "core-js": "^3.0.1"
   }
 }

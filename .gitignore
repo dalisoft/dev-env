@@ -28,6 +28,3 @@ __snapshots__
 .docz
 tmp
 artifacts
-
-package-lock.json
-yarn.lock
