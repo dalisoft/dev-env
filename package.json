@@ -47,7 +47,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-source-map-support": "^2.0.1",
     "cross-env": "^5.2.0",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.0",
     "husky": "^2.4.1",
     "lint-staged": "^8.2.1",
     "netlify-lambda": "^1.4.13",
