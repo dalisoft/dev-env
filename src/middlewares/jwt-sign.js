@@ -17,7 +17,7 @@ export default async function(req, _res, payload, next) {
       jwt
     );
 
-    payload.accessToken = accessToken;
+    return next(null, { ...payload, accessToken });
   }
   next(null, payload);
 }
