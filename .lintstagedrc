@@ -1,24 +1,8 @@
 {
   "linters": {
-    "src/**/*.{json,css,scss,md,yml}": [
-      "prettier --write",
-      "git add"
-    ],
-    "src/**/*.js": [
-      "prettier --write",
-      "eslint ./src/*.js --fix",
-      "git add"
-    ],
-    "src/**/*.jsx": [
-      "prettier --write",
-      "eslint ./src/*.jsx --fix",
-      "git add"
-    ],
-    "ignore": [
-      "**/build/*.*",
-      "**/dist/*.*",
-      "**/tmp/*.*",
-      "**/artifacts/*.*"
-    ]
+    "src/**/*.{json,css,scss,md,yml}": ["prettier --write", "git add"],
+    "src/**/*.js": ["prettier --write", "eslint ./src/**/*.js --fix", "git add"],
+    "src/**/*.jsx": ["prettier --write", "eslint ./src/**/*.jsx --fix", "git add"],
+    "ignore": ["**/build/*.*", "**/dist/*.*", "**/tmp/*.*", "**/artifacts/*.*"]
   }
 }

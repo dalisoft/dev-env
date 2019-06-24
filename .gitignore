@@ -27,6 +27,3 @@ __snapshots__
 .docz
 
 /tmp
-
-package-lock.json
-yarn.lock
