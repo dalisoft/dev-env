@@ -1,0 +1,50 @@
+{
+  "name": "uwebsockets-dev-env",
+  "version": "0.1.0",
+  "description": "An modern and blazing fast development environment for Backend development with uWebSockets.js",
+  "module": "src/server.js",
+  "private": true,
+  "scripts": {
+    "start": "node build/server.js",
+    "test": "ava",
+    "lint": "eslint ./src",
+    "dev": "NODE_ENV=development rollup -c -w",
+    "build": "rollup -c"
+  },
+  "engines": {
+    "node": ">=10.x",
+    "npm": ">=6.9.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalisoft/uwebsockets-dev-env.git"
+  },
+  "keywords": [
+    "uWebSockets.js",
+    "modern",
+    "dev-env"
+  ],
+  "author": "dalisoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dalisoft/uwebsockets-dev-env/issues"
+  },
+  "homepage": "https://github.com/dalisoft/uwebsockets-dev-env#readme",
+  "dependencies": {
+    "@sifrr/server": "0.0.5",
+    "cookie": "^0.4.0",
+    "dotenv-safe": "^6.1.0",
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v15.11.0"
+  },
+  "devDependencies": {
+    "ava": "^2.0.0",
+    "eslint": "^6.0.0",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "prettier": "^1.17.1",
+    "rollup": "^1.12.3",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.0",
+    "rollup-plugin-run": "^1.1.0"
+  }
+}
