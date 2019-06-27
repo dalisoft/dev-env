@@ -10,6 +10,8 @@ const compressions = {
 const bytes = 'bytes=';
 
 export default function(
+  req,
+  res,
   path,
   {
     lastModified = true,
@@ -20,7 +22,6 @@ export default function(
     cache = false
   } = {}
 ) {
-  const res = this;
   const stat = fs.statSync(path);
   const { mtime } = stat;
   let { size } = stat;
@@ -28,7 +29,7 @@ export default function(
   mtime.setMilliseconds(0);
   const mtimeutc = mtime.toUTCString();
 
-  const { headers } = res.__request;
+  const { headers } = req;
 
   // handling last modified
   if (lastModified) {
