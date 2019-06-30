@@ -8,7 +8,8 @@
   "eslint.enable": true,
   "eslint.packageManager": "npm",
   "files.associations": {
-    "*.js": "javascript"
+    "*.js": "javascript",
+    "Dockerfile*": "dockerfile"
   },
   "tslint.jsEnable": false,
   "typescript.tsdk": null,

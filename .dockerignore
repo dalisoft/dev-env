@@ -1,0 +1,5 @@
+.vscode
+.webpack
+build
+node_modules
+functions-build

@@ -1,0 +1,28 @@
+#
+# DEVELOPMENT
+# Dockerfile
+#
+
+#
+# In DEVELOPMENT mode we
+# not use Multi-staging
+# only in PRODUCTION
+#
+# We install the dependencies
+# and required tools such as git, npm
+#
+
+FROM mhart/alpine-node:12
+
+WORKDIR /usr/src/fastify-app
+
+COPY . /usr/src/fastify-app
+
+RUN npm ci --ignore-scripts
+
+ENV NODE_CLUSTER_SCHED_POLICY=rr
+ENV PORT=8080
+
+EXPOSE 8080
+
+CMD ["npm", "run", "dev:watch-server"]
