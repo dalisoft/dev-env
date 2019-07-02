@@ -4,11 +4,15 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "watch": "nodemon server.js",
     "start": "node server.js"
   },
   "author": "dalisoft",
   "license": "MIT",
   "dependencies": {
-    "nanoexpress": "^0.7.7"
+    "nanoexpress": "^0.9.x"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }

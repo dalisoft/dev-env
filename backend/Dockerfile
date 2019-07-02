@@ -36,4 +36,6 @@ WORKDIR /usr/src/app
 
 COPY --from=build usr/src/app /usr/src/app
 
-ENTRYPOINT ["node", "/usr/src/app/server.js"]
+ENV NODE_CLUSTER_SCHED_POLICY=rr
+
+ENTRYPOINT ["npm", "run", "start"]
