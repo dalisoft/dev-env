@@ -3,7 +3,7 @@ const os = require('os');
 
 const CLUSTER_THREAD = os.cpus().length;
 
-if (cluster.isMaster) {
+if (CLUSTER_THREAD > 1 && cluster.isMaster) {
   let i = 1;
   while (i < CLUSTER_THREAD) {
     cluster.fork();

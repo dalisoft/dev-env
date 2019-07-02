@@ -13,13 +13,14 @@ FROM mhart/alpine-node:12 as build
 
 LABEL autodelete="true"
 
-RUN apk update && apk add --no-cache git
-
 WORKDIR /usr/src/app
 
 COPY app /usr/src/app
 
-RUN npm ci --prod
+RUN apk update && apk add --no-cache git
+RUN rm -rf /usr/src/app/node_modules
+RUN npm ci --prod --ignore-scripts
+RUN rm -rf /usr/src/app/node_modules/@sifrr/server/node_modules/uWebSockets.js
 
 #
 # Stage: 2
@@ -30,6 +31,7 @@ RUN npm ci --prod
 FROM mhart/alpine-node:slim-12
 
 # RUN apk update && apk add --no-cache libc6-compat (add it when error happens)
+
 RUN ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
 
 WORKDIR /usr/src/app
@@ -38,4 +40,4 @@ COPY --from=build usr/src/app /usr/src/app
 
 ENV NODE_CLUSTER_SCHED_POLICY=rr
 
-ENTRYPOINT ["npm", "run", "start"]
+ENTRYPOINT ["node", "server.js"]

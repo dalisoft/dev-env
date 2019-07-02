@@ -10,7 +10,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.options('/*', (req, res) => {
+app.options('/*', { isRaw: true }, (req, res) => {
   res.writeStatus('200 OK');
   res.end('OK');
 });
