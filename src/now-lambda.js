@@ -19,7 +19,7 @@ export default async (request, response) => {
     body
   };
   // Run the request
-  const res = await app.run(event, {}).catch((error) => ({error}));
+  const res = await app.run(event, {}).catch((error) => ({ error }));
 
   if (res && !res.error) {
     let { body } = res;
