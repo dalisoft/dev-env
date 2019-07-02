@@ -1,19 +1,4 @@
 {
-  "linters": {
-    "src/**/*.{json,css,scss,md,yml}": [
-      "prettier --write",
-      "git add"
-    ],
-    "src/**/*.js": [
-      "prettier --write",
-      "eslint ./src --fix",
-      "git add"
-    ],
-    "ignore": [
-      "**/build/*.js",
-      "**/tmp/*.js",
-      "**/functions-build/*.js",
-      "**/.webpack/*.js"
-    ]
-  }
+  "src/**/*.{json,css,scss,md,yml}": ["prettier --write", "git add"],
+  "src/**/*.{js,jsx}": ["prettier --write", "eslint ./src --fix", "git add"]
 }

@@ -18,7 +18,7 @@ app.get('/', (res) => {
 
 routes(app);
 
-app.listen(Number(process.env.PORT), '0.0.0.0', (token) => {
+app.listen(Number(process.env.PORT), (token) => {
   if (token) {
     console.log(
       `[Server]: Server started successfully 0.0.0.0:${
