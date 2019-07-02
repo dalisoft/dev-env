@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/dalisoft/docker-db-templates#readme",
   "devDependencies": {
-    "husky": "^2.3.0",
+    "husky": "^3.0.0",
     "lint-staged": "^9.0.0",
     "prettier": "^1.17.1"
   }
