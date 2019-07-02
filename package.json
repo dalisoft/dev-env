@@ -35,7 +35,7 @@
     "docz-theme-default": "^1.0.0-rc.9",
     "gh-pages": "^2.0.1",
     "husky": "^2.4.1",
-    "lint-staged": "^8.2.1",
+    "lint-staged": "^9.0.0",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.8.6",
     "stylelint": "^10.1.0",
