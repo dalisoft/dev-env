@@ -1,0 +1,4 @@
+**/build/*.js
+**/tmp/*.js
+**/functions-build/*.js
+**/.webpack/*.js
