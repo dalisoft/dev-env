@@ -5,7 +5,7 @@
   "sideEffects": false,
   "dependencies": {
     "classnames": "^2.2.6",
-    "connected-react-router": "^6.4.0",
+    "connected-react-router": "^6.5.0",
     "core-js": "^3.1.4",
     "history": "^4.9.0",
     "intl": "^1.2.5",
@@ -13,7 +13,7 @@
     "lodash.mapvalues": "^4.6.0",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
-    "query-string": "^6.7.0",
+    "query-string": "^6.8.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-intl": "^2.9.0",
@@ -29,13 +29,13 @@
     "unfetch": "^4.1.0"
   },
   "devDependencies": {
-    "@types/react": "^16.8.20",
+    "@types/react": "^16.8.22",
     "docz": "^1.0.0-rc.9",
     "docz-plugin-css": "^0.11.0",
     "docz-theme-default": "^1.0.0-rc.9",
     "gh-pages": "^2.0.1",
     "husky": "^3.0.0",
-    "lint-staged": "^9.0.0",
+    "lint-staged": "^9.0.1",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.8.6",
     "stylelint": "^10.1.0",
