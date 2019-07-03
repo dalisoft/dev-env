@@ -1,4 +1,8 @@
-**/build/*.*
-**/dist/*.*
-**/tmp/*.*
-**/artifacts/*.*
+.git
+.vscode
+.docz
+artifacts
+build
+dist
+tmp
+node_modules
