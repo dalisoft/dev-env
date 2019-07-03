@@ -1,6 +1,10 @@
+.git
 .vscode
-.webpack
+.docz
+artifacts
 build
+dist
+tmp
 node_modules
 functions-build
-.git
+.webpack

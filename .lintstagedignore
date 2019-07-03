@@ -1,4 +1,10 @@
-**/build/*.js
-**/tmp/*.js
-**/functions-build/*.js
-**/.webpack/*.js
+.git
+.vscode
+.docz
+artifacts
+build
+dist
+tmp
+node_modules
+functions-build
+.webpack
