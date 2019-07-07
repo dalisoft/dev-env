@@ -1,6 +1,5 @@
 import nanoexpress from 'nanoexpress';
 import './env';
-import { dev } from './config';
 import appPlugins from './app-plugins';
 import appHandler from './errors';
 import swagger from '../docs-config';
