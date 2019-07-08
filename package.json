@@ -1,0 +1,57 @@
+{
+  "name": "express-dev-env",
+  "version": "0.1.0",
+  "description": "An modern and easy development environment for Backend development with Express",
+  "module": "src/server.js",
+  "private": true,
+  "scripts": {
+    "start": "node build/server.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon build/server.js",
+    "test": "ava",
+    "lint": "eslint ./src",
+    "dev": "cross-env NODE_ENV=development rollup -c -w",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalisoft/express-dev-env.git"
+  },
+  "keywords": [
+    "express",
+    "modern",
+    "dev-env"
+  ],
+  "author": "dalisoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dalisoft/express-dev-env/issues"
+  },
+  "homepage": "https://github.com/dalisoft/express-dev-env#readme",
+  "dependencies": {
+    "@dalisoft/ws-events-sync": "0.0.9",
+    "ajv": "^6.10.1",
+    "consolemd": "^0.2.1",
+    "cookie": "^0.4.0",
+    "express": "^4.17.1",
+    "express-cors": "0.0.3",
+    "express-jwt": "^5.3.1",
+    "express-rate-limit": "^5.0.0",
+    "fast-json-stringify": "^1.15.3",
+    "helmet": "^3.18.0",
+    "lodash.pick": "^4.4.0"
+  },
+  "devDependencies": {
+    "ava": "^2.1.0",
+    "cross-env": "^5.2.0",
+    "dotenv-safe": "^6.1.0",
+    "eslint": "^6.0.0",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.1.0",
+    "prettier": "^1.18.2",
+    "rollup": "^1.16.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.0.4",
+    "rollup-plugin-run": "^1.1.0"
+  }
+}
