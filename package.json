@@ -29,14 +29,11 @@
   "homepage": "https://github.com/dalisoft/express-dev-env#readme",
   "dependencies": {
     "@dalisoft/ws-events-sync": "0.0.9",
-    "ajv": "^6.10.1",
     "consolemd": "^0.2.1",
-    "cookie": "^0.4.0",
     "express": "^4.17.1",
     "express-cors": "0.0.3",
     "express-jwt": "^5.3.1",
     "express-rate-limit": "^5.0.0",
-    "fast-json-stringify": "^1.15.3",
     "helmet": "^3.18.0",
     "lodash.pick": "^4.4.0"
   },
