@@ -1,0 +1,36 @@
+{
+  "name": "razzle-examples-basic",
+  "version": "3.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production node build/server.js",
+    "dev": "razzle start",
+    "build": "razzle build",
+    "test": "razzle test --env=jsdom"
+  },
+  "dependencies": {
+    "express": "^4.x",
+    "classnames": "^2.2.6",
+    "connected-react-router": "^6.5.0",
+    "history": "^4.9.0",
+    "intl": "^1.2.5",
+    "isomorphic-unfetch": "^3.0.0",
+    "lodash.get": "^4.4.2",
+    "lodash.mapvalues": "^4.6.0",
+    "lodash.pick": "^4.4.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-intl": "^2.9.0",
+    "react-redux": "^7.1.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "redaction": "^5.1.1",
+    "redux": "^4.0.1",
+    "redux-batched-subscribe": "^0.1.6",
+    "redux-form": "^8.2.4",
+    "suncalc": "^1.8.0"
+  },
+  "devDependencies": {
+    "razzle": "^3.x"
+  }
+}
