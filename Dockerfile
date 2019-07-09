@@ -19,7 +19,6 @@ COPY . /usr/src/razzle-dev-env
 
 RUN npm ci --ignore-scripts
 RUN npm run build
-RUN rm -rf node_modules src
 RUN npm ci --prod --ignore-scripts
 
 #
@@ -32,7 +31,7 @@ FROM mhart/alpine-node:slim-12
 
 WORKDIR /usr/src/razzle-dev-env
 
-COPY --from=build usr/src/razzle-dev-env /usr/src/razzle-dev-env
+COPY --from=build usr/src/razzle-dev-env/build /usr/src/razzle-dev-env
 
 ENV NODE_CLUSTER_SCHED_POLICY=rr
 ENV NODE_ENV=production
@@ -40,4 +39,4 @@ ENV PORT=8080
 
 EXPOSE 8080
 
-ENTRYPOINT ["node", "build/server.js"]
+ENTRYPOINT ["node", "server.js"]
