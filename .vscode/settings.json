@@ -1,0 +1,15 @@
+{
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false,
+  "prettier.tslintIntegration": true,
+  "prettier.eslintIntegration": true,
+  "prettier.stylelintIntegration": true,
+  "prettier.requireConfig": true,
+  "eslint.enable": true,
+  "files.associations": {
+    "*.js": "javascriptreact"
+  },
+  "jest.autoEnable": false,
+  "jest.showCoverageOnLoad": false,
+  "jest.pathToJest": ""
+}
