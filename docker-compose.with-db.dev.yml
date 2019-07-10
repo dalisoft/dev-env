@@ -1,6 +1,21 @@
 version: '3'
 
 services:
+  database:
+    build: ./database/postgres
+    container_name: docker-fullstack-app-multistage-demo-database
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      - 'POSTGRES_PASSWORD=postgres-password'
+      - 'POSTGRES_DB=postgres-db'
+    volumes:
+      - ./database/postgres/sql/:/docker-entrypoint-initdb.d/
+      - ./database/postgres/postgres/data/:/var/lib/postgresql/data/
+      - ./database/postgres/postgres/logs/postgres/:/var/log/postgres/
+    networks:
+      - docker-fullstack-app-multistage-demo-connect
   backend:
     build:
       context: ./backend
@@ -13,6 +28,8 @@ services:
       - 'NODE_ENV=development'
     networks:
       - docker-fullstack-app-multistage-demo-connect
+    depends_on:
+      - database
     volumes:
       - ./backend/app:/usr/src/app
       - /usr/src/app/node_modules # Remove this if you have pure JS dependencies
@@ -28,6 +45,7 @@ services:
     networks:
       - docker-fullstack-app-multistage-demo-connect
     depends_on:
+      - database
       - backend
 
 networks:
