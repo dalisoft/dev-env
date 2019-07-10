@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Text } from 'components/UI';
-import { LangSwitcher } from 'components/common';
+import { Text } from '../../components/UI';
+import { LangSwitcher } from '../../components/common';
 
 const Home = () => (
   <div>

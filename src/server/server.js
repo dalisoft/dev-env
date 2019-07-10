@@ -1,3 +1,5 @@
+import 'core-js'; // polyfills for ios 9
+import intl from 'intl';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
@@ -12,6 +14,8 @@ const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
 const server = express();
 
+global.Intl = intl; // polyfill for ios 9
+
 server
   .disable('x-powered-by')
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
@@ -20,7 +24,7 @@ server
     const APP_TITLE = process.env.APP_TITLE || 'Razzle Dev Env';
 
     const markup = renderToString(
-      React.createElement(Provider, { store }, App)
+      React.createElement(Provider, { store }, React.createElement(App))
     );
     res.send(
       // prettier-ignore
