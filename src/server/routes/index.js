@@ -9,10 +9,7 @@ export default (app) => {
             status: { type: 'string' }
           }
         },
-        headers: {
-          type: 'object',
-          properties: {}
-        },
+        headers: false,
         params: false,
         query: false
       }
