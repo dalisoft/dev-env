@@ -1,5 +1,3 @@
-import express from 'express';
-
 let app = require('./server').default;
 
 if (module.hot) {
@@ -16,12 +14,6 @@ if (module.hot) {
 
 const port = process.env.PORT || 3000;
 
-export default express()
-  .use((req, res) => app.handle(req, res))
-  .listen(port, function(err) {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    console.log(`> Started on port ${port}`);
-  });
+app.listen(port).then(() => console.log(`> Started on port ${port}`));
+
+export default app;

@@ -17,7 +17,7 @@ WORKDIR /usr/src/razzle-dev-env
 
 COPY . /usr/src/razzle-dev-env
 
-RUN npm ci --ignore-scripts
+RUN npm ci
 RUN npm run build
 RUN npm ci --prod --ignore-scripts
 

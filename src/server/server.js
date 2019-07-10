@@ -8,37 +8,40 @@ import { StaticRouter } from 'react-router';
 import App from '../client/containers/App';
 import { store } from '../client/redux/store';
 
-import express from 'express';
+import nanoexpress from 'nanoexpress';
 import routes from './routes';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
-const server = express();
+const server = nanoexpress();
 
 global.Intl = intl; // polyfill for ios 9
 
-server
-  .disable('x-powered-by')
-  .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
-  .use(routes)
-  .get('/*', (req, res) => {
+server.register(routes);
+server.static('/', process.env.RAZZLE_PUBLIC_DIR);
+
+server.get(
+  '/*',
+  {
+    schema: {
+      headers: false
+    }
+  },
+  (req, res) => {
     const APP_TITLE = process.env.APP_TITLE || 'Razzle Dev Env';
     const context = {};
 
     const markup = renderToString(
       <Provider store={store}>
-        <App router={StaticRouter} location={req.url} context={context} />
+        <App router={StaticRouter} location={req.path} context={context} />
       </Provider>
     );
 
     if (context.url) {
-      res.writeHead(301, {
-        Location: context.url
-      });
-      res.end();
+      return res.redirect(301, context.url);
     }
 
-    res.send(
+    res.end(
       // prettier-ignore
       `<!doctype html>
     <html lang="">
@@ -59,6 +62,7 @@ server
     </body>
 </html>`
     );
-  });
+  }
+);
 
 export default server;
