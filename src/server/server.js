@@ -3,6 +3,7 @@ import intl from 'intl';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
+import { StaticRouter } from 'react-router';
 
 import App from '../client/containers/App';
 import { store } from '../client/redux/store';
@@ -16,16 +17,32 @@ const server = express();
 
 global.Intl = intl; // polyfill for ios 9
 
+const MyNode = (props) => {
+  console.log('server props', props);
+  return <App />;
+};
+
 server
   .disable('x-powered-by')
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
   .use(routes)
   .get('/*', (req, res) => {
     const APP_TITLE = process.env.APP_TITLE || 'Razzle Dev Env';
+    const context = {};
 
     const markup = renderToString(
-      React.createElement(Provider, { store }, React.createElement(App))
+      <Provider store={store}>
+        <App router={StaticRouter} location={req.url} context={context} />
+      </Provider>
     );
+
+    if (context.url) {
+      res.writeHead(301, {
+        Location: context.url
+      });
+      res.end();
+    }
+
     res.send(
       // prettier-ignore
       `<!doctype html>

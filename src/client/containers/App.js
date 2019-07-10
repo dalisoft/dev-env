@@ -5,9 +5,9 @@ import Routes from '../routes';
 import Root from './Root';
 import { connect } from 'redaction';
 
-const App = React.memo(({ locale }) => {
+const App = React.memo((props) => {
   return (
-    <Root locale={locale}>
+    <Root {...props}>
       <Route component={Routes} />
     </Root>
   );

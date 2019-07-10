@@ -9,9 +9,9 @@
     "test": "razzle test --env=jsdom"
   },
   "dependencies": {
-    "express": "^4.x",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.5.0",
+    "express": "^4.x",
     "history": "^4.9.0",
     "intl": "^1.2.5",
     "isomorphic-unfetch": "^3.0.0",

@@ -7,11 +7,18 @@ import { history } from '../redux/store';
 
 export default class Root extends PureComponent {
   render() {
-    const { locale, children } = this.props;
+    const {
+      locale,
+      children,
+      router: RouterComponent = Router,
+      ...routerProps
+    } = this.props;
 
     return (
       <IntlProvider locale={locale}>
-        <Router history={history}>{children}</Router>
+        <RouterComponent history={history} {...routerProps}>
+          {children}
+        </RouterComponent>
       </IntlProvider>
     );
   }
@@ -19,5 +26,6 @@ export default class Root extends PureComponent {
 
 Root.propTypes = {
   locale: PropTypes.string,
-  children: PropTypes.any
+  children: PropTypes.any,
+  router: PropTypes.func
 };
