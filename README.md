@@ -79,6 +79,6 @@ Your app is ready to be deployed!
 
 ## Learn More
 
-You can learn more in the [Razzle documentation]<https://github.com/jaredpalmer/razzle).>
+You can learn more in the [Razzle documentation](https://github.com/jaredpalmer/razzle)
 
 To learn React, check out the [React documentation](https://reactjs.org/).
