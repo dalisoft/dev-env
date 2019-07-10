@@ -17,11 +17,6 @@ const server = express();
 
 global.Intl = intl; // polyfill for ios 9
 
-const MyNode = (props) => {
-  console.log('server props', props);
-  return <App />;
-};
-
 server
   .disable('x-powered-by')
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
