@@ -6,8 +6,7 @@ export default (app) => {
         response: {
           type: 'object',
           properties: {
-            status: { type: 'string' },
-            headers: { type: 'object' }
+            status: { type: 'string' }
           }
         },
         headers: {

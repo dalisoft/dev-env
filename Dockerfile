@@ -17,6 +17,7 @@ WORKDIR /usr/src/razzle-dev-env
 
 COPY . /usr/src/razzle-dev-env
 
+RUN apk update && apk add --no-cache git
 RUN npm ci
 RUN npm run build
 RUN npm ci --prod --ignore-scripts
@@ -32,6 +33,8 @@ FROM mhart/alpine-node:slim-12
 WORKDIR /usr/src/razzle-dev-env
 
 COPY --from=build usr/src/razzle-dev-env/build /usr/src/razzle-dev-env
+
+RUN ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
 
 ENV NODE_CLUSTER_SCHED_POLICY=rr
 ENV NODE_ENV=production
