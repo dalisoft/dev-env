@@ -11,14 +11,17 @@ import { store } from '../client/redux/store';
 import nanoexpress from 'nanoexpress';
 import routes from './routes';
 
+import { join } from 'path';
+
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
 const server = nanoexpress();
 
 global.Intl = intl; // polyfill for ios 9
 
+const { RAZZLE_PUBLIC_DIR } = process.env;
+
 server.register(routes);
-server.static('/', process.env.RAZZLE_PUBLIC_DIR);
 
 server.get(
   '/*',
@@ -28,6 +31,12 @@ server.get(
     }
   },
   (req, res) => {
+    if (req.path === assets.client.css) {
+      return res.sendFile(join(RAZZLE_PUBLIC_DIR, assets.client.css));
+    } else if (req.path === assets.client.js) {
+      return res.sendFile(join(RAZZLE_PUBLIC_DIR, assets.client.js));
+    }
+
     const APP_TITLE = process.env.APP_TITLE || 'Razzle Dev Env';
     const context = {};
 
