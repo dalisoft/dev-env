@@ -13,8 +13,11 @@ services:
       - ./database/postgres/sql/:/docker-entrypoint-initdb.d/
       - ./database/postgres/postgres/data/:/var/lib/postgresql/data/
       - ./database/postgres/postgres/logs/postgres/:/var/log/postgres/
+    networks:
+      - docker-fullstack-app-multistage-demo-connect
   backend:
     build: ./backend
+    container_name: docker-fullstack-app-multistage-demo-backend
     ports:
       - '3000:3000'
     environment:
