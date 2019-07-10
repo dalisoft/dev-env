@@ -20,7 +20,6 @@ COPY . /usr/src/razzle-dev-env
 RUN apk update && apk add --no-cache git
 RUN npm ci
 RUN npm run build
-RUN npm ci --prod --ignore-scripts
 
 #
 # Stage: 2
