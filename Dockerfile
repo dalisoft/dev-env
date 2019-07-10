@@ -20,6 +20,8 @@ COPY . /usr/src/razzle-dev-env
 RUN apk update && apk add --no-cache git
 RUN npm ci
 RUN npm run build
+RUN rm -rf node_modules src
+RUN npm ci --prod --ignore-scripts
 
 #
 # Stage: 2
@@ -31,7 +33,7 @@ FROM mhart/alpine-node:slim-12
 
 WORKDIR /usr/src/razzle-dev-env
 
-COPY --from=build usr/src/razzle-dev-env/build /usr/src/razzle-dev-env
+COPY --from=build usr/src/razzle-dev-env /usr/src/razzle-dev-env
 
 RUN ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
 
@@ -41,4 +43,4 @@ ENV PORT=8080
 
 EXPOSE 8080
 
-ENTRYPOINT ["node", "server.js"]
+ENTRYPOINT ["node", "build/server.js"]
