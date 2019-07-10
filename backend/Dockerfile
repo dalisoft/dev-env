@@ -18,9 +18,8 @@ WORKDIR /usr/src/app
 COPY app /usr/src/app
 
 RUN apk update && apk add --no-cache git
-RUN rm -rf /usr/src/app/node_modules
+RUN rm -rf node_modules
 RUN npm ci --prod --ignore-scripts
-RUN rm -rf /usr/src/app/node_modules/@sifrr/server/node_modules/uWebSockets.js
 
 #
 # Stage: 2
