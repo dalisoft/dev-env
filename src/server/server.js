@@ -35,7 +35,7 @@ server
 
       const markup = renderToString(
         <Provider store={store}>
-          <App router={StaticRouter} location={req.path} context={context} />
+          <App router={StaticRouter} location={req.url} context={context} />
         </Provider>
       );
 
