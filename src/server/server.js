@@ -19,40 +19,33 @@ const server = nanoexpress();
 
 global.Intl = intl; // polyfill for ios 9
 
-const { RAZZLE_PUBLIC_DIR } = process.env;
+server
+  .register(routes)
+  .static(process.env.RAZZLE_PUBLIC_DIR)
+  .get(
+    '/*',
+    {
+      schema: {
+        headers: false
+      }
+    },
+    (req, res) => {
+      const APP_TITLE = process.env.APP_TITLE || 'Razzle Dev Env';
+      const context = {};
 
-server.register(routes);
+      const markup = renderToString(
+        <Provider store={store}>
+          <App router={StaticRouter} location={req.path} context={context} />
+        </Provider>
+      );
 
-server.get(
-  '/*',
-  {
-    schema: {
-      headers: false
-    }
-  },
-  (req, res) => {
-    if (req.path === assets.client.css) {
-      return res.sendFile(join(RAZZLE_PUBLIC_DIR, assets.client.css));
-    } else if (req.path === assets.client.js) {
-      return res.sendFile(join(RAZZLE_PUBLIC_DIR, assets.client.js));
-    }
+      if (context.url) {
+        return res.redirect(301, context.url);
+      }
 
-    const APP_TITLE = process.env.APP_TITLE || 'Razzle Dev Env';
-    const context = {};
-
-    const markup = renderToString(
-      <Provider store={store}>
-        <App router={StaticRouter} location={req.path} context={context} />
-      </Provider>
-    );
-
-    if (context.url) {
-      return res.redirect(301, context.url);
-    }
-
-    res.end(
-      // prettier-ignore
-      `<!doctype html>
+      res.end(
+        // prettier-ignore
+        `<!doctype html>
     <html lang="">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -70,8 +63,8 @@ server.get(
         <script src="${assets.client.js}" defer crossorigin></script>
     </body>
 </html>`
-    );
-  }
-);
+      );
+    }
+  );
 
 export default server;
