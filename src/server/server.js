@@ -25,9 +25,7 @@ server
   .get(
     '/*',
     {
-      schema: {
-        headers: false
-      }
+      isRaw: true
     },
     (req, res) => {
       const APP_TITLE = process.env.APP_TITLE || 'Razzle Dev Env';
@@ -35,12 +33,19 @@ server
 
       const markup = renderToString(
         <Provider store={store}>
-          <App router={StaticRouter} location={req.url} context={context} />
+          <App
+            router={StaticRouter}
+            location={req.getUrl()}
+            context={context}
+          />
         </Provider>
       );
 
       if (context.url) {
-        return res.redirect(301, context.url);
+        res.writeHeader('Location', context.url);
+        res.writeStatus('301 Moved Permanently');
+        res.end();
+        return;
       }
 
       res.end(
