@@ -45,7 +45,7 @@
     "@babel/preset-env": "^7.4.5",
     "ava": "^2.0.0",
     "babel-loader": "^8.0.6",
-    "babel-plugin-source-map-support": "^2.0.1",
+    "babel-plugin-source-map-support": "^2.1.1",
     "cross-env": "^5.2.0",
     "eslint": "^6.0.1",
     "husky": "^3.0.0",
