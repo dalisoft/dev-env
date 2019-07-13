@@ -6,17 +6,17 @@ An modern and easy development environment using MERN stack
 
 ## Requires
 
-- express
+- nanoexpress
 - React
 - Node.js server / Machine supports Node.js
-- An good developer (like you) that already know about `express`, `react` and ES6 Syntax
+- An good developer (like you) that already know about `nanoexpress`, `react` and ES6 Syntax
 
 ## Features
 
 - Speeds-up your development time
 - Fast backend (very good performance)
-- Async/Await support (with express & Babel)
-- Validation / Serialization support (with express)
+- Async/Await support (with nanoexpress & Babel)
+- Validation / Serialization support (with nanoexpress)
 - Fast build with Rollup & Babel
 - Latest JS things can be used
 - Configured all security & essential plugins
