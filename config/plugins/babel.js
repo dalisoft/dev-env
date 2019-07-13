@@ -21,8 +21,7 @@ export default babel({
     '@babel/preset-react'
   ],
   plugins: [
-    '@babel/plugin-proposal-class-properties',
-    '@babel/plugin-transform-runtime'
+    '@babel/plugin-proposal-class-properties'
   ],
   sourceMaps: false
 });

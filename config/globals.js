@@ -1,6 +1,7 @@
 export default {
   'react': 'React',
   'react-dom': 'ReactDOM',
+  'prop-types': 'Prop-Types',
   'react-redux': 'ReactRedux',
   'react-router-dom': 'ReactRouterDOM',
   'react-intl': 'ReactIntl',
