@@ -1,4 +1,3 @@
-import 'core-js'; // polyfills for ios 9
 import intl from 'intl';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
