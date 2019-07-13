@@ -11,8 +11,6 @@ import { store } from '../client/redux/store';
 import nanoexpress from 'nanoexpress';
 import routes from './routes';
 
-import { join } from 'path';
-
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
 const server = nanoexpress();
