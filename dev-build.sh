@@ -1,1 +1,1 @@
-docker build -f Dockerfile.dev -t express-dev-env .
+docker build -f Dockerfile.dev -t mern-dev-env .

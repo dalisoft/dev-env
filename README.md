@@ -1,14 +1,15 @@
-# express-dev-env
+# mern-dev-env
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/express-dev-env.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/mern-dev-env.svg)](https://greenkeeper.io/)
 
-An modern and easy development environment for Backend development with Express
+An modern and easy development environment using MERN stack
 
 ## Requires
 
 - express
+- React
 - Node.js server / Machine supports Node.js
-- An good developer (like you) that already know about `express` and ES6 Syntax
+- An good developer (like you) that already know about `express`, `react` and ES6 Syntax
 
 ## Features
 
