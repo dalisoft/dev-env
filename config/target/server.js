@@ -13,7 +13,7 @@ export default {
     format: 'cjs',
     file: './build/server.js',
     esModule: false,
-    sourceMap: true,
+    sourceMap: false,
     globals
   },
   external,
@@ -25,7 +25,7 @@ export default {
       preferBuiltins: true
     }),
     commonjs({
-      sourceMap: watch,
+      sourceMap: false,
       namedExports: {
         'node_modules/react-dom/server.js': [ 'renderToString' ]
       }

@@ -11,7 +11,7 @@ export default {
     format: 'iife',
     file: './build/assets/js/bundle.js',
     esModule: false,
-    sourceMap: 'inline',
+    sourceMap: false,
     globals
   },
   plugins: [

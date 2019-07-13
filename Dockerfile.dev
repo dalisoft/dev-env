@@ -14,9 +14,9 @@
 
 FROM mhart/alpine-node:12
 
-WORKDIR /usr/src/express-app
+WORKDIR /usr/src/mern-dev-env
 
-COPY . /usr/src/express-app
+COPY . /usr/src/mern-dev-env
 
 RUN npm ci --ignore-scripts
 

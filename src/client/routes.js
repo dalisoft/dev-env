@@ -25,7 +25,7 @@ const Routes = ({ someCondition }) =>
   );
 
 Routes.propTypes = {
-  someCondition: PropTypes.boolean
+  someCondition: PropTypes.bool
 };
 
 export default React.memo(Routes);

@@ -13,9 +13,9 @@ FROM mhart/alpine-node:12 as build
 
 LABEL autodelete="true"
 
-WORKDIR /usr/src/express-app
+WORKDIR /usr/src/mern-dev-env
 
-COPY . /usr/src/express-app
+COPY . /usr/src/mern-dev-env
 
 RUN npm ci --ignore-scripts
 RUN npm run build
@@ -30,9 +30,9 @@ RUN npm ci --prod --ignore-scripts
 
 FROM mhart/alpine-node:slim-12
 
-WORKDIR /usr/src/express-app
+WORKDIR /usr/src/mern-dev-env
 
-COPY --from=build usr/src/express-app /usr/src/express-app
+COPY --from=build usr/src/mern-dev-env /usr/src/mern-dev-env
 
 ENV NODE_CLUSTER_SCHED_POLICY=rr
 ENV NODE_ENV=production

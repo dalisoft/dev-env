@@ -19,7 +19,7 @@ global.Intl = intl; // polyfill for ios 9
 
 server
   .register(routes)
-  .static(join(__dirname, '../build/assets'))
+  .static(join(__dirname, './assets'))
   .get(
     '/*',
     {
