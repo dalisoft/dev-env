@@ -5,5 +5,5 @@ import uz from './uz';
 export default {
   en,
   ru,
-  uz,
+  uz
 };

@@ -6,7 +6,8 @@
     "start": "NODE_ENV=production node build/server.js",
     "dev": "razzle start",
     "build": "razzle build",
-    "test": "razzle test --env=jsdom"
+    "test": "razzle test --env=jsdom",
+    "lint": "eslint ./src"
   },
   "dependencies": {
     "ajv": "^6.10.1",
@@ -35,6 +36,9 @@
     "suncalc": "^1.8.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.0.1",
+    "eslint-plugin-react": "^7.14.2",
     "razzle": "^3.x",
     "razzle-plugin-scss": "^3.0.0"
   }

@@ -13,6 +13,8 @@ const App = React.memo((props) => {
   );
 });
 
+App.displayName = 'App';
+
 const enhance = connect({ locale: 'init.locale' });
 
 export default enhance(App);

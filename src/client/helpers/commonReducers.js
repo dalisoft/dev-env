@@ -1,4 +1,4 @@
 export const update = (state, payload) => ({
-	...state,
-	...payload,
+  ...state,
+  ...payload
 });

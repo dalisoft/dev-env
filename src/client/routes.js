@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 
 import { Home, Counter, NotFound } from './pages';
@@ -22,5 +23,9 @@ const Routes = ({ someCondition }) =>
       </Switch>
     </PageLayout>
   );
+
+Routes.propTypes = {
+  someCondition: PropTypes.bool
+};
 
 export default React.memo(Routes);

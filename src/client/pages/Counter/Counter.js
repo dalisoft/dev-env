@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'redaction';
 
@@ -35,6 +36,11 @@ const Counter = React.memo(({ counter }) => {
     </div>
   );
 });
+
+Counter.displayName = 'Counter';
+Counter.propTypes = {
+  counter: PropTypes.number
+};
 
 const enhance = connect({ counter: 'counter.counter' });
 

@@ -5,7 +5,7 @@ import { layout } from './style.module.scss';
 
 const Layout = ({ children }) => <div className={layout}>{children}</div>;
 Layout.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.any
 };
 
 export default React.memo(Layout);

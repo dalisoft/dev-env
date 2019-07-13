@@ -3,5 +3,5 @@ import counter from '../pages/Counter/reducers';
 
 export default {
   init,
-  counter,
+  counter
 };

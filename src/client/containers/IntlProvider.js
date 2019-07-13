@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { IntlProvider as Provider, addLocaleData } from 'react-intl';
 
 import en from 'react-intl/locale-data/en';
@@ -20,3 +21,10 @@ export const IntlProvider = React.memo(({ children, locale }) => {
     </Provider>
   );
 });
+
+IntlProvider.displayName = 'IntlProvider';
+
+IntlProvider.propTypes = {
+  children: PropTypes.any,
+  locale: PropTypes.string
+};
