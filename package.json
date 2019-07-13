@@ -5,12 +5,13 @@
   "module": "src/server.js",
   "private": true,
   "scripts": {
+    "clean": "rm -rf build",
     "start": "node build/server.js",
     "start:dev": "NODE_ENV=development nodemon build/server.js",
     "test": "ava",
     "lint": "eslint ./src",
-    "dev": "NODE_ENV=development rollup -c -w",
-    "build": "rollup -c"
+    "dev": "npm run clean && NODE_ENV=development rollup -c -w",
+    "build": "npm run clean && rollup -c"
   },
   "repository": {
     "type": "git",
