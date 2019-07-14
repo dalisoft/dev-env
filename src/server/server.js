@@ -5,19 +5,14 @@ import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router';
 
 import App from '../client/containers/App';
-import { store } from '../client/redux/store';
-
-import nanoexpress from 'nanoexpress';
-import routes from './routes';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
-const server = nanoexpress();
-
 global.Intl = intl; // polyfill for ios 9
 
-server
-  .register(routes)
+export default (server) => {
+  server
+  .register(require('./routes').default)
   .static(process.env.RAZZLE_PUBLIC_DIR)
   .get(
     '/*',
@@ -29,7 +24,7 @@ server
       const context = {};
 
       const markup = renderToString(
-        <Provider store={store}>
+        <Provider store={require('../client/redux/store').store}>
           <App
             router={StaticRouter}
             location={req.getUrl()}
@@ -66,7 +61,6 @@ server
     </body>
 </html>`
       );
-    }
-  );
-
-export default server;
+    });
+    return server;
+  }

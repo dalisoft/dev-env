@@ -1,10 +1,28 @@
-let app = require('./server').default;
+import nanoexpress from 'nanoexpress';
+import server from './server';
+
+(async () => {
+const instance = nanoexpress();
+let app = await server(instance);
+const port = process.env.PORT || 3000;
 
 if (module.hot) {
-  module.hot.accept('./server', function() {
+  module.hot.accept('./server', async () => {
     console.log('🔁  HMR Reloading `./server`...');
     try {
-      app = require('./server').default;
+      instance.close();
+      app = await server(instance, port);
+      await instance.listen(port);
+    } catch (error) {
+      console.error(error);
+    }
+  });
+  module.hot.accept('./routes', async () => {
+    console.log('🔁  HMR Reloading `./routes`...');
+    try {
+      instance.close();
+      app = await server(instance, port);
+      await instance.listen(port);
     } catch (error) {
       console.error(error);
     }
@@ -12,8 +30,4 @@ if (module.hot) {
   console.info('✅  Server-side HMR Enabled!');
 }
 
-const port = process.env.PORT || 3000;
-
-app.listen(port).then(() => console.log(`> Started on port ${port}`));
-
-export default app;
+})();
