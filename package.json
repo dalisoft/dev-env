@@ -30,7 +30,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv-safe": "^6.1.0",
-    "express-graphql": "^0.8.0",
+    "express-graphql": "^0.9.0",
     "graphql": "^14.4.1",
     "nanoexpress": "^0.12.1"
   },
