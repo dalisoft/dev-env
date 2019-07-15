@@ -15,7 +15,7 @@ This dev-env is very new/young project, not complex (as i'm focused on simplicit
 
 ## Features
 
-- Blazing fast performance (up to 200x faster than express-graphql)
+- Blazing fast performance (up to 8x faster than express-graphql + express combo)
 - Low-level HTTP with uWebSockets.js
 - Pure call, no layer (like express-graphql)
 - Speeds up development time
