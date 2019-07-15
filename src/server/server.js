@@ -12,37 +12,37 @@ global.Intl = intl; // polyfill for ios 9
 
 export default (server) => {
   server
-  .register(require('./routes').default)
-  .static(process.env.RAZZLE_PUBLIC_DIR)
-  .get(
-    '/*',
-    {
-      isRaw: true
-    },
-    (req, res) => {
-      const APP_TITLE = process.env.APP_TITLE || 'Razzle Dev Env';
-      const context = {};
+    .register(require('./routes').default)
+    .static(process.env.RAZZLE_PUBLIC_DIR)
+    .get(
+      '/*',
+      {
+        isRaw: true
+      },
+      (req, res) => {
+        const APP_TITLE = process.env.APP_TITLE || 'Razzle Dev Env';
+        const context = {};
 
-      const markup = renderToString(
-        <Provider store={require('../client/redux/store').store}>
-          <App
-            router={StaticRouter}
-            location={req.getUrl()}
-            context={context}
-          />
-        </Provider>
-      );
+        const markup = renderToString(
+          <Provider store={require('../client/redux/store').store}>
+            <App
+              router={StaticRouter}
+              location={req.getUrl()}
+              context={context}
+            />
+          </Provider>
+        );
 
-      if (context.url) {
-        res.writeHeader('Location', context.url);
-        res.writeStatus('301 Moved Permanently');
-        res.end();
-        return;
-      }
+        if (context.url) {
+          res.writeHeader('Location', context.url);
+          res.writeStatus('301 Moved Permanently');
+          res.end();
+          return;
+        }
 
-      res.end(
+        res.end(
         // prettier-ignore
-        `<!doctype html>
+          `<!doctype html>
     <html lang="">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -60,7 +60,7 @@ export default (server) => {
         <script src="${assets.client.js}" defer crossorigin></script>
     </body>
 </html>`
-      );
-    });
-    return server;
-  }
+        );
+      });
+  return server;
+};
