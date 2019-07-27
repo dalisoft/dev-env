@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/dalisoft/uwebsockets-dev-env#readme",
   "dependencies": {
-    "@sifrr/server": "0.0.5",
+    "@sifrr/server": "0.0.6",
     "cookie": "^0.4.0",
     "dotenv-safe": "^6.1.0",
     "uWebSockets.js": "github:uNetworking/uWebSockets.js#v15.11.0"
