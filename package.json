@@ -33,7 +33,7 @@
   "dependencies": {
     "@sifrr/server": "0.0.5",
     "cookie": "^0.4.0",
-    "dotenv-safe": "^6.1.0",
+    "dotenv-safe": "^8.1.0",
     "uWebSockets.js": "github:uNetworking/uWebSockets.js#v15.11.0"
   },
   "devDependencies": {
