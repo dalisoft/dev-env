@@ -67,7 +67,7 @@
     "autoprefixer": "^9.6.1",
     "ava": "^2.2.0",
     "babel-eslint": "^10.0.2",
-    "dotenv-safe": "^6.1.0",
+    "dotenv-safe": "^8.1.0",
     "eslint": "^6.0.1",
     "eslint-plugin-react": "^7.14.2",
     "husky": "^3.0.0",
