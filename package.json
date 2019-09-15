@@ -36,7 +36,7 @@
 		"preact-render-to-string": "^4.1.0",
 		"prettier": "^1.17.1",
 		"sass-loader": "^7.1.0",
-		"stylelint": "^10.0.1",
+		"stylelint": "^11.0.0",
 		"webpack": "^4.33.0"
 	},
 	"dependencies": {
