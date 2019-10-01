@@ -42,7 +42,7 @@
 	"dependencies": {
 		"classnames": "^2.2.6",
 		"intl": "^1.2.5",
-		"preact": "^8.4.2",
+		"preact": "^10.0.0",
 		"preact-compat": "^3.18.5",
 		"preact-router": "^2.6.1",
 		"react-intl": "^3.0.0",
