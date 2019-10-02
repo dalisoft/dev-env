@@ -33,7 +33,7 @@
 		"lint-staged": "^9.0.0",
 		"node-sass": "^4.12.0",
 		"preact-cli": "^2.2.1",
-		"preact-render-to-string": "^4.1.0",
+		"preact-render-to-string": "^5.0.6",
 		"prettier": "^1.17.1",
 		"sass-loader": "^7.1.0",
 		"stylelint": "^11.0.0",
