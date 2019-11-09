@@ -84,7 +84,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "optionalDependencies": {
-    "@dalisoft/ws-events-sync": "0.0.11",
+    "@dalisoft/ws-events-sync": "0.0.12",
     "bufferutil": "^4.0.1",
     "long": "^4.0.0",
     "pino-pretty": "^3.0.0",
