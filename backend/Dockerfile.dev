@@ -23,6 +23,7 @@ COPY app /usr/src/app
 
 RUN npm ci
 
+ENV NODE_ENV=development
 ENV NODE_CLUSTER_SCHED_POLICY=rr
 
 CMD ["npm", "run", "watch"]

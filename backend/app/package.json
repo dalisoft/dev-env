@@ -10,9 +10,9 @@
   "author": "dalisoft",
   "license": "MIT",
   "dependencies": {
-    "nanoexpress": "^0.12.x"
+    "nanoexpress": "^1.1.10"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.4"
   }
 }
