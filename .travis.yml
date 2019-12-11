@@ -1,19 +1,11 @@
 sudo: false
 language: node_js
-cache:
-  directories:
-    - node_modules
 notifications:
   email: false
 node_js:
-  - '10'
-  - '11'
   - '12'
-before_install:
-  - npm install -g greenkeeper-lockfile
+  - '13'
 install: npm install
-before_script: greenkeeper-lockfile-update
-after_script: greenkeeper-lockfile-upload
 script:
   - npm run lint
 # TODO: temporarily comment test command
