@@ -63,3 +63,7 @@ typings/
 build
 functions-build
 .webpack
+
+# lockfiles
+package-lock.json
+yarn.lock
