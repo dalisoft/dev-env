@@ -46,7 +46,7 @@
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": "^7.14.1",
     "gh-pages": "^2.0.1",
-    "husky": "^3.0.0",
+    "husky": "^4.0.2",
     "lint-staged": "^9.0.0",
     "prettier": "^1.17.1",
     "react-hot-loader": "^4.8.8",
