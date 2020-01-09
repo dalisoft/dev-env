@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/dalisoft/nanoexpress-dev-env#readme",
   "dependencies": {
-    "@dalisoft/ws-events-sync": "0.0.9",
+    "@dalisoft/ws-events-sync": "1.1.5",
     "ajv": "^6.10.1",
     "consolemd": "^0.2.1",
     "cookie": "^0.4.0",
