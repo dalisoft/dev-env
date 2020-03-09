@@ -29,7 +29,7 @@
   "homepage": "https://github.com/dalisoft/nanoexpress-dev-env#readme",
   "dependencies": {
     "@dalisoft/ws-events-sync": "0.0.9",
-    "ajv": "^6.10.1",
+    "ajv": "^6.12.0",
     "consolemd": "^0.2.1",
     "cookie": "^0.4.0",
     "express-cors": "0.0.3",
