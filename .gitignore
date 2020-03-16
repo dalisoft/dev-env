@@ -61,3 +61,6 @@ typings/
 .next
 
 build
+
+# lockfile
+package-lock.json

@@ -26,6 +26,11 @@ An modern and fast development environment for Backend development with `nanoexp
 - Travis CI configured
 - Husky & Lint-staged is configured
 
+## Running
+
+- On development (local machine): `npm run dev`
+- On production: `npm run build` then `npm start`
+
 ## License
 
 MIT
