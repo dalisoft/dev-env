@@ -28,7 +28,6 @@
   },
   "homepage": "https://github.com/dalisoft/nanoexpress-dev-env#readme",
   "dependencies": {
-    "@dalisoft/ws-events-sync": "0.0.9",
     "ajv": "^6.12.0",
     "consolemd": "^0.2.1",
     "cookie": "^0.4.0",
@@ -38,17 +37,17 @@
     "fast-json-stringify": "^1.17.0",
     "helmet": "^3.21.3",
     "lodash.pick": "^4.4.0",
-    "nanoexpress": "^0.12.19"
+    "nanoexpress": "^1.1.17"
   },
   "devDependencies": {
-    "ava": "^2.1.0",
+    "ava": "^3.5.0",
     "cross-env": "^7.0.2",
     "dotenv-safe": "^8.2.0",
     "eslint": "^6.8.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
-    "rollup": "^1.32.1",
+    "rollup": "^2.0.6",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.0.4",
