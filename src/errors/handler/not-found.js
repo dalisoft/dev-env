@@ -1,6 +1,6 @@
 import * as translations from '../translations';
 
-export default (response, request) => {
+export default (request, response) => {
   const lang = request.getHeader('lang');
   const map = translations[lang];
 
