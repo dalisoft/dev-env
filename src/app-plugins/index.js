@@ -4,8 +4,4 @@ import cors from './cors';
 import jwt from './jwt';
 
 export default (app) =>
-  app
-    .register(rateLimiter)
-    .register(cors)
-    .register(helmet)
-    .register(jwt);
+  app.register(rateLimiter).register(cors).register(helmet).register(jwt);
