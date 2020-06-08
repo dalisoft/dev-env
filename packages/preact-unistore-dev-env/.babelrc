@@ -1,0 +1,18 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "loose": true
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "transform-react-jsx",
+      {
+        "pragma": "Preact.h"
+      }
+    ]
+  ]
+}
