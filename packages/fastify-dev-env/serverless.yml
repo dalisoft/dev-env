@@ -1,0 +1,49 @@
+service: fastify-dev-env-serverless
+
+provider:
+  name: aws
+  runtime: nodejs8
+  websocketsApiRouteSelectionExpression: '$request.body.type'
+
+# Functions
+functions:
+  fastify-serverless-api:
+    name: ${self:service}-${self:provider.stage}-fastify-serverless-api
+    handler: lambda.handler
+    timeout: 30
+    events:
+      - http:
+          path: '{proxy+}'
+          method: any
+          cors: true
+      - websocket:
+          routeKey: $connect
+      - websocket:
+          routeKey: $disconnect
+  connect:
+    handler: lambda.handler
+    events:
+      - websocket:
+          route: $connect
+  disconnect:
+    handler: lambda.handler
+    events:
+      - websocket:
+          route: $disconnect
+
+# Plugins
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-webpack
+  - serverless-offline
+  - serverless-websockets-plugin
+
+# serverless optimization
+package:
+  individually: true
+# serverless-webpack configuration
+# Enable auto-packing of external modules
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
