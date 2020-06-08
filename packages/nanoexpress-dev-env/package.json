@@ -1,0 +1,56 @@
+{
+  "name": "nanoexpress-dev-env",
+  "version": "0.1.0",
+  "description": "An modern and fast development environment for Backend development with `nanoexpress`",
+  "module": "src/server.js",
+  "private": true,
+  "scripts": {
+    "start": "node build/server.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon build/server.js",
+    "test": "ava",
+    "lint": "eslint ./src",
+    "dev": "cross-env NODE_ENV=development rollup -c -w",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalisoft/nanoexpress-dev-env.git"
+  },
+  "keywords": [
+    "nanoexpress",
+    "modern",
+    "dev-env"
+  ],
+  "author": "dalisoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dalisoft/nanoexpress-dev-env/issues"
+  },
+  "homepage": "https://github.com/dalisoft/nanoexpress-dev-env#readme",
+  "dependencies": {
+    "ajv": "^6.12.0",
+    "consolemd": "^0.2.1",
+    "cookie": "^0.4.0",
+    "express-cors": "0.0.3",
+    "express-jwt": "^5.3.1",
+    "express-rate-limit": "^5.1.1",
+    "fast-json-stringify": "^1.18.0",
+    "helmet": "^3.21.3",
+    "lodash.pick": "^4.4.0",
+    "nanoexpress": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "^3.5.1",
+    "cross-env": "^7.0.2",
+    "dotenv-safe": "^8.2.0",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "prettier": "^2.0.1",
+    "rollup": "^2.1.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.0.4",
+    "rollup-plugin-run": "^1.1.0"
+  }
+}
