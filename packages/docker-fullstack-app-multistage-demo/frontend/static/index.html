@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Docker example -- Front</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 class="hey">
+      Hey, <i>it's</i> a <b>Docker</b> <u>Multi-stage</u> example
+    </h2>
+    <h3>Time from backend:</h3>
+    <h3 id="time"></h3>
+    <script>
+      const timeEl = document.getElementById('time');
+      fetch('http://localhost:3000/time', {
+        headers: { 'Content-Type': 'application/json' }
+      })
+        .then((res) => res.json())
+        .then(({ time }) => {
+          console.log('time', new Date(time));
+          timeEl.textContent = time;
+        });
+    </script>
+  </body>
+</html>

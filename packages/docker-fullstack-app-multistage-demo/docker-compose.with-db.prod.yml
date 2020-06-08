@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  database:
+    build: ./database/postgres
+    container_name: docker-fullstack-app-multistage-demo-database
+    ports:
+      - '5432:5432'
+    environment:
+      - 'POSTGRES_PASSWORD=postgres-password'
+      - 'POSTGRES_DB=postgres-db'
+    volumes:
+      - ./database/postgres/sql/:/docker-entrypoint-initdb.d/
+      - ./database/postgres/postgres/data/:/var/lib/postgresql/data/
+      - ./database/postgres/postgres/logs/postgres/:/var/log/postgres/
+    networks:
+      - docker-fullstack-app-multistage-demo-connect
+  backend:
+    build: ./backend
+    container_name: docker-fullstack-app-multistage-demo-backend
+    ports:
+      - '3000:3000'
+    environment:
+      - 'NODE_ENV=production'
+    networks:
+      - docker-fullstack-app-multistage-demo-connect
+    depends_on:
+      - database
+  frontend:
+    image: nginx:1.17-alpine
+    container_name: docker-fullstack-app-multistage-demo-frontend
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./frontend/static:/usr/share/nginx/html
+    networks:
+      - docker-fullstack-app-multistage-demo-connect
+    depends_on:
+      - database
+      - backend
+
+networks:
+  docker-fullstack-app-multistage-demo-connect:
+    driver: bridge
