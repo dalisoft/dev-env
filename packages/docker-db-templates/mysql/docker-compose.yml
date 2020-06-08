@@ -1,0 +1,25 @@
+# Can be connected via url mysql://mysql_user:mysql_pass@localhost:3306/mysql_db
+version: '3.1'
+
+services:
+  mysql:
+    container_name: mysql-db-template
+    image: mysql/mysql-server:5.7
+    restart: always
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: 'mysql_db'
+      MYSQL_USER: 'mysql_user'
+      MYSQL_PASSWORD: 'mysql_pass'
+    volumes:
+      - ./mysql/var/:/var/lib/mysql
+    networks:
+      - mysql-connect
+
+networks:
+  mysql-connect:
+    driver: bridge
