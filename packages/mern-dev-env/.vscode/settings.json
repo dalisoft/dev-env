@@ -1,0 +1,16 @@
+{
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false,
+  "prettier.tslintIntegration": false,
+  "prettier.eslintIntegration": true,
+  "prettier.stylelintIntegration": false,
+  "prettier.requireConfig": true,
+  "eslint.enable": true,
+  "eslint.packageManager": "npm",
+  "files.associations": {
+    "*.js": "javascript"
+  },
+  "jest.autoEnable": false,
+  "jest.showCoverageOnLoad": false,
+  "jest.pathToJest": ""
+}
