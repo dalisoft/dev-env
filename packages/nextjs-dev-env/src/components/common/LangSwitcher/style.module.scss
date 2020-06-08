@@ -1,0 +1,14 @@
+.switcher-container {
+  display: flex;
+}
+
+.switcher {
+  color: #666;
+  text-decoration: underline;
+}
+
+.active {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
