@@ -1,4 +1,3 @@
-sudo: false
 language: node_js
 cache:
   directories:
@@ -6,11 +5,10 @@ cache:
 notifications:
   email: false
 node_js:
-  - '8'
-before_install:
-  - npm i -g npm@^6.0.0
+  - "12"
+  - "13"
+  - "14"
 before_script:
   - npm prune
-script:
-  - npm run lint
-  - npm test
+# script:
+#  - npm test
