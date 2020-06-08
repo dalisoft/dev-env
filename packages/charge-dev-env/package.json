@@ -1,0 +1,30 @@
+{
+  "name": "charge-dev-env",
+  "version": "0.1.0",
+  "private": true,
+  "sideEffects": false,
+  "devDependencies": {
+    "@static/charge": "^1.5.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-config-react-app": "^4.0.1",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "gh-pages": "^2.1.1",
+    "husky": "^4.0.2",
+    "lint-staged": "^9.3.0",
+    "prettier": "^1.18.2",
+    "stylelint": "^11.0.0",
+    "stylelint-config-sass-guidelines": "^6.1.0"
+  },
+  "scripts": {
+    "start": "charge serve src",
+    "build": "charge build src build",
+    "lint": "eslint ./src/*.jsx",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
