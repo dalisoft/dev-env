@@ -32,18 +32,18 @@
   "homepage": "https://github.com/dalisoft/uwebsockets-dev-env#readme",
   "dependencies": {
     "@sifrr/server": "0.0.6",
-    "cookie": "^0.4.0",
-    "dotenv-safe": "^8.1.0",
+    "cookie": "^0.4.1",
+    "dotenv-safe": "^8.2.0",
     "uWebSockets.js": "github:uNetworking/uWebSockets.js#v15.11.0"
   },
   "devDependencies": {
-    "ava": "^2.0.0",
-    "eslint": "^6.0.0",
-    "husky": "^4.0.2",
-    "lint-staged": "^9.0.1",
-    "prettier": "^1.17.1",
-    "rollup": "^1.16.4",
-    "rollup-plugin-commonjs": "^10.0.0",
+    "ava": "^2.4.0",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "rollup": "^1.32.1",
+    "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-run": "^1.1.0"
   }

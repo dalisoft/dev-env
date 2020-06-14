@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/dalisoft/docker-db-templates#readme",
   "devDependencies": {
-    "husky": "^4.0.2",
-    "lint-staged": "^9.0.0",
-    "prettier": "^1.17.1"
+    "husky": "^4.2.5",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1"
   }
 }
