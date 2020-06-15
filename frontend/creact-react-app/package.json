@@ -47,22 +47,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "eslint ./src",
+    "lint:eslint": "eslint ./src",
+    "lint:prettier": "prettier -c .",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
     "eject": "react-scripts eject",
     "docs": "docz dev",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }

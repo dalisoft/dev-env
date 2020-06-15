@@ -89,6 +89,8 @@ __snapshots__
 .docz
 
 /tmp
+**/tmp
+**/**/tmp
 
 # own script
 npm-update.sh
