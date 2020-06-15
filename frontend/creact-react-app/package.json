@@ -4,6 +4,8 @@
   "private": true,
   "sideEffects": false,
   "dependencies": {
+    "@formatjs/intl-pluralrules": "^2.2.6",
+    "@formatjs/intl-relativetimeformat": "^5.2.6",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.5.0",
     "core-js": "^3.1.4",
@@ -30,15 +32,15 @@
   },
   "devDependencies": {
     "@types/react": "^16.8.22",
-    "docz": "^1.0.0-rc.9",
+    "docz": "^2.3.1",
     "docz-plugin-css": "^0.11.0",
     "docz-theme-default": "^1.0.0-rc.9",
     "gh-pages": "^2.0.1",
     "husky": "^4.0.2",
-    "lint-staged": "^9.0.1",
-    "prettier": "^1.18.2",
+    "lint-staged": "^10.2.10",
+    "prettier": "^2.0.5",
     "react-test-renderer": "^16.8.6",
-    "stylelint": "^11.0.0",
+    "stylelint": "^13.6.0",
     "stylelint-config-sass-guidelines": "^6.0.0"
   },
   "scripts": {
@@ -50,5 +52,17 @@
     "docs": "docz dev",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
