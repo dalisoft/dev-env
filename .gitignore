@@ -89,3 +89,6 @@ __snapshots__
 .docz
 
 /tmp
+
+# own script
+npm-update.sh

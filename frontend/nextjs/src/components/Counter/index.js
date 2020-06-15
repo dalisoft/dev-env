@@ -6,7 +6,6 @@ import { LangSwitcher } from '../common';
 
 import { counter as action } from '../../redux/actions';
 
-import './style.scss';
 import style from './style.module.scss';
 
 const Counter = ({ counter }) => {
