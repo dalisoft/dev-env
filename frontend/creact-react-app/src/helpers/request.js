@@ -1,16 +1,16 @@
 import 'unfetch/polyfill';
 
-const requestByMethod = method => (url, options) => {
-	options = options || {};
-	options.method = method.toUpperCase();
+const requestByMethod = (method) => (url, options) => {
+  options = options || {};
+  options.method = method.toUpperCase();
 
-	let req = fetch(url, options);
+  let req = fetch(url, options);
 
-	if (options.json) {
-		req = req.then(res => res.json());
-	}
+  if (options.json) {
+    req = req.then((res) => res.json());
+  }
 
-	return req;
+  return req;
 };
 
 const get = requestByMethod('get');
