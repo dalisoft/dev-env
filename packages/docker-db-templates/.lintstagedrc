@@ -1,8 +1,4 @@
 {
-  "linters": {
-     "*.{json,md,yml}": [
-      "prettier --write",
-      "git add"
-    ]
-  }
+  "*.{json,scss,css,md,yml}": ["prettier -c --config .prettierrc"],
+  "*.{js,ts,jsx,tsx}": ["eslint", "prettier -c --config .prettierrc"]
 }
