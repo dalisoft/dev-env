@@ -2,7 +2,7 @@ import { css } from 'docz-plugin-css';
 import path from 'path';
 
 export default {
-  title: 'CRA Modified',
+  title: 'create-react-app',
   codeSandbox: false,
   typescript: false,
   propsParser: true,
