@@ -5,4 +5,4 @@
 - [x] Next.JS
 - [x] Create React App
 - [x] ChargeJS
-- [] Gatsby
+- [x] Gatsby
