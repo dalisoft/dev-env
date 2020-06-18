@@ -1,4 +1,4 @@
-import nanoexpress from 'nanoexpress';
+import nanoexpress from '@nanoexpress/pro-slim/cjs/nanoexpress';
 import server from './server';
 
 (async () => {
@@ -12,7 +12,6 @@ import server from './server';
       console.log('🔁  HMR Reloading `./server`...');
       try {
         instance.close();
-        app = await server(instance, port);
         await instance.listen(port);
       } catch (error) {
         console.error(error);
@@ -22,13 +21,12 @@ import server from './server';
       console.log('🔁  HMR Reloading `./routes`...');
       try {
         instance.close();
-        app = await server(instance, port);
         await instance.listen(port);
       } catch (error) {
         console.error(error);
       }
     });
+    await app.listen(port);
     console.info('✅  Server-side HMR Enabled!');
   }
-
 })();

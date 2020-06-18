@@ -3,46 +3,39 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router';
+import staticServe from '@nanoexpress/middlewares/static/cjs/static.cjs';
 
 import App from '../client/containers/App';
+import AppRoutes from './routes';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
 global.Intl = intl; // polyfill for ios 9
 
 export default (server) => {
+  AppRoutes(server);
+
   server
-    .register(require('./routes').default)
-    .static(process.env.RAZZLE_PUBLIC_DIR)
-    .get(
-      '/*',
-      {
-        isRaw: true
-      },
-      (req, res) => {
-        const APP_TITLE = process.env.APP_TITLE || 'Razzle Dev Env';
-        const context = {};
+    .use(staticServe(process.env.RAZZLE_PUBLIC_DIR))
+    .get('/*', (req, res) => {
+      const APP_TITLE = process.env.APP_TITLE || 'Razzle Dev Env';
+      const context = { req, res };
 
-        const markup = renderToString(
-          <Provider store={require('../client/redux/store').store}>
-            <App
-              router={StaticRouter}
-              location={req.getUrl()}
-              context={context}
-            />
-          </Provider>
-        );
+      const markup = renderToString(
+        <Provider store={require('../client/redux/store').store}>
+          <App router={StaticRouter} location={req.path} context={context} />
+        </Provider>
+      );
 
-        if (context.url) {
-          res.writeHeader('Location', context.url);
-          res.writeStatus('301 Moved Permanently');
-          res.end();
-          return;
-        }
+      if (context.url) {
+        res.writeHeader('Location', context.url);
+        res.writeStatus('301 Moved Permanently');
+        return res.end();
+      }
 
-        res.end(
+      return res.end(
         // prettier-ignore
-          `<!doctype html>
+        `<!doctype html>
     <html lang="">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -60,7 +53,7 @@ export default (server) => {
         <script src="${assets.client.js}" defer crossorigin></script>
     </body>
 </html>`
-        );
-      });
+      );
+    });
   return server;
 };
