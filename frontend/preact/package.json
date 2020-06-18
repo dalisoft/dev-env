@@ -18,34 +18,50 @@
 		"precommit": "npm run lint:prettify && npm run lint:fix"
 	},
 	"devDependencies": {
-		"@namics/stylelint-bem": "^6.0.0",
-		"docz": "^1.0.0-rc.9",
+		"@namics/stylelint-bem": "^6.3.1",
+		"docz": "^2.3.1",
 		"docz-plugin-css": "^0.11.0",
-		"docz-theme-default": "^1.0.0-rc.9",
-		"eslint": "^6.0.0",
-		"eslint-config-synacor": "^3.0.4",
-		"gh-pages": "^2.0.1",
+		"docz-theme-default": "^1.2.0",
+		"eslint": "^7.2.0",
+		"eslint-config-synacor": "^3.0.5",
+		"gh-pages": "^3.0.0",
 		"html-looks-like": "^1.0.3",
-		"husky": "^4.0.2",
+		"husky": "^4.2.5",
 		"identity-obj-proxy": "^3.0.0",
 		"if-env": "^1.0.4",
-		"jest": "^24.8.0",
-		"lint-staged": "^9.0.0",
-		"node-sass": "^4.12.0",
+		"jest": "^26.0.1",
+		"lint-staged": "^10.2.11",
+		"node-sass": "^4.14.1",
 		"preact-cli": "^2.2.1",
-		"preact-render-to-string": "^5.0.6",
-		"prettier": "^1.17.1",
-		"sass-loader": "^7.1.0",
-		"stylelint": "^11.0.0",
-		"webpack": "^4.33.0"
+		"preact-render-to-string": "^5.1.9",
+		"prettier": "^2.0.5",
+		"sass-loader": "^8.0.2",
+		"stylelint": "^13.6.1",
+		"webpack": "^4.43.0"
 	},
 	"dependencies": {
+		"@formatjs/intl-pluralrules": "^2.2.6",
+		"@formatjs/intl-relativetimeformat": "^5.2.6",
 		"classnames": "^2.2.6",
 		"intl": "^1.2.5",
-		"preact": "^10.0.0",
-		"preact-compat": "^3.18.5",
-		"preact-router": "^3.0.1",
-		"react-intl": "^3.0.0",
+		"preact": "^10.4.4",
+		"preact-compat": "^3.19.0",
+		"preact-router": "^3.2.1",
+		"react-intl": "^4.6.9",
 		"unistore": "^3.5.2"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"safari >= 9",
+			"ie >= 11",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
 	}
 }

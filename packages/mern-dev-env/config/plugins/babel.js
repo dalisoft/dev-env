@@ -1,6 +1,6 @@
 import babel from 'rollup-plugin-babel';
 
-import browserlist from '../browserlistrc';
+import pkg from '.../../package.json';
 
 import { dev, watch } from '../env';
 
@@ -15,13 +15,11 @@ export default babel({
       '@babel/preset-env',
       {
         modules: false,
-        targets: browserlist[ENV]
+        targets: pkg.browserslist[ENV]
       }
     ],
     '@babel/preset-react'
   ],
-  plugins: [
-    '@babel/plugin-proposal-class-properties'
-  ],
+  plugins: ['@babel/plugin-proposal-class-properties'],
   sourceMaps: false
 });

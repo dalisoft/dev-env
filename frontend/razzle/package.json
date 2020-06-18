@@ -41,5 +41,19 @@
     "eslint-plugin-react": "^7.17.0",
     "razzle": "^3.x",
     "razzle-plugin-scss": "^3.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "safari >= 9",
+      "ie >= 11",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
