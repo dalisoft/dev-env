@@ -1,5 +1,5 @@
 {
-  "name": "docker-db-templates",
+  "name": "@dalisoft/docker-db-templates",
   "version": "0.1.0",
   "description": "Docker templates for most commonly used DB",
   "private": true,

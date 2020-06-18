@@ -1,5 +1,5 @@
 {
-  "name": "fastify-dev-env",
+  "name": "@dalisoft/fastify-dev-env",
   "version": "0.1.0",
   "description": "An modern development environment for Backend development with Fastify",
   "module": "src/server.js",

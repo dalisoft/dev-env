@@ -1,5 +1,5 @@
 {
-  "name": "charge-dev-env",
+  "name": "@dalisoft/charge-dev-env",
   "version": "0.1.0",
   "private": true,
   "sideEffects": false,
@@ -15,9 +15,9 @@
     "eslint-plugin-react-hooks": "^4.0.4",
     "gh-pages": "^3.0.0",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.10",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
-    "stylelint": "^13.6.0",
+    "stylelint": "^13.6.1",
     "stylelint-config-sass-guidelines": "^7.0.0"
   },
   "scripts": {

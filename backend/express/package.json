@@ -1,5 +1,5 @@
 {
-  "name": "express-dev-env",
+  "name": "@dalisoft/express-dev-env",
   "version": "0.1.0",
   "description": "An modern and easy development environment for Backend development with Express",
   "module": "src/server.js",

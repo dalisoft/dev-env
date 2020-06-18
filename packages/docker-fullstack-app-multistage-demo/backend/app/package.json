@@ -1,5 +1,5 @@
 {
-  "name": "docker-multistage-backend",
+  "name": "@dalisoft/docker-multistage-backend",
   "version": "0.0.0",
   "description": "",
   "main": "server.js",

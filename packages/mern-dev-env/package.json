@@ -1,5 +1,5 @@
 {
-  "name": "mern-dev-env",
+  "name": "@dalisoft/mern-dev-env",
   "version": "0.1.0",
   "description": "An modern and easy development environment using MERN stack",
   "module": "src/server.js",

@@ -1,5 +1,5 @@
 {
-	"name": "preact-unistore-dev-env",
+	"name": "@dalisoft/preact-unistore-dev-env",
 	"version": "0.0.1",
 	"license": "MIT",
 	"scripts": {
@@ -46,6 +46,6 @@
 		"preact-compat": "^3.18.5",
 		"preact-router": "^3.0.1",
 		"react-intl": "^3.0.0",
-		"unistore": "^3.4.1"
+		"unistore": "^3.5.2"
 	}
 }

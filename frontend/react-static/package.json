@@ -1,5 +1,5 @@
 {
-  "name": "react-static-dev-env",
+  "name": "@dalisoft/react-static-dev-env",
   "private": true,
   "scripts": {
     "clean": "rm -rf dist artifacts tmp",

@@ -1,5 +1,5 @@
 {
-  "name": "lambda-api-dev-env",
+  "name": "@dalisoft/lambda-api-dev-env",
   "version": "0.1.0",
   "description": "An modern development environment for Serverless development with Lambda API",
   "main": "build/server.js",

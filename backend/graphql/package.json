@@ -1,5 +1,5 @@
 {
-  "name": "graphql-dev-env",
+  "name": "@dalisoft/graphql-dev-env",
   "version": "0.1.0",
   "description": "An fast & modern GraphQL development environment for with GraphiQL",
   "main": "build/server.js",

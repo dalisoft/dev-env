@@ -1,0 +1,7 @@
+{
+  "name": "@dalisoft/dev-env-templates",
+  "npmClient": "npm",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}

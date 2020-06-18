@@ -1,5 +1,5 @@
 {
-  "name": "rollup-starter-dev-env",
+  "name": "@dalisoft/rollup-starter-dev-env",
   "version": "1.0.0",
   "description": "Starter Dev-Env with React, Babel and Rollup",
   "main": "dist/server.js",

@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-dev-env",
+  "name": "@dalisoft/nextjs-dev-env",
   "version": "0.1.0",
   "private": true,
   "sideEffects": false,
@@ -12,7 +12,7 @@
     "isomorphic-unfetch": "^3.0.0",
     "lodash.get": "^4.4.2",
     "lodash.mapvalues": "^4.6.0",
-    "next": "^9.4.5-canary.12",
+    "next": "^9.4.5-canary.13",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "query-string": "^6.13.1",
@@ -33,12 +33,12 @@
     "eslint": "^7.2.0",
     "gh-pages": "^3.0.0",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.10",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "react-scripts": "^3.4.1",
     "react-test-renderer": "^16.13.1",
     "serve": "^11.3.2",
-    "stylelint": "^13.6.0",
+    "stylelint": "^13.6.1",
     "stylelint-config-sass-guidelines": "^7.0.0"
   },
   "scripts": {

@@ -1,5 +1,5 @@
 {
-  "name": "uwebsockets-dev-env",
+  "name": "@dalisoft/uwebsockets-dev-env",
   "version": "0.1.0",
   "description": "An modern and blazing fast development environment for Backend development with uWebSockets.js",
   "module": "src/server.js",

@@ -1,5 +1,5 @@
 {
-  "name": "nanoexpress-dev-env",
+  "name": "@dalisoft/nanoexpress-dev-env",
   "version": "0.1.0",
   "description": "An modern and fast development environment for Backend development with `nanoexpress`",
   "module": "src/server.js",
