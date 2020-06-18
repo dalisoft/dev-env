@@ -11,7 +11,7 @@ There has 3 categories, 5+ on both frontend and backend and as bonus there Docke
 - `[x]` Gatsby
 - `[x]` Next.JS
 - `[x]` Preact
-- `[]` Razzle
+- `[x]` Razzle
 - `[]` react-static
 - `[]` rollup-starter
 
