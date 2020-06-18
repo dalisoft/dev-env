@@ -32,7 +32,7 @@
 		"jest": "^26.0.1",
 		"lint-staged": "^10.2.11",
 		"node-sass": "^4.14.1",
-		"preact-cli": "^2.2.1",
+		"preact-cli": "^3.0.0-rc.14",
 		"preact-render-to-string": "^5.1.9",
 		"prettier": "^2.0.5",
 		"sass-loader": "^8.0.2",
