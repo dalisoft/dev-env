@@ -92,5 +92,8 @@ __snapshots__
 **/tmp
 **/**/tmp
 
+.cache
+frontend/gatsby/public
+
 # own script
 npm-update.sh
