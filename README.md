@@ -2,7 +2,7 @@
 
 There has 3 categories, 5+ on both frontend and backend and as bonus there Docker templates with Docker database expose template
 
-> Note, where `[x]` means it is upgraded whereas others didn't
+> Note, where `[x]` means it is upgraded whereas others (`[]`) didn't
 
 ## Frontend
 
