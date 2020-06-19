@@ -1,4 +1,3 @@
-import 'core-js'; // polyfills for ios 9
 import 'intl';
 import React from 'react';
 import { Provider, connect } from 'react-redux';

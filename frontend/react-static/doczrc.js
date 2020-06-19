@@ -5,7 +5,6 @@ export default {
   codeSandbox: false,
   typescript: false,
   propsParser: true,
-  wrapper: 'src/wrap-el.docs',
   dest: './build/docs/',
   plugins: [
     css({

@@ -94,6 +94,7 @@ __snapshots__
 
 .cache
 frontend/gatsby/public
+frontend/react-static/artifacts
 
 # own script
 npm-update.sh

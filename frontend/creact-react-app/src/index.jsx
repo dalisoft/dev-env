@@ -1,5 +1,4 @@
-import 'core-js'; // polyfills for ios 9
-import intl from 'intl';
+import 'intl';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -8,8 +7,6 @@ import { store } from 'redux/store';
 import * as serviceWorker from './serviceWorker';
 
 import './index.css';
-
-global.Intl = intl; // polyfill for ios 9
 
 ReactDOM.render(
   <Provider store={store}>

@@ -8,7 +8,6 @@
     "@formatjs/intl-relativetimeformat": "^5.2.6",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.5.0",
-    "core-js": "^3.1.4",
     "history": "^4.10.1",
     "intl": "^1.2.5",
     "lodash.get": "^4.4.2",

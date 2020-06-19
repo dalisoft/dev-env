@@ -2,9 +2,13 @@
 
 There has 3 categories, 5+ on both frontend and backend and as bonus there Docker templates with Docker database expose template
 
-> Note, where `[x]` means it is upgraded whereas others (`[]`) didn't
+> Note, where `[x]` means it is upgraded and maintaining currently whereas others (`[]`) didn't
+
+`[x/x]` means there project was updated and configured well working Component/Describe documentation
 
 ## Frontend
+
+> Most of these frontend dev env are for React, for Vue, Svelte please submit PR if you can
 
 - `[x]` ChargeJS
 - `[x]` Create React App
@@ -12,7 +16,7 @@ There has 3 categories, 5+ on both frontend and backend and as bonus there Docke
 - `[x]` Next.JS
 - `[x]` Preact
 - `[x]` Razzle
-- `[]` react-static
+- `[x/x]` react-static
 - `[]` rollup-starter
 
 ## Backend

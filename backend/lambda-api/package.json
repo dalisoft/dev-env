@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/dalisoft/lambda-api-dev-env#readme",
   "dependencies": {
-    "aws-sdk": "^2.587.0",
+    "aws-sdk": "^2.700.0",
     "lambda-api": "^0.10.4",
     "source-map-support": "^0.5.16"
   },
@@ -58,7 +58,7 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "serverless": "^1.59.3",
+    "serverless": "^1.73.1",
     "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^5.12.1",
     "serverless-webpack": "^5.3.1",
