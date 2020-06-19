@@ -17,7 +17,6 @@ There has 3 categories, 5+ on both frontend and backend and as bonus there Docke
 - `[x]` Preact
 - `[x]` Razzle
 - `[x/x]` react-static
-- `[]` rollup-starter
 
 ## Backend
 
