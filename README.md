@@ -11,7 +11,7 @@ There has 3 categories, 5+ on both frontend and backend and as bonus there Docke
 > Most of these frontend dev env are for React, for Vue, Svelte please submit PR if you can
 
 - `[x]` ChargeJS
-- `[x]` Create React App
+- `[x/x]` Create React App
 - `[x]` Gatsby
 - `[x]` Next.JS
 - `[x]` Preact

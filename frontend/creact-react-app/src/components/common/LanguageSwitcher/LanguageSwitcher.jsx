@@ -5,11 +5,6 @@ import reducers from '../../../redux/reducers';
 
 import style from './style.module.css';
 
-/**
- * Language Switcher component
- *
- * @example <PureLanguageSwitcher />
- */
 export default class LanguageSwitcher extends React.PureComponent {
   static propTypes = {
     locale: PropTypes.string,

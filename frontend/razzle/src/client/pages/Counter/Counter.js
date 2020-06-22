@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'redaction';
 
 import { Text } from '../../components/UI';
-import { LangSwitcher } from '../../components/common';
+import { LanguageSwitcher } from '../../components/common';
 
 import { counter as action } from '../../redux/actions';
 
@@ -31,7 +31,7 @@ const Counter = React.memo(({ counter }) => {
       <h4 onClick={action.reset} className={style['change-count--btn']}>
         Reset counter
       </h4>
-      <LangSwitcher />
+      <LanguageSwitcher />
       <Link to="/">Go to home</Link>
     </div>
   );

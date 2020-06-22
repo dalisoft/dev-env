@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { Text } from 'components/UI';
-import { LangSwitcher } from 'components/common';
+import { LanguageSwitcher } from 'components/common';
 
 const Home = () => (
   <div>
     <h1>
       <Text>HOME_PAGE</Text>
     </h1>
-    <LangSwitcher />
+    <LanguageSwitcher />
     <Link to="/counter">Go to counter</Link>
   </div>
 );

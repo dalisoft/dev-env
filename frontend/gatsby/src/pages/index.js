@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import { Text } from "components/UI"
-import { LangSwitcher } from "components/common"
+import { LanguageSwitcher } from "components/common"
 
 const IndexPage = () => (
   <Layout>
@@ -17,7 +17,7 @@ const IndexPage = () => (
       <Image />
     </div>
     Current page <Text>HOME_PAGE</Text>
-    <LangSwitcher />
+    <LanguageSwitcher />
     <Link to="/counter/">Go to counter</Link>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { connect } from 'redaction';
 
 import { Text } from '../UI';
-import { LangSwitcher } from '../common';
+import { LanguageSwitcher } from '../common';
 
 import { counter as action } from '../../redux/actions';
 
@@ -28,7 +28,7 @@ const Counter = ({ counter }) => {
       <h4 onClick={action.reset} className={style['change-count--btn']}>
         Reset counter
       </h4>
-      <LangSwitcher />
+      <LanguageSwitcher />
       <Link href="/">
         <a>Go to home</a>
       </Link>
