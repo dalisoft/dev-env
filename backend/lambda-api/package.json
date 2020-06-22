@@ -36,13 +36,13 @@
   },
   "homepage": "https://github.com/dalisoft/lambda-api-dev-env#readme",
   "dependencies": {
-    "aws-sdk": "^2.700.0",
+    "aws-sdk": "^2.702.0",
     "lambda-api": "^0.10.4",
     "source-map-support": "^0.5.16"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.6",
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
     "ava": "^2.4.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-source-map-support": "^2.1.1",

@@ -1,7 +1,7 @@
-import React from 'preact-compat';
 import 'intl';
-import { Provider } from 'unistore/preact';
-import { store } from './store';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 
 const Wrap = ({ children }) => <Provider store={store}>{children}</Provider>;
 

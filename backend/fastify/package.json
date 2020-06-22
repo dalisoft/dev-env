@@ -41,7 +41,7 @@
     "aws-serverless-express": "^3.3.6",
     "consolemd": "^0.2.1",
     "dotenv-safe": "^8.2.0",
-    "fastify": "^2.11.0",
+    "fastify": "^2.15.0",
     "fastify-compress": "^2.0.0",
     "fastify-cookie": "^3.4.0",
     "fastify-cors": "^3.0.1",
@@ -55,8 +55,8 @@
     "lodash.pick": "^4.4.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.6",
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
     "ava": "^2.4.0",
     "babel-loader": "^8.0.6",
     "cross-env": "^6.0.3",

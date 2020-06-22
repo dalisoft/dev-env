@@ -19,7 +19,7 @@ This project is modified and prepared as Development Environment for Frontend de
 - Github Pages support (via `npm run deploy`)
 - Fetch is preferred
 - NPM is preferred (because of dependecies resolve)
-- Components are documented with docz (with basic example)
+- Components are documented with react-styleguidist (with basic example)
 - Components are tests with react-test-renderer and Jest (with basic example)
 - Good browser support
 - Good structured (subjective)
@@ -28,7 +28,7 @@ This project is modified and prepared as Development Environment for Frontend de
 
 ### Documentations
 
-One of component was documented with docz and works good for now.
+One of component was documented with react-styleguidist and works good for now.
 Showing docs available only for DEV as frontend-devs works in localhost most-time
 
 Command to run

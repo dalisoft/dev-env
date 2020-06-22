@@ -1,6 +1,5 @@
 .git
 .vscode
-.docz
 artifacts
 build
 dist

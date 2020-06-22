@@ -61,11 +61,11 @@
     "swagger-ui-dist": "^3.27.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.2",
+    "@babel/core": "^7.10.3",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
-    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "^7.10.1",
-    "autoprefixer": "^9.8.0",
+    "autoprefixer": "^9.8.2",
     "ava": "^3.9.0",
     "babel-eslint": "^10.1.0",
     "dotenv-safe": "^8.2.0",

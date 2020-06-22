@@ -2,11 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import reducers from '../../../redux/reducers';
-import { connect } from 'redaction';
 
-import style from './style.module.scss';
+import style from './style.module.css';
 
-export class LanguageSwitcher extends React.PureComponent {
+/**
+ * Language Switcher component
+ *
+ * @example <PureLanguageSwitcher />
+ */
+export default class LanguageSwitcher extends React.PureComponent {
   static propTypes = {
     locale: PropTypes.string,
   };
@@ -43,5 +47,3 @@ export class LanguageSwitcher extends React.PureComponent {
     );
   }
 }
-
-export default connect({ locale: 'init.locale' })(LanguageSwitcher);

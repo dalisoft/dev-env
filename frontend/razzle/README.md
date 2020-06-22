@@ -17,7 +17,7 @@ This project is modified and prepared as Development Environment for Frontend de
 - SSR Compatible
 - Fetch is preferred
 - NPM is preferred (because of dependecies resolve)
-- Components are documented with docz (with basic example)
+- Components are documented with react-styleguidist (with basic example)
 - Components are tests with react-test-renderer and Jest (with basic example)
 - Good browser support
 - Good structured (subjective)

@@ -1,67 +1,65 @@
 {
-	"name": "@dalisoft/preact-unistore-dev-env",
-	"version": "0.0.1",
-	"license": "MIT",
-	"scripts": {
-		"start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
-		"fix-redirects": "cp ./src/_redirects build/",
-		"build": "rm -rf build && preact build --template src/template.html --no-prerender && npm run fix-redirects",
-		"dev": "preact watch --template src/template.html",
-		"lint": "eslint src",
-		"lint:prettier": "prettier -c .prettierrc ./src/*.*",
-		"lint:fix": "eslint --fix ./src",
-		"lint:prettify": "prettier -c .prettierrc --write ./src/*.*",
-		"test": "jest",
-		"docs": "docz dev",
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build",
-		"precommit": "npm run lint:prettify && npm run lint:fix"
-	},
-	"devDependencies": {
-		"@namics/stylelint-bem": "^6.3.1",
-		"docz": "^2.3.1",
-		"docz-plugin-css": "^0.11.0",
-		"docz-theme-default": "^1.2.0",
-		"eslint": "^7.2.0",
-		"eslint-config-synacor": "^3.0.5",
-		"gh-pages": "^3.0.0",
-		"html-looks-like": "^1.0.3",
-		"husky": "^4.2.5",
-		"identity-obj-proxy": "^3.0.0",
-		"if-env": "^1.0.4",
-		"jest": "^26.0.1",
-		"lint-staged": "^10.2.11",
-		"node-sass": "^4.14.1",
-		"preact-cli": "^3.0.0-rc.14",
-		"preact-render-to-string": "^5.1.9",
-		"prettier": "^2.0.5",
-		"sass-loader": "^8.0.2",
-		"stylelint": "^13.6.1",
-		"webpack": "^4.43.0"
-	},
-	"dependencies": {
-		"@formatjs/intl-pluralrules": "^2.2.6",
-		"@formatjs/intl-relativetimeformat": "^5.2.6",
-		"classnames": "^2.2.6",
-		"intl": "^1.2.5",
-		"preact": "^10.4.4",
-		"preact-compat": "^3.19.0",
-		"preact-router": "^3.2.1",
-		"react-intl": "^4.6.9",
-		"unistore": "^3.5.2"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"safari >= 9",
-			"ie >= 11",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	}
+  "name": "@dalisoft/preact-unistore-dev-env",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "fix-redirects": "cp ./src/_redirects build/",
+    "build": "rm -rf build && preact build --template src/template.html --no-prerender && npm run fix-redirects",
+    "dev": "preact watch --template src/template.html",
+    "test": "jest",
+    "lint:eslint": "eslint ./src",
+    "lint:prettier": "prettier -c .",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "docs:dev": "styleguidist server",
+    "docs": "styleguidist build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "precommit": "npm run lint:prettify && npm run lint:fix"
+  },
+  "devDependencies": {
+    "@namics/stylelint-bem": "^6.3.1",
+    "eslint": "^7.3.0",
+    "eslint-config-synacor": "^3.0.5",
+    "gh-pages": "^3.1.0",
+    "html-looks-like": "^1.0.3",
+    "husky": "^4.2.5",
+    "identity-obj-proxy": "^3.0.0",
+    "if-env": "^1.0.4",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.11",
+    "node-sass": "^4.14.1",
+    "preact-cli": "^3.0.0-rc.14",
+    "preact-render-to-string": "^5.1.9",
+    "prettier": "^2.0.5",
+    "react-styleguidist": "^11.0.8",
+    "sass-loader": "^8.0.2",
+    "stylelint": "^13.6.1",
+    "webpack": "^4.43.0"
+  },
+  "dependencies": {
+    "@formatjs/intl-pluralrules": "^2.2.7",
+    "@formatjs/intl-relativetimeformat": "^5.2.7",
+    "classnames": "^2.2.6",
+    "intl": "^1.2.5",
+    "preact": "^10.4.4",
+    "preact-compat": "^3.19.0",
+    "preact-router": "^3.2.1",
+    "react-intl": "^4.6.10",
+    "unistore": "^3.5.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "safari >= 9",
+      "ie >= 11",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
