@@ -5,7 +5,7 @@ const combineLink = (...args) => {
     args[0] = '';
   }
 
-  args.forEach(value => (link += `${value}/`));
+  args.forEach((value) => (link += `${value}/`));
 
   return link.substr(0, link.length - 1);
 };

@@ -7,7 +7,16 @@ import debounce from './debounce';
 import imageResize from './image-resize';
 import formValidation from './form-validation';
 
-export { connect, flatten, request, combineLink, asyncFind, debounce, imageResize, formValidation };
+export {
+  connect,
+  flatten,
+  request,
+  combineLink,
+  asyncFind,
+  debounce,
+  imageResize,
+  formValidation
+};
 
 export * from './api';
 export * from './store';

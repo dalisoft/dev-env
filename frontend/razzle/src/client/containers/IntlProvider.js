@@ -1,5 +1,6 @@
 import React from 'react';
 import { IntlProvider as Provider } from 'react-intl';
+import PropTypes from 'prop-types';
 
 import 'intl/locale-data/jsonp/en.js';
 import 'intl/locale-data/jsonp/ru.js';
@@ -27,4 +28,9 @@ export const IntlProvider = ({ children, locale }) => {
       {children}
     </Provider>
   );
+};
+
+IntlProvider.propTypes = {
+  children: PropTypes.any,
+  locale: PropTypes.string
 };

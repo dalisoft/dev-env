@@ -4,7 +4,7 @@ import server from './server';
 (async () => {
   const instance = nanoexpress();
   // eslint-disable-next-line no-unused-vars
-  let app = await server(instance);
+  const app = await server(instance);
   const port = process.env.PORT || 3000;
 
   if (module.hot) {

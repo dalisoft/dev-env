@@ -1,7 +1,7 @@
 const initialState = {
-  locale: 'en',
-};
+  locale: "en",
+}
 
-const setLocale = (state, locale) => ({ ...state, locale });
+const setLocale = (state, locale) => ({ ...state, locale })
 
-export default { initialState, setLocale };
+export default { initialState, setLocale }

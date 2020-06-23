@@ -8,7 +8,9 @@ FormattedMessage.propTypes = {
   children: PropTypes.string
 };
 
-export const Text = ({ id, ...props }) => <FormattedMessage id={id || props.children} {...props} />;
+export const Text = ({ id, ...props }) => (
+  <FormattedMessage id={id || props.children} {...props} />
+);
 
 Text.propTypes = {
   id: PropTypes.any,

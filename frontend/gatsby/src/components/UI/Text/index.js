@@ -1,3 +1,3 @@
-import Text from './Text.jsx';
+import Text from "./Text.jsx"
 
-export default Text;
+export default Text

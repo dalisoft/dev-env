@@ -1,5 +1,5 @@
 node_modules/
 build/
-dist/
 public/
-src/.next/
+artifacts
+tmp

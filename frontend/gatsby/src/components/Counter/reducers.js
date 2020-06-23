@@ -14,7 +14,7 @@ const decrement = ({ counter, ...state }) => ({
   ...state,
   counter: counter - 1,
 })
-const reset = state => ({ ...state, counter: 0 })
+const reset = (state) => ({ ...state, counter: 0 })
 
 export default {
   initialState,

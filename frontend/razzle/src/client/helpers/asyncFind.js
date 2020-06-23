@@ -1,9 +1,9 @@
 const tickMap = {};
 // eslint-disable-next-line
-Promise.prototype.debounce = function(ms) {
+Promise.prototype.debounce = function (ms) {
   return this.then(
-    data =>
-      new Promise(resolve => {
+    (data) =>
+      new Promise((resolve) => {
         const _id = JSON.stringify(data);
         clearTimeout(tickMap[_id]);
         tickMap[_id] = setTimeout(resolve, ms, data);
@@ -11,8 +11,10 @@ Promise.prototype.debounce = function(ms) {
   );
 };
 // eslint-disable-next-line
-Promise.prototype.wait = function(ms) {
-  return this.then(data => new Promise(resolve => setTimeout(resolve, ms, data)));
+Promise.prototype.wait = function (ms) {
+  return this.then(
+    (data) => new Promise((resolve) => setTimeout(resolve, ms, data))
+  );
 };
 
 export default (obj, fn, ms = 500) => {

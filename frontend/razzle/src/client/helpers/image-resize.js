@@ -1,11 +1,11 @@
 export default async ([file], MAX_WIDTH, MAX_HEIGHT) => {
   const img = document.createElement('img');
-  img.src = await new Promise(resolve => {
+  img.src = await new Promise((resolve) => {
     const reader = new FileReader();
-    reader.onload = e => resolve(e.target.result);
+    reader.onload = (e) => resolve(e.target.result);
     reader.readAsDataURL(file);
   });
-  await new Promise(resolve => (img.onload = resolve));
+  await new Promise((resolve) => (img.onload = resolve));
   const canvas = document.createElement('canvas');
   let ctx = canvas.getContext('2d');
   ctx.drawImage(img, 0, 0);
@@ -26,6 +26,8 @@ export default async ([file], MAX_WIDTH, MAX_HEIGHT) => {
   canvas.height = height;
   ctx = canvas.getContext('2d');
   ctx.drawImage(img, 0, 0, width, height);
-  const result = await new Promise(resolve => resolve(canvas.toDataURL(file.type, 0.95)));
+  const result = await new Promise((resolve) =>
+    resolve(canvas.toDataURL(file.type, 0.95))
+  );
   return result;
 };

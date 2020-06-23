@@ -6,9 +6,9 @@ import { store } from './store';
 import './index.css';
 
 const AppWrapped = () => (
-	<Provider store={store}>
-		<App />
-	</Provider>
+  <Provider store={store}>
+    <App />
+  </Provider>
 );
 
 export default AppWrapped;

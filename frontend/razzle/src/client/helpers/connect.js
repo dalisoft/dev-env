@@ -17,9 +17,12 @@ const lookup = (obj, key, args) => {
 // it will then dive into an immutable object and grab all of these storeProps
 // and return the same object, but where the values are the resolved data
 const resolve = (storeProps, storeState, props) =>
-  mapValues(connect.jsreProps, v => lookup(storeState, v, [storeState, props]));
+  mapValues(connect.jsreProps, (v) =>
+    lookup(storeState, v, [storeState, props])
+  );
 
-const mapStateToProps = storeProps => (storeState, ownProps) => resolve(storeProps, storeState, ownProps);
+const mapStateToProps = (storeProps) => (storeState, ownProps) =>
+  resolve(storeProps, storeState, ownProps);
 
 const defaults = {
   pure: true,
@@ -33,7 +36,7 @@ export default (storeProps, options) => {
     null,
     { ...defaults, ...options }
   );
-  return Component => {
+  return (Component) => {
     Component.storeProps = storeProps;
     return connector(Component);
   };

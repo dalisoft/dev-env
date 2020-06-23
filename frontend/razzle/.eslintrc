@@ -54,5 +54,17 @@
     "window": "readonly",
     "navigator": "readonly",
     "FileReader": "readonly"
+  },
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "version": "detect"
+    },
+    "propWrapperFunctions": [
+      "forbidExtraProps",
+      { "property": "freeze", "object": "Object" },
+      { "property": "myFavoriteWrapper" }
+    ],
+    "linkComponents": ["Hyperlink", { "name": "Link", "linkAttribute": "to" }]
   }
 }

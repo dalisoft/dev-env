@@ -1,11 +1,12 @@
+/* eslint-disable indent */
 import mapValues from 'lodash.mapvalues';
 
 const origin =
   typeof window !== 'undefined'
     ? window.location
     : typeof process !== 'undefined'
-      ? process.env.ORIGIN
-      : 'http://localhost:3000';
+    ? process.env.ORIGIN
+    : 'http://localhost:3000';
 
 const createLinks = (links, base) =>
   mapValues(links, (link) => `${base}${link}`);

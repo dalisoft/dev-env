@@ -15,7 +15,9 @@
 ```jsx
 import { connect } from 'redaction';
 import LanguageSwitcher from './LanguageSwitcher';
-const WrappedLanguageSwitcher = connect({ locale: 'init.locale' })(LanguageSwitcher);
+const WrappedLanguageSwitcher = connect({ locale: 'init.locale' })(
+  LanguageSwitcher
+);
 
 <WrappedLanguageSwitcher />;
 ```

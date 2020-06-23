@@ -13,9 +13,11 @@
 ## Wrap-to-Connect
 
 ```jsx
-import { connect } from 'redaction';
-import LanguageSwitcher from './LanguageSwitcher';
-const WrappedLanguageSwitcher = connect({ locale: 'init.locale' })(LanguageSwitcher);
+import { connect } from "redaction"
+import LanguageSwitcher from "./LanguageSwitcher"
+const WrappedLanguageSwitcher = connect({ locale: "init.locale" })(
+  LanguageSwitcher
+)
 
-<WrappedLanguageSwitcher />;
+;<WrappedLanguageSwitcher />
 ```

@@ -3,9 +3,9 @@ import Root from './Root';
 import { connect } from 'unistore/preact';
 
 const App = ({ locale }) => (
-	<Root locale={locale}>
-		<Routes />
-	</Root>
+  <Root locale={locale}>
+    <Routes />
+  </Root>
 );
 
 const enhance = connect('locale');

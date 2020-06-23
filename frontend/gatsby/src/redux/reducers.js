@@ -1,8 +1,8 @@
-import { wrapReducers } from 'redaction';
+import { wrapReducers } from "redaction"
 
-import reducers from './_reducers';
-import { dispatch } from '../helpers';
+import reducers from "./_reducers"
+import { dispatch } from "../helpers"
 
-const wrappedReducers = wrapReducers(reducers, dispatch);
+const wrappedReducers = wrapReducers(reducers, dispatch)
 
-export default wrappedReducers;
+export default wrappedReducers

@@ -7,11 +7,11 @@ import { IntlProvider } from "./IntlProvider"
 
 global.Intl = intl // polyfill for ios 9
 
-const LanguageProvider = connect({ locale: "init.locale" })(
-  ({ locale, children }) => (
-    <IntlProvider locale={locale}>{children}</IntlProvider>
-  )
-)
+const LanguageProvider = connect({
+  locale: "init.locale",
+})(({ locale, children }) => (
+  <IntlProvider locale={locale}>{children}</IntlProvider>
+))
 
 export default ({ element }) => (
   <Provider store={store}>

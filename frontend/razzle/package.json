@@ -14,8 +14,8 @@
     "docs": "styleguidist build"
   },
   "dependencies": {
-    "@formatjs/intl-pluralrules": "^2.2.7",
-    "@formatjs/intl-relativetimeformat": "^5.2.7",
+    "@formatjs/intl-pluralrules": "^2.2.9",
+    "@formatjs/intl-relativetimeformat": "^5.2.9",
     "@nanoexpress/middlewares": "github:nanoexpress/middlewares",
     "@nanoexpress/pro-slim": "github:nanoexpress/pro-slim",
     "ajv": "^6.10.2",
@@ -31,7 +31,7 @@
     "lodash.pick": "^4.4.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-intl": "^4.6.10",
+    "react-intl": "^4.7.1",
     "react-redux": "^7.1.3",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
-    "eslint": "^7.3.0",
+    "eslint": "^7.3.1",
     "eslint-plugin-react": "^7.17.0",
     "razzle": "^3.x",
     "razzle-plugin-scss": "^3.0.0",

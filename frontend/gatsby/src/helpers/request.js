@@ -1,13 +1,13 @@
 import fetch from "isomorphic-unfetch"
 
-const requestByMethod = method => (url, options) => {
+const requestByMethod = (method) => (url, options) => {
   options = options || {}
   options.method = method.toUpperCase()
 
   let req = fetch(url, options)
 
   if (options.json) {
-    req = req.then(res => res.json())
+    req = req.then((res) => res.json())
   }
 
   return req
