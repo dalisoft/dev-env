@@ -87,7 +87,7 @@
     "@dalisoft/ws-events-sync": "0.0.12",
     "bufferutil": "^4.0.1",
     "long": "^4.0.0",
-    "pino-pretty": "^3.0.0",
+    "pino-pretty": "^4.0.0",
     "uglify-es": "^3.3.9",
     "utf-8-validate": "^5.0.2",
     "ws": "^7.0.0"
