@@ -1,3 +1,4 @@
+import { h } from 'preact';
 import { IntlProvider } from './IntlProvider';
 
 const Root = ({ locale, children }) => (

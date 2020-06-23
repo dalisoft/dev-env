@@ -13,5 +13,10 @@
         "varsIgnorePattern": "^Preact$"
       }
     ]
-  }
+  },
+  "settings": {
+    "react": {
+      "pragma": "h"
+    }
+}
 }

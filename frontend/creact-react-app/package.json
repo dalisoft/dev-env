@@ -44,7 +44,7 @@
     "eject": "react-scripts eject",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll",
     "lint:eslint": "eslint ./src",
     "lint:prettier": "prettier -c .",
     "lint": "npm run lint:eslint && npm run lint:prettier",

@@ -1,4 +1,5 @@
-import Preact from 'preact';
+/* eslint-disable no-unused-vars */
+import { h } from 'preact';
 import render from 'preact-render-to-string';
 import htmlLooksLike from 'html-looks-like';
 import PageLayout from './PageLayout';

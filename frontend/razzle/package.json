@@ -6,7 +6,7 @@
     "start": "NODE_ENV=production node build/server.js",
     "dev": "razzle start",
     "build": "razzle build",
-    "test": "razzle test --env=jsdom",
+    "test": "razzle test --env=jsdom --watchAll",
     "lint:eslint": "eslint ./src",
     "lint:prettier": "prettier -c .",
     "lint": "npm run lint:eslint && npm run lint:prettier",
@@ -47,7 +47,8 @@
     "eslint-plugin-react": "^7.17.0",
     "razzle": "^3.x",
     "razzle-plugin-scss": "^3.0.0",
-    "react-styleguidist": "^11.0.8"
+    "react-styleguidist": "^11.0.8",
+    "react-test-renderer": "^16.13.1"
   },
   "browserslist": {
     "production": [

@@ -8,7 +8,7 @@
     "build": "npm run clean && react-static build",
     "analyze": "react-static build --analyze",
     "serve": "serve dist -p 3000",
-    "test": "SKIP_PREFLIGHT_CHECK=true react-scripts test",
+    "test": "SKIP_PREFLIGHT_CHECK=true react-scripts test --watchAll",
     "lint:eslint": "eslint ./src",
     "lint:prettier": "prettier -c .",
     "lint": "npm run lint:eslint && npm run lint:prettier",

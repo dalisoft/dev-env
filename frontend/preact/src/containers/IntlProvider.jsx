@@ -1,3 +1,4 @@
+import { h } from 'preact';
 import { IntlProvider as Provider } from 'react-intl';
 
 import 'intl/locale-data/jsonp/en.js';

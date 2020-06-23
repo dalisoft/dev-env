@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-indent-props */
+import { h } from 'preact';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
