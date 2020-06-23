@@ -1,4 +1,3 @@
-import React from 'react';
 import { IntlProvider as Provider } from 'react-intl';
 
 import 'intl/locale-data/jsonp/en.js';
@@ -21,10 +20,8 @@ if (!Intl.RelativeTimeFormat) {
   require('@formatjs/intl-relativetimeformat/dist/locale-data/uz');
 }
 
-export const IntlProvider = ({ children, locale }) => {
-  return (
-    <Provider locale={locale} messages={flatten(messages[locale])}>
-      {children}
-    </Provider>
-  );
-};
+export const IntlProvider = ({ children, locale }) => (
+  <Provider locale={locale} messages={flatten(messages[locale])}>
+    {children}
+  </Provider>
+);

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'preact-router';
 import { connect } from 'unistore/preact';
 
