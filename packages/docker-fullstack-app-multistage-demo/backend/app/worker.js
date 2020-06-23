@@ -1,4 +1,4 @@
-const nanoexpress = require('nanoexpress');
+const nanoexpress = require('nanoexpress-pro/cjs');
 
 const app = nanoexpress();
 
@@ -10,7 +10,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.options('/*', { isRaw: true }, (req, res) => {
+app.options('/*', (req, res) => {
   res.writeStatus('200 OK');
   res.end('OK');
 });

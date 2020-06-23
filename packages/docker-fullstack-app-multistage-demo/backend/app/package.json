@@ -2,17 +2,18 @@
   "name": "@dalisoft/docker-multistage-backend",
   "version": "0.0.0",
   "description": "",
+  "type": "commonjs",
   "main": "server.js",
   "scripts": {
-    "watch": "nodemon server.js",
+    "dev": "nodemon server.js",
     "start": "node server.js"
   },
   "author": "dalisoft",
   "license": "MIT",
   "dependencies": {
-    "nanoexpress": "^1.1.10"
+    "nanoexpress-pro": "^1.12.1"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "nodemon": "^2.0.4"
   }
 }

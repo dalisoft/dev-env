@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/dalisoft/lambda-api-dev-env#readme",
   "dependencies": {
-    "aws-sdk": "^2.702.0",
+    "aws-sdk": "^2.703.0",
     "lambda-api": "^0.10.4",
     "source-map-support": "^0.5.16"
   },

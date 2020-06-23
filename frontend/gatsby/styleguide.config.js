@@ -7,13 +7,17 @@ module.exports = {
   },
   webpackConfig: {
     resolve: {
-      modules: [path.resolve(__dirname, "src"), "node_modules"],
+      modules: [path.resolve(__dirname, "src"), path.resolve("node_modules")],
     },
     module: {
       rules: [
         {
-          test: /\.jsx?$/gim,
-          exclude: /node_modules\/(?!gatsby\/cache-dir).*/gim,
+          test: /\.jsx?$/,
+          exclude: /node_modules\/(?!gatsby\/cache-dir).*/,
+          include: [
+            /src\/(.*)\/*.jsx?$/,
+            /node_modules\/gatsby\/cache-dir\/(.*).js$/,
+          ],
           loader: "babel-loader",
           options: {
             presets: ["babel-preset-gatsby"],
@@ -21,7 +25,7 @@ module.exports = {
         },
         {
           test: /\.css$/,
-          use: ["style-loader", "css-loader"],
+          loader: "style-loader!css-loader?modules",
         },
       ],
     },

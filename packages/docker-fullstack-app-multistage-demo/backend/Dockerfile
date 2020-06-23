@@ -38,6 +38,5 @@ WORKDIR /usr/src/app
 COPY --from=build usr/src/app /usr/src/app
 
 ENV NODE_ENV=production
-ENV NODE_CLUSTER_SCHED_POLICY=rr
 
 ENTRYPOINT ["node", "server.js"]

@@ -31,7 +31,7 @@
     "lodash.pick": "^4.4.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-intl": "^4.7.1",
+    "react-intl": "^4.7.2",
     "react-redux": "^7.1.3",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",

@@ -34,7 +34,7 @@
     "express-cors": "0.0.3",
     "express-jwt": "^5.3.3",
     "express-rate-limit": "^5.1.3",
-    "helmet": "^3.23.1",
+    "helmet": "^3.23.2",
     "lodash.pick": "^4.4.0"
   },
   "devDependencies": {
