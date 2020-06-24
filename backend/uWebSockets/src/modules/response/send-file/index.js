@@ -1,6 +1,6 @@
-import { getMime, stream2Buffer } from './sifrr-server';
 import fs from 'fs';
 import zlib from 'zlib';
+import { getMime, stream2Buffer } from './sifrr-server.js';
 
 const compressions = {
   br: zlib.createBrotliCompress,
@@ -9,7 +9,7 @@ const compressions = {
 };
 const bytes = 'bytes=';
 
-export default function(
+export default function (
   req,
   res,
   path,

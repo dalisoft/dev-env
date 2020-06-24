@@ -1,5 +1,7 @@
-const { getMime } = require('@sifrr/server/src/server/mime');
-const stream2Buffer = require('@sifrr/server/src/server/streamtobuffer');
-const sendFile = require('@sifrr/server/src/server/sendfile');
+import mime from '@sifrr/server/src/server/mime.js';
+import stream2Buffer from '@sifrr/server/src/server/streamtobuffer.js';
+import sendFile from '@sifrr/server/src/server/sendfile';
+
+const { getMime } = mime;
 
 export { getMime, stream2Buffer, sendFile };

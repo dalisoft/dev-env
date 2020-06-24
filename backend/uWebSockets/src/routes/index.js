@@ -1,5 +1,5 @@
-import v1_api from './v1';
-
 export default (app) => {
-  v1_api(app);
+  app.get('/hello', (res) => {
+    res.end(JSON.stringify({ status: 'success', page: '/hello' }));
+  });
 };

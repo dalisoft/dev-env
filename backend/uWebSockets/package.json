@@ -3,17 +3,18 @@
   "version": "0.1.0",
   "description": "An modern and blazing fast development environment for Backend development with uWebSockets.js",
   "module": "src/server.js",
+  "type": "module",
   "private": true,
   "scripts": {
-    "start": "node build/server.js",
+    "start": "node src/server.js",
     "test": "ava",
-    "lint": "eslint ./src",
-    "dev": "NODE_ENV=development rollup -c -w",
-    "build": "rollup -c"
+    "lint:eslint": "eslint ./src",
+    "lint:prettier": "prettier -c .",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "dev": "nodemon"
   },
   "engines": {
-    "node": ">=10.x",
-    "npm": ">=6.9.x"
+    "node": ">=12.16"
   },
   "keywords": [
     "uWebSockets.js",
@@ -26,17 +27,14 @@
     "@sifrr/server": "0.0.6",
     "cookie": "^0.4.1",
     "dotenv-safe": "^8.2.0",
-    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v15.11.0"
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v18.3.0"
   },
   "devDependencies": {
-    "ava": "^2.4.0",
-    "eslint": "^6.8.0",
+    "ava": "^3.9.0",
+    "eslint": "^7.3.1",
     "husky": "^4.2.5",
-    "lint-staged": "^9.5.0",
-    "prettier": "^1.19.1",
-    "rollup": "^1.32.1",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-run": "^1.1.0"
+    "lint-staged": "^10.2.11",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5"
   }
 }
