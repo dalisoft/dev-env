@@ -15,10 +15,6 @@
     "node": ">=10.x",
     "npm": ">=6.9.x"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dalisoft/uwebsockets-dev-env.git"
-  },
   "keywords": [
     "uWebSockets.js",
     "modern",
@@ -26,10 +22,6 @@
   ],
   "author": "dalisoft",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dalisoft/uwebsockets-dev-env/issues"
-  },
-  "homepage": "https://github.com/dalisoft/uwebsockets-dev-env#readme",
   "dependencies": {
     "@sifrr/server": "0.0.6",
     "cookie": "^0.4.1",

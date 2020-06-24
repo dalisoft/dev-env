@@ -12,10 +12,6 @@
     "test": "ava",
     "lint": "eslint ./src"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dalisoft/graphql-dev-env.git"
-  },
   "keywords": [
     "graphql",
     "fast",
@@ -23,10 +19,6 @@
   ],
   "author": "dalisoft",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dalisoft/graphql-dev-env/issues"
-  },
-  "homepage": "https://github.com/dalisoft/graphql-dev-env#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv-safe": "^8.2.0",

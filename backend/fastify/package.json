@@ -19,10 +19,6 @@
     "build:server": "rollup -c",
     "build:functions": "netlify-lambda build functions --config webpack.config.netlify.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dalisoft/fastify-dev-env.git"
-  },
   "keywords": [
     "fastify",
     "modern",
@@ -30,10 +26,6 @@
   ],
   "author": "dalisoft",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dalisoft/fastify-dev-env/issues"
-  },
-  "homepage": "https://github.com/dalisoft/fastify-dev-env#readme",
   "dependencies": {
     "@dalisoft/cache-ttl": "^0.4.2",
     "@dalisoft/cookie": "0.0.4",

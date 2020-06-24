@@ -2,7 +2,7 @@ service: serverless-dev-env-sample
 
 provider:
   name: aws
-  runtime: nodejs8
+  runtime: nodejs12.x
 
 # Functions
 functions:
@@ -12,7 +12,7 @@ functions:
     timeout: 30
     events:
       - http:
-          path: '{proxy+}'
+          path: "{proxy+}"
           method: any
           cors: true
 

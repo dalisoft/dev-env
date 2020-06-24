@@ -2,7 +2,7 @@
 
 There has 3 categories, 5+ on both frontend and backend and as bonus there Docker templates with Docker database expose template
 
-> Note, where `[x]` means it is upgraded and maintaining currently whereas others (`[ ]`) didn't
+> Note, where `[x]` means it is upgraded and maintaining currently whereas others ([ ]) didn't
 
 ## Frontend
 
@@ -18,18 +18,18 @@ There has 3 categories, 5+ on both frontend and backend and as bonus there Docke
 
 ## Backend
 
-- `[ ]` express
-- `[ ]` fastify
-- `[ ]` graphql
-- `[ ]` lambda-api
-- `[ ]` nanoexpress
-- `[ ]` uWebSockets.js
+- [x] lambda-api
+- [ ] express
+- [ ] fastify
+- [ ] graphql
+- [ ] nanoexpress
+- [ ] uWebSockets.js
 
 ## Packages
 
 - [x] docker-db-templates
 - [x] docker-fullstack-app-multistage
-- `[ ]` mern-dev-env
+- [ ] mern-dev-env
 
 ## License
 

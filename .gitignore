@@ -97,5 +97,10 @@ frontend/gatsby/public
 frontend/react-static/artifacts
 frontend/**/styleguide
 
+backend/**/.vercel
+backend/**/.webpack
+backend/**/.serverless
+backend/**/.functions-build
+
 # own script
 npm-update.sh

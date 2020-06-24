@@ -1,5 +1,5 @@
-import routeHello from './route-hello';
-import routeAsyncHello from './route-async-hello';
+import routeHello from './route-hello.js';
+import routeAsyncHello from './route-async-hello.js';
 
 export default (app) => {
   app.get('/', async () => ({ status: 'success' }));

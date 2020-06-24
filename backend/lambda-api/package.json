@@ -1,26 +1,26 @@
 {
   "name": "@dalisoft/lambda-api-dev-env",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An modern development environment for Serverless development with Lambda API",
-  "main": "build/server.js",
   "module": "src/server.js",
-  "type": "module",
   "private": true,
+  "engine": {
+    "node": ">=12.16"
+  },
   "scripts": {
     "test": "ava",
-    "lint": "eslint ./src",
-    "start": "cross-env NODE_ENV=development npm-run-all --parallel start:**",
-    "start:functions": "netlify-lambda -c webpack.functions.js serve functions",
-    "start:serverless": "sls offline",
-    "start:now": "now dev",
-    "start:http-server": "node build/http-server.js",
-    "build": "cross-env NODE_ENV=production npm-run-all --parallel build:**",
-    "build:functions": "netlify-lambda -c webpack.functions.js build functions",
-    "build:http-server": "cross-env NODE_ENV=production rollup -c"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dalisoft/lambda-api-dev-env.git"
+    "lint:eslint": "eslint ./src",
+    "lint:prettier": "prettier -c .",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "start": "echo \"This script was deprecated. Please use npm run start:YOUR_CHOICE\" && exit 1",
+    "start:http-server": "node --experimental-modules src/http-server.js",
+    "dev": "echo \"This script was deprecated. Please use npm run dev:YOUR_CHOICE\" && exit 1",
+    "dev:functions": "NODE_ENV=development netlify-lambda serve functions",
+    "dev:serverless": "NODE_ENV=development sls offline",
+    "dev:vercel": "NODE_ENV=development vercel dev",
+    "build": "echo \"This script was deprecated. Please use npm run build:YOUR_CHOICE\" && exit 1",
+    "build:functions": "netlify-lambda build functions",
+    "build:serverless": "sls webpack"
   },
   "keywords": [
     "lambda",
@@ -31,38 +31,22 @@
   ],
   "author": "dalisoft",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dalisoft/lambda-api-dev-env/issues"
-  },
-  "homepage": "https://github.com/dalisoft/lambda-api-dev-env#readme",
   "dependencies": {
     "aws-sdk": "^2.703.0",
-    "lambda-api": "^0.10.4",
-    "source-map-support": "^0.5.16"
+    "lambda-api": "^0.10.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.3",
-    "@babel/preset-env": "^7.10.3",
-    "ava": "^2.4.0",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-source-map-support": "^2.1.1",
-    "cross-env": "^6.0.3",
-    "eslint": "^6.7.2",
+    "ava": "^3.9.0",
+    "eslint": "^7.3.1",
     "husky": "^4.0.2",
-    "lint-staged": "^9.5.0",
+    "lint-staged": "^10.2.11",
     "netlify-lambda": "^1.6.3",
-    "now": "^16.6.3",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^1.19.1",
-    "rollup": "^1.27.10",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
+    "prettier": "^2.0.5",
     "serverless": "^1.73.1",
     "serverless-dotenv-plugin": "^2.1.1",
-    "serverless-offline": "^5.12.1",
+    "serverless-offline": "^6.4.0",
     "serverless-webpack": "^5.3.1",
-    "shebang-loader": "0.0.1",
+    "vercel": "^19.1.1",
     "webpack-node-externals": "^1.7.2"
   }
 }

@@ -1,8 +1,8 @@
 const time = Date.now(); // For better managing start-time / lags
 
 import lambda from 'lambda-api';
-import routes from './routes';
-import middlewares from './middlewares';
+import routes from './routes/index.js';
+import middlewares from './middlewares/index.js';
 
 // Initialize Instance (cold start)
 const appConfig = {

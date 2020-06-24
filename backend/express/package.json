@@ -12,10 +12,6 @@
     "dev": "cross-env NODE_ENV=development rollup -c -w",
     "build": "rollup -c"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dalisoft/express-dev-env.git"
-  },
   "keywords": [
     "express",
     "modern",
@@ -23,10 +19,6 @@
   ],
   "author": "dalisoft",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dalisoft/express-dev-env/issues"
-  },
-  "homepage": "https://github.com/dalisoft/express-dev-env#readme",
   "dependencies": {
     "@dalisoft/ws-events-sync": "0.0.9",
     "consolemd": "^0.2.1",

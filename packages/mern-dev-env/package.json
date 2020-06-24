@@ -13,10 +13,6 @@
     "dev": "npm run clean && NODE_ENV=development rollup -c -w",
     "build": "npm run clean && rollup -c"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dalisoft/mern-dev-env.git"
-  },
   "keywords": [
     "nanoexpress",
     "modern",
@@ -24,10 +20,6 @@
   ],
   "author": "dalisoft",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dalisoft/mern-dev-env/issues"
-  },
-  "homepage": "https://github.com/dalisoft/mern-dev-env#readme",
   "dependencies": {
     "@dalisoft/ws-events-sync": "0.0.9",
     "ajv": "^6.12.2",

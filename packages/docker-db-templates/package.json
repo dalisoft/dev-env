@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "description": "Docker templates for most commonly used DB",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dalisoft/docker-db-templates.git"
-  },
   "keywords": [
     "docker",
     "templates",
@@ -18,10 +14,6 @@
   ],
   "author": "dalisoft",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dalisoft/docker-db-templates/issues"
-  },
-  "homepage": "https://github.com/dalisoft/docker-db-templates#readme",
   "devDependencies": {
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",

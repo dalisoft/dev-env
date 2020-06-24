@@ -1,4 +1,4 @@
-import { CORS_DOMAIN } from '../config';
+import { CORS_DOMAIN } from '../config.js';
 
 export default (req, res, next) => {
   if (req.app.method === 'OPTIONS') {

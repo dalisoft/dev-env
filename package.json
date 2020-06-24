@@ -3,5 +3,13 @@
   "npmClient": "npm",
   "devDependencies": {
     "lerna": "^3.22.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalisoft/dev-env.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dalisoft/dev-env/issues"
+  },
+  "homepage": "https://github.com/dalisoft/dev-env#readme"
 }

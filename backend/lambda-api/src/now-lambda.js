@@ -1,5 +1,5 @@
 import { parse } from 'querystring';
-import app from './server';
+import app from './server.js';
 
 // Declare your Lambda handler
 export default async (request, response) => {

@@ -12,10 +12,6 @@
     "dev": "cross-env NODE_ENV=development rollup -c -w",
     "build": "rollup -c"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dalisoft/nanoexpress-dev-env.git"
-  },
   "keywords": [
     "nanoexpress",
     "modern",
@@ -23,10 +19,6 @@
   ],
   "author": "dalisoft",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dalisoft/nanoexpress-dev-env/issues"
-  },
-  "homepage": "https://github.com/dalisoft/nanoexpress-dev-env#readme",
   "dependencies": {
     "ajv": "^6.12.0",
     "consolemd": "^0.2.1",
