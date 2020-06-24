@@ -2,8 +2,6 @@
 
 There has 3 categories, 5+ on both frontend and backend and as bonus there Docker templates with Docker database expose template
 
-> Note, where `[x]` means it is upgraded and maintaining currently whereas others ([ ]) didn't
-
 ## Frontend
 
 > Most of these frontend dev env are for React, for Vue, Svelte please submit PR if you can
@@ -30,6 +28,11 @@ There has 3 categories, 5+ on both frontend and backend and as bonus there Docke
 - [x] docker-db-templates
 - [x] docker-fullstack-app-multistage
 - [ ] mern-dev-env
+
+## Notes
+
+- [x] this means template was upgraded, uses latest technologies as possible
+- [ ] uses old technology, when used, you have upgrade and migration steps yourself
 
 ## License
 
