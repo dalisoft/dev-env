@@ -1,7 +1,5 @@
 # docker-db-templates
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/docker-db-templates.svg)](https://greenkeeper.io/)
-
 Docker templates for most commonly used DB
 
 ## Requires

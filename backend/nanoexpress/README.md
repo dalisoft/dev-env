@@ -1,7 +1,5 @@
 # nanoexpress-dev-env
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/nanoexpress-dev-env.svg)](https://greenkeeper.io/)
-
 An modern and fast development environment for Backend development with `nanoexpress`
 
 ## Requires
@@ -30,7 +28,3 @@ An modern and fast development environment for Backend development with `nanoexp
 
 - On development (local machine): `npm run dev`
 - On production: `npm run build` then `npm start`
-
-## License
-
-MIT

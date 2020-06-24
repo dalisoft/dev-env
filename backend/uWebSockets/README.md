@@ -1,7 +1,5 @@
 # uwebsockets-dev-env
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/uwebsockets-dev-env.svg)](https://greenkeeper.io/)
-
 An modern and blazing fast development environment for Backend development with uWebSockets.js
 
 ## Requires
@@ -23,7 +21,3 @@ An modern and blazing fast development environment for Backend development with 
 - Clean code by Prettier + ESLint (at editor level too)
 - Travis CI configured
 - Husky & Lint-staged is configured
-
-## License
-
-MIT

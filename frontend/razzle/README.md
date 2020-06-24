@@ -1,7 +1,5 @@
 # razzle-dev-env
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/razzle-dev-env.svg)](https://greenkeeper.io/)
-
 This project is modified and prepared as Development Environment for Frontend development with SSR support. This project supports SSR. Also if you have less money on deploy servers, this Dev-Env will help you because it uses only one server for both `nanoexpress` (server) and React (client)
 
 ## Target of project

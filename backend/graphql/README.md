@@ -1,7 +1,5 @@
 # graphql-dev-env
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/graphql-dev-env.svg)](https://greenkeeper.io/)
-
 An fast & modern GraphQL development environment for with GraphiQL
 
 ## Note
@@ -60,9 +58,3 @@ fetch('http://your-endpoint.tld/graphql', {
 
 - `GRAPHIQL?: string = undefined` - Define whether enable GraphiQL or not. If you don't enable GraphiQL, please don't define this env variable
 - `ORIGIN?: string = undefined` - CORS-like origin checked, will declide request to `/graphql` if origin does not match
-
-## License
-
-This project is licensed under MIT, but
-
-- `uWebSockets.js` and `nanoexpress` [license](https://github.com/uNetworking/uWebSockets.js/blob/master/LICENSE) may/is differs from MIT license

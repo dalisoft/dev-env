@@ -1,7 +1,5 @@
 # mern-dev-env
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/mern-dev-env.svg)](https://greenkeeper.io/)
-
 An modern and easy development environment using MERN stack
 
 ## Requires
@@ -26,7 +24,3 @@ An modern and easy development environment using MERN stack
 - Clean code by Prettier + ESLint (at editor level too)
 - Travis CI configured
 - Husky & Lint-staged is configured
-
-## License
-
-MIT

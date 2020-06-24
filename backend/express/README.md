@@ -1,7 +1,5 @@
 # express-dev-env
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/express-dev-env.svg)](https://greenkeeper.io/)
-
 An modern and easy development environment for Backend development with Express
 
 ## Requires
@@ -25,7 +23,3 @@ An modern and easy development environment for Backend development with Express
 - Clean code by Prettier + ESLint (at editor level too)
 - Travis CI configured
 - Husky & Lint-staged is configured
-
-## License
-
-MIT

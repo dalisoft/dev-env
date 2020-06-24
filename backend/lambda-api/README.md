@@ -1,7 +1,5 @@
 # lambda-api-dev-env
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/lambda-api-dev-env.svg)](https://greenkeeper.io/)
-
 An modern development environment for Serverless development with Lambda API
 
 ## Requires
@@ -26,7 +24,3 @@ An modern development environment for Serverless development with Lambda API
 - Travis CI configured
 - Husky & Lint-staged is configured
 - i18n & Custom error messages are implemented
-
-## License
-
-MIT

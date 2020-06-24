@@ -1,7 +1,5 @@
 # Charge Dev Env
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/charge-dev-env.svg)](https://greenkeeper.io/)
-
 This project is mostly used for small projects documentation
 
 ## Target of project

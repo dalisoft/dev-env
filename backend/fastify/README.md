@@ -1,7 +1,5 @@
 # fastify-dev-env
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/dalisoft/fastify-dev-env.svg)](https://greenkeeper.io/)
-
 An modern development environment for Backend development with Fastify
 
 ## Requires
@@ -47,7 +45,3 @@ WebSocket not working in Serverless mode (even on AWS/GCloud), even i tried to c
 - Travis CI configured
 - Husky & Lint-staged is configured
 - i18n & Custom error messages are implemented
-
-## License
-
-MIT
