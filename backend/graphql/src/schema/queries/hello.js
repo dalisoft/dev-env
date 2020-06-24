@@ -1,7 +1,7 @@
-import { GraphQLString } from 'graphql';
+import GraphQL from 'graphql';
 
 export default {
-  type: GraphQLString,
+  type: GraphQL.GraphQLString,
   resolve() {
     return 'world';
   }

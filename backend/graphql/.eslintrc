@@ -25,13 +25,7 @@
       "error",
       "always"
     ],
-    "indent": [
-      "error",
-      2,
-      {
-        "MemberExpression": 1
-      }
-    ],
+    "indent": "off",
     "no-multiple-empty-lines": [
       "error"
     ],

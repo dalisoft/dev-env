@@ -18,7 +18,7 @@ There has 3 categories, 5+ on both frontend and backend and as bonus there Docke
 
 - [ ] express
 - [ ] fastify
-- [ ] graphql
+- [x] graphql
 - [x] lambda-api
 - [ ] nanoexpress
 - [x] uWebSockets.js

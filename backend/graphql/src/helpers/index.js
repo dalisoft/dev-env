@@ -1,3 +1,3 @@
-import hasKeyObj from './has-key-obj';
+import hasKeyObj from './has-key-obj.js';
 
 export { hasKeyObj };

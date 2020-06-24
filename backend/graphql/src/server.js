@@ -1,22 +1,23 @@
-import nanoexpress from 'nanoexpress';
+import nanoexpress from 'nanoexpress-pro';
 import graphqlHTTP from 'express-graphql';
 import cors from 'cors';
+import bodyParser from '@nanoexpress/middlewares/body-parser/body-parser.es.js';
 
-import { port, graphiql, origin } from './env';
+import { port, graphiql, origin } from './env.js';
 
-import schema from './schema';
+import schema from './schema/index.js';
 
 const app = nanoexpress();
 
 if (origin) {
-  app.options(
-    '/*',
+  app.use(
     cors({
       origin,
       optionsSuccessStatus: 200
     })
   );
 }
+app.use(bodyParser());
 
 app.post(
   '/graphql',
