@@ -32,7 +32,7 @@ There has 3 categories, 5+ on both frontend and backend and as bonus there Docke
 ## Notes
 
 - [x] this means template was upgraded, uses latest technologies as possible
-- [ ] uses old technology, when used, you have upgrade and migration steps yourself
+- [ ] uses old technology, when used, you have do upgrade and migration steps yourself
 
 ## License
 
