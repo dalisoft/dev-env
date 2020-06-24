@@ -18,12 +18,12 @@ There has 3 categories, 5+ on both frontend and backend and as bonus there Docke
 
 ## Backend
 
-- [x] lambda-api
 - [ ] express
 - [ ] fastify
 - [ ] graphql
+- [x] lambda-api
 - [ ] nanoexpress
-- [ ] uWebSockets.js
+- [x] uWebSockets.js
 
 ## Packages
 
