@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom/esm/react-router-dom.js';
 
 import { Text } from '../../components/UI';
 import { LangSwitcher } from '../../components/common';

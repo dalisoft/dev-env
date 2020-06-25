@@ -1,25 +1,19 @@
-import babel from 'rollup-plugin-babel';
-
-import pkg from '.../../package.json';
-
+import babel from '@rollup/plugin-babel';
 import { dev, watch } from '../env';
-
-const ENV = dev && watch ? 'development' : 'production';
+import pkg from '../../package.json';
 
 export default babel({
-  runtimeHelpers: true,
   exclude: 'node_modules/**',
   babelrc: false,
   presets: [
     [
       '@babel/preset-env',
       {
-        modules: false,
-        targets: pkg.browserslist[ENV]
+        targets: pkg.browserslist[dev && watch ? 'development' : 'production']
       }
     ],
     '@babel/preset-react'
   ],
   plugins: ['@babel/plugin-proposal-class-properties'],
-  sourceMaps: false
+  sourceMaps: watch ? 'both' : 'false'
 });

@@ -13,7 +13,6 @@ export default Object.keys(pkg.dependencies)
     'react-intl/locale-data/en',
     'react-intl/locale-data/ru',
     'react-intl/locale-data/uz',
-    'core-js',
     'react-dom/server',
     'prop-types',
     'console',
@@ -30,5 +29,14 @@ export default Object.keys(pkg.dependencies)
     'stream',
     'tls',
     'net',
-    'zlib'
+    'zlib',
+    'querystring',
+    'util',
+    'uWebSockets.js',
+    'nanoexpress-pro',
+    '@nanoexpress/middlewares',
+    'ajv',
+    'fast-json-stringify',
+    'swagger-ui',
+    'turbo-json-parse'
   ]);

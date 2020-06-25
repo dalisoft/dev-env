@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom/esm/react-router-dom.js';
 import { connect } from 'redaction';
 
 import { Text } from '../../components/UI';

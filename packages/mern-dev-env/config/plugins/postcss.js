@@ -5,10 +5,8 @@ import { dev, watch } from '../env';
 
 export default postcss({
   extract: 'build/assets/css/bundle.css',
-  plugins: dev && watch ? [] : [
-    autoprefixer
-  ],
+  plugins: dev && watch ? [] : [autoprefixer],
   autoModules: true,
-  sourceMap: false,
+  sourceMap: watch,
   extensions: ['.scss', '.css']
 });

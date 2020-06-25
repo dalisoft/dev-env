@@ -1,6 +1,7 @@
-import commonjs from 'rollup-plugin-commonjs';
-import resolve from 'rollup-plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
 
+import { watch } from '../env';
 import globals from '../globals';
 import * as plugins from '../plugins/index';
 import terser from '../plugins/terser';
@@ -8,10 +9,12 @@ import terser from '../plugins/terser';
 export default {
   input: './src/client/index.js',
   output: {
-    format: 'iife',
-    file: './build/assets/js/bundle.js',
-    esModule: false,
-    sourceMap: false,
+    format: 'esm',
+    dir: './build/assets/js',
+    inlineDynamicImports: true,
+    // file: './build/assets/js/bundle.js',
+    // esModule: false,
+    sourceMap: watch,
     globals
   },
   plugins: [
@@ -20,12 +23,14 @@ export default {
     resolve({
       mainFields: ['module', 'main'],
       browser: true,
-      include: 'node_modules/**',
+      include: ['node_modules/**', 'node_modules/path-to-regexp/*'],
+      exclude: ['node_modules/nanoexpress-pro'],
       preferBuiltins: false,
-      sourceMap: false
+      sourceMap: watch
     }),
     commonjs({
-      include: 'node_modules/**',
+      include: ['node_modules/**', 'node_modules/path-to-regexp/*'],
+      exclude: ['node_modules/nanoexpress-pro/*'],
       ignoreGlobal: true,
       namedExports: {
         'node_modules/react/index.js': [
@@ -42,7 +47,8 @@ export default {
           'useRef',
           'useContext',
           'useReducer',
-          'forwardRef'
+          'forwardRef',
+          'createRef'
         ],
         'node_modules/react-is/index.js': [
           'isValidElementType',

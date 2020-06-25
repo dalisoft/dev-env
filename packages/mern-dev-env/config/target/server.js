@@ -1,6 +1,5 @@
-import commonjs from 'rollup-plugin-commonjs';
-import resolve from 'rollup-plugin-node-resolve';
-import run from 'rollup-plugin-run';
+import resolve from '@rollup/plugin-node-resolve';
+import run from '@rollup/plugin-run';
 
 import external from '../externals';
 import globals from '../globals';
@@ -8,12 +7,13 @@ import * as plugins from '../plugins/index';
 import { dev, watch } from '../env';
 
 export default {
-  input: './src/server/index.js',
+  input: './src/server/server.js',
   output: {
-    format: 'cjs',
-    file: './build/server.js',
+    format: 'esm',
+    dir: './build',
+    // file: './build/server.js',
     esModule: false,
-    sourceMap: false,
+    sourceMap: watch,
     globals
   },
   external,
@@ -23,12 +23,6 @@ export default {
       mainFields: ['module', 'main'],
       exclude: 'node_modules/**',
       preferBuiltins: true
-    }),
-    commonjs({
-      sourceMap: false,
-      namedExports: {
-        'node_modules/react-dom/server.js': [ 'renderToString' ]
-      }
     }),
     dev && watch && run()
   ]

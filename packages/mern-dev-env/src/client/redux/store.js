@@ -2,7 +2,7 @@ import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory, createMemoryHistory } from 'history';
 import { createStore, combineReducers } from 'redaction';
 import { batchedSubscribe } from 'redux-batched-subscribe';
-import { unstable_batchedUpdates } from 'react-dom';
+import ReactDOM from 'react-dom';
 import { reducer as form } from 'redux-form';
 import reducers from './_reducers';
 
@@ -24,5 +24,5 @@ export const store = createStore({
     form
   },
   middleware: [routerMiddleware(history)],
-  enhancers: [batchedSubscribe(unstable_batchedUpdates)]
+  enhancers: [batchedSubscribe(ReactDOM.unstable_batchedUpdates)]
 });

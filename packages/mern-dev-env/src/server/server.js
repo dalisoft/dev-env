@@ -1,51 +1,50 @@
 import './env';
-import intl from 'intl';
+import 'intl';
 import React from 'react';
-import { renderToString } from 'react-dom/server';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { StaticRouter } from 'react-router';
+import { StaticRouter } from 'react-router/esm/react-router.js';
 
 import App from '../client/containers/App';
 import { store } from '../client/redux/store';
 
-import nanoexpress from 'nanoexpress';
+import nanoexpress from 'nanoexpress-pro/src/nanoexpress';
+import staticServe from '@nanoexpress/middlewares/static/static.es.js';
 import routes from './routes';
 
-import { join } from 'path';
+import path from 'path';
 
-const server = nanoexpress();
+const app = nanoexpress();
 
-global.Intl = intl; // polyfill for ios 9
+async function main(port) {
+  // Initialize middlewares
+  app.use(await staticServe(path.join(__dirname, './assets/')));
 
-server
-  .register(routes)
-  .static(join(__dirname, './assets'))
-  .get(
-    '/*',
-    {
-      isRaw: true
-    },
-    (req, res) => {
-      const APP_TITLE = process.env.APP_TITLE || 'MERN Dev Env';
-      const context = {};
+  // Initialize routes
+  app.define(routes);
 
-      const markup = renderToString(
-        <Provider store={store}>
-          <App
-            router={StaticRouter}
-            location={req.getUrl()}
-            context={context}
-          />
-        </Provider>
-      );
+  // Initialize Server-side Rendering route
+  app.get('/*', (req, res) => {
+    const APP_TITLE = process.env.APP_TITLE || 'MERN Dev Env';
+    const context = { req, res };
 
-      if (context.url) {
-        res.writeHeader('Location', context.url);
-        res.writeStatus('301 Moved Permanently');
-        res.end();
-        return;
-      }
+    const markup = ReactDOM.renderToString(
+      React.createElement(
+        Provider,
+        { store },
+        React.createElement(App, {
+          router: StaticRouter,
+          location: req.path,
+          context
+        })
+      )
+    );
 
+    if (context.url) {
+      res.writeHeader('Location', context.url);
+      res.writeStatus('301 Moved Permanently');
+      res.end();
+    } else {
       res.end(
         // prettier-ignore
         `<!doctype html>
@@ -64,6 +63,13 @@ server
 </html>`
       );
     }
-  );
+  });
 
-export default server;
+  await app.listen(port);
+
+  return app;
+}
+
+main(process.env.PORT || 3000);
+
+export default app;

@@ -2,13 +2,6 @@
 
 An modern and easy development environment using MERN stack
 
-## Requires
-
-- nanoexpress
-- React
-- Node.js server / Machine supports Node.js
-- An good developer (like you) that already know about `nanoexpress`, `react` and ES6 Syntax
-
 ## Features
 
 - Speeds-up your development time

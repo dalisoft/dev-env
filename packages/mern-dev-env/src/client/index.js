@@ -1,7 +1,7 @@
-import 'core-js'; // polyfills for ios 9
-import intl from 'intl';
+import './polyfill';
+import 'intl';
 import React from 'react';
-import { hydrate } from 'react-dom';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import App from './containers/App';
 import { store } from './redux/store';
@@ -9,9 +9,7 @@ import * as serviceWorker from './serviceWorker';
 
 import './index.css';
 
-global.Intl = intl; // polyfill for ios 9
-
-hydrate(
+ReactDOM.hydrate(
   <Provider store={store}>
     <App />
   </Provider>,

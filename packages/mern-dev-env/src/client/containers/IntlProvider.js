@@ -1,10 +1,7 @@
 import React from 'react';
+import { IntlProvider as Provider } from 'react-intl';
 import PropTypes from 'prop-types';
-import { IntlProvider as Provider, addLocaleData } from 'react-intl';
 
-import en from 'react-intl/locale-data/en';
-import ru from 'react-intl/locale-data/ru';
-import uz from 'react-intl/locale-data/uz';
 import 'intl/locale-data/jsonp/en.js';
 import 'intl/locale-data/jsonp/ru.js';
 import 'intl/locale-data/jsonp/uz.js';
@@ -12,17 +9,26 @@ import 'intl/locale-data/jsonp/uz.js';
 import { flatten } from '../helpers';
 import messages from '../translations';
 
-addLocaleData([...en, ...ru, ...uz]);
+if (!Intl.PluralRules) {
+  import('@formatjs/intl-pluralrules/polyfill');
+  import('@formatjs/intl-pluralrules/dist/locale-data/en');
+  import('@formatjs/intl-pluralrules/dist/locale-data/ru');
+  import('@formatjs/intl-pluralrules/dist/locale-data/uz');
+}
+if (!Intl.RelativeTimeFormat) {
+  import('@formatjs/intl-relativetimeformat/polyfill');
+  import('@formatjs/intl-relativetimeformat/dist/locale-data/en');
+  import('@formatjs/intl-relativetimeformat/dist/locale-data/ru');
+  import('@formatjs/intl-relativetimeformat/dist/locale-data/uz');
+}
 
-export const IntlProvider = React.memo(({ children, locale }) => {
+export const IntlProvider = ({ children, locale }) => {
   return (
     <Provider locale={locale} messages={flatten(messages[locale])}>
       {children}
     </Provider>
   );
-});
-
-IntlProvider.displayName = 'IntlProvider';
+};
 
 IntlProvider.propTypes = {
   children: PropTypes.any,

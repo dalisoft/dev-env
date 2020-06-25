@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route } from 'react-router-dom/esm/react-router-dom.js';
 
 import Routes from '../routes';
 import Root from './Root';
