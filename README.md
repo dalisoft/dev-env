@@ -16,7 +16,7 @@ There has 3 categories, 5+ on both frontend and backend and as bonus there Docke
 
 ## Backend
 
-- [ ] express
+- [x] express
 - [ ] fastify
 - [x] graphql
 - [x] lambda-api
