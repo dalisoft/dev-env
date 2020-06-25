@@ -27,7 +27,6 @@ There has 3 categories, 5+ on both frontend and backend and as bonus there Docke
 
 - [x] docker-db-templates
 - [x] docker-fullstack-app-multistage
-- [ ] mern-dev-env
 
 ## Notes
 
