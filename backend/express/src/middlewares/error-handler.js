@@ -29,40 +29,26 @@ export default (err, req, res, next) => {
   res.header('Content-Type', 'application/json; charset=utf-8');
 
   if (code === 'permission_denied') {
-    res.send({ status: 'error', message: 'Доступ запрещен' });
+    res.send({ status: 'error', message: 'Access denied' });
   } else if (code === 'credentials_required') {
-    res.send({ status: 'error', message: 'Пользователь не авторизован' });
+    res.send({
+      status: 'error',
+      message: 'User is not logined, please login first',
+    });
   } else if (code === 'invalid_token') {
     res.send({
       status: 'error',
-      message: 'Подпись токена авторизации недействительна или повреждена',
+      message: 'Token is invalid or marlformed',
     });
   } else if (code === 'password_not_match') {
     res.send({
       status: 'error',
-      message: 'Неверный пароль',
+      message: 'Incorrect password',
     });
   } else if (code === 'email_exists' || code === 'user_not_exists') {
     res.send({
       status: 'error',
-      message: `Пользователь ${
-        code === 'user_not_exists' ? 'не' : 'уже'
-      } существует`,
-    });
-  } else if (code === 'disallowed_files') {
-    res.send({
-      status: 'error',
-      message: 'Неподдерживаемый формат контента выгрузки',
-    });
-  } else if (code === 'tag_duplicated') {
-    res.send({
-      status: 'error',
-      message: 'Этот тег уже есть в БД, попробуйте другой тег',
-    });
-  } else if (code === 'file_duplicated') {
-    res.send({
-      status: 'error',
-      message: 'Этот файл уже есть в сервере, попробуйте выгрузить другой файл',
+      message: `User ${code === 'user_not_exists' ? 'not' : 'already'} exists`,
     });
   } else if (err.name === 'JsonSchemaValidationError') {
     res.status(status || 500);

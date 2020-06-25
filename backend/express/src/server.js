@@ -58,7 +58,7 @@ server.use((req, res) => {
   res.status(404);
   res.send({
     status: 404,
-    message: 'Страница не найден!',
+    message: 'Not Found',
   });
 });
 
