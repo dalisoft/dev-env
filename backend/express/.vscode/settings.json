@@ -1,0 +1,13 @@
+{
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.enable": true,
+  "files.associations": {
+    "*.js": "javascript"
+  },
+  "eslint.packageManager": "npm",
+  "debug.node.autoAttach": "off"
+}

@@ -1,81 +1,41 @@
 {
-  "extends": "eslint:recommended",
   "env": {
-    "node": true,
-    "browser": false,
-    "es6": true
+    "es6": true,
+    "node": true
   },
+  "extends": ["airbnb-base", "eslint:recommended"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "describe": "readonly",
+    "it": "readonly",
+    "expect": "readonly"
+  },
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2018,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": false
+    }
   },
   "rules": {
-    "comma-dangle": [
-      "error",
-      "never"
-    ],
-    "comma-spacing": [
-      "error",
-      {
-        "before": false,
-        "after": true
-      }
-    ],
-    "eol-last": [
-      "error",
-      "always"
-    ],
-    "indent": [
-      "error",
-      2,
-      {
-        "MemberExpression": 1
-      }
-    ],
-    "no-multiple-empty-lines": [
-      "error"
-    ],
-    "no-new-symbol": "error",
-    "no-trailing-spaces": [
-      "error"
-    ],
-    "no-undef": [
-      "error"
-    ],
-    "no-unused-vars": [
-      "error"
-    ],
-    "no-console": 0,
-    "object-curly-spacing": [
-      "error",
-      "always"
-    ],
-    "object-shorthand": "error",
-    "prefer-const": 2,
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "error",
-      "always"
-    ],
-    "space-in-parens": [
-      "error",
-      "never"
-    ],
-    "strict": [
-      2,
-      "never"
-    ],
-    "max-len": [
-      "error",
-      120
-    ],
-    "no-dupe-args": "error",
-    "no-dupe-keys": "error",
-    "no-duplicate-imports": "error",
-    "no-duplicate-case": "error",
-    "no-dupe-class-members": "error"
+    "import/extensions": "off",
+    "consistent-return": "off",
+    "arrow-parens": "off",
+    "comma-dangle": "off",
+    "function-paren-newline": "off",
+    "import/prefer-default-export": "off",
+    "no-console": "off",
+    "no-undef": "error",
+    "no-dupe-else-if": "off",
+    "no-import-assign": "off",
+    "no-setter-return": "off",
+    "implicit-arrow-linebreak": "off",
+    "no-confusing-arrow": "off",
+    "object-curly-newline": "off"
+  },
+  "settings": {
+    "import/extensions": [".js"]
   }
 }

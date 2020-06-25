@@ -1,0 +1,80 @@
+{
+  "checkLogin": {
+    "cookies": {
+      "type": "object",
+      "required": ["access_token"],
+      "properties": {
+        "access_token": { "type": "string" }
+      }
+    },
+    "headers": {
+      "type": "object",
+      "properties": {
+        "content-type": {
+          "type": "string",
+          "default": "application/json",
+          "enum": ["application/json"]
+        }
+      }
+    }
+  },
+  "login": {
+    "headers": {
+      "type": "object",
+      "properties": {
+        "content-type": {
+          "type": "string",
+          "enum": ["application/json"],
+          "default": "application/json"
+        }
+      }
+    },
+    "body": {
+      "type": "object",
+      "required": ["email", "password"],
+      "properties": {
+        "email": { "type": "string" },
+        "password": { "type": "string" }
+      }
+    }
+  },
+  "register": {
+    "headers": {
+      "type": "object",
+      "properties": {
+        "content-type": {
+          "type": "string",
+          "enum": ["application/json"],
+          "default": "application/json"
+        }
+      }
+    },
+    "body": {
+      "type": "object",
+      "required": ["email", "password"],
+      "properties": {
+        "email": { "type": "string", "format": "email", "maxLength": 100 },
+        "password": { "type": "string", "minLength": 8 }
+      }
+    }
+  },
+  "del": {
+    "cookies": {
+      "type": "object",
+      "required": ["access_token"],
+      "properties": {
+        "access_token": { "type": "string" }
+      }
+    },
+    "headers": {
+      "type": "object",
+      "properties": {
+        "content-type": {
+          "type": "string",
+          "enum": ["application/json"],
+          "default": "application/json"
+        }
+      }
+    }
+  }
+}

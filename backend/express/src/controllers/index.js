@@ -1,3 +1,4 @@
-import Controller1 from './Controller1';
+import * as Auth from './auth.js';
+import * as helpers from './helpers.js';
 
-export { Controller1 };
+export { Auth, helpers };

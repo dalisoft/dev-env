@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Debug App",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      // "runtimeVersion": "12.14.0",
+      "runtimeArgs": ["run-script", "dev"],
+      "port": 9229,
+      "envFile": "${workspaceFolder}/.env",
+      "env": {
+        "DEBUG": "true"
+      },
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}

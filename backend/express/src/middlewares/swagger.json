@@ -1,0 +1,116 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "@dalisoft/express-dev-env",
+    "version": "1.0.0",
+    "description": "Dev Env by @dalisoft"
+  },
+  "basePath": "/",
+  "components": {
+    "securitySchemes": {
+      "cookieAuth": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "access_token",
+        "description": "Токен авторизации"
+      }
+    }
+  },
+  "responses": {
+    "errors": {
+      "common": {
+        "type": "object",
+        "properties": {
+          "status": { "type": "string", "example": "error" },
+          "message": { "type": "string" }
+        }
+      },
+      "user": {
+        "not_found": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string", "example": "error" },
+            "message": {
+              "type": "string",
+              "example": "Пользователь не существует"
+            }
+          }
+        },
+        "exists": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string", "example": "error" },
+            "message": {
+              "type": "string",
+              "example": "Пользователь уже существует"
+            }
+          }
+        },
+        "not_authorized": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string", "example": "error" },
+            "message": {
+              "type": "string",
+              "example": "Пользователь не авторизован"
+            }
+          }
+        },
+        "invalid_token": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string", "example": "error" },
+            "message": {
+              "type": "string",
+              "example": "Подпись токена авторизации недействительна или повреждена"
+            }
+          }
+        }
+      },
+      "docs": {
+        "not_found": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string", "example": "error" },
+            "message": {
+              "type": "string",
+              "example": "MEDIA_ID does not exist in file storage"
+            }
+          }
+        },
+        "disallowed_files": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string", "example": "error" },
+            "message": {
+              "type": "string",
+              "example": "Неподдерживаемый формат контента выгрузки"
+            }
+          }
+        }
+      },
+      "code": {
+        "duplicated": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string", "example": "error" },
+            "message": {
+              "type": "string",
+              "example": "Этот код уже есть в БД, попробуйте другой код"
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [{ "cookieAuth": [] }],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "tags": [
+    {
+      "name": "auth",
+      "description": "Аутентификация пользователя"
+    }
+  ],
+  "paths": {}
+}

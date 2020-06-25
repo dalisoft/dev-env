@@ -1,0 +1,248 @@
+---
+path:
+  /auth:
+    get:
+      summary: Проверяет, авторизован ли пользователь
+      description: Нужно авторизоваться чтобы воспользоваться данной API
+      consumes: application/json
+      produces: application/json
+      tags: [auth]
+      parameters:
+        - in: headers
+          description: Тип контента
+          name: content-type
+          schema:
+            type: string
+            default: application/json
+            enum:
+              - application/json
+        - in: cookie
+          description: Кук токена (обязательно)
+          name: access_token
+          schema:
+            type: string
+      responses:
+        200:
+          description: Ответ успешный проверку
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  authorized:
+                    type: boolean
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        format: uuid
+                      email:
+                        type: string
+                        example: foo@bar.baz
+        401:
+          description: Ответ авторизованных пользователей которые срок токена истек
+          content:
+            application/json:
+              schema:
+                $ref: '#/responses/errors/user/invalid_token'
+        404:
+          description: Ответ на несуществущий аккаунт
+          content:
+            application/json:
+              schema:
+                $ref: '#/responses/errors/user/not_found'
+        403:
+          description: Ответ неавторизованных пользователей
+          content:
+            application/json:
+              schema:
+                $ref: '#/responses/errors/user/not_authorized'
+  /auth/login:
+    post:
+      summary: Авторизация пользователя
+      consumes: application/json
+      produces: application/json
+      tags: [auth]
+      security: []
+      parameters:
+        - in: headers
+          description: Тип контента
+          name: content-type
+          schema:
+            type: string
+            default: application/json
+            enum:
+              - application/json
+      requestBody:
+        description: Учетные данные для входа
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string,
+                  example: foo@bar.baz
+                password:
+                  type: string
+      responses:
+        200:
+          description: Ответ успешный авторизацию
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  authorized:
+                    type: boolean
+                  data:
+                    type: object
+                    properties:
+                      user:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                            format: uuid
+                          email:
+                            type: string
+                            example: foo@bar.baz
+        401:
+          description: Ответ авторизованных пользователей которые срок токена истек
+          content:
+            application/json:
+              schema:
+                $ref: '#/responses/errors/user/invalid_token'
+        404:
+          description: Ответ на несуществущий аккаунт
+          content:
+            application/json:
+              schema:
+                $ref: '#/responses/errors/user/not_found'
+        403:
+          description: Ответ неавторизованных пользователей
+          content:
+            application/json:
+              schema:
+                $ref: '#/responses/errors/user/not_authorized'
+  /auth/register:
+    post:
+      summary: Регистрация пользователя
+      consumes: application/json
+      produces: application/json
+      tags: [auth]
+      security: []
+      parameters:
+        - in: headers
+          description: Тип контента
+          name: content-type
+          schema:
+            type: string
+            default: application/json
+            enum:
+              - application/json
+      requestBody:
+        description: Учетные данные для входа
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string,
+                  example: foo@bar.baz
+                password:
+                  type: string
+      responses:
+        201:
+          description: Ответ будет таким если с регистрационные данные все в порядке и успешно создан пользователь
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  authorized:
+                    type: boolean
+                  data:
+                    type: object
+                    properties:
+                      user:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                            format: uuid
+                          email:
+                            type: string
+                            example: foo@bar.baz
+        409:
+          description: Ответ будет таким если с регистрационные данные что-то не так
+          content:
+            application/json:
+              schema:
+                $ref: '#/responses/errors/user/exists'
+  /auth/logout:
+    post:
+      summary: Де-авторизация пользователя
+      consumes: application/json
+      produces: application/json
+      tags: [auth]
+      parameters:
+        - in: headers
+          description: Тип контента
+          name: content-type
+          schema:
+            type: string
+            default: application/json
+            enum:
+              - application/json
+        - in: cookie
+          description: Кук токена (обязательно)
+          name: access_token
+          schema:
+            type: string
+      responses:
+        200:
+          description: Ответ успешный логаут
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+        401:
+          description: Ответ авторизованных пользователей которые срок токена истек
+          content:
+            application/json:
+              schema:
+                $ref: '#/responses/errors/user/invalid_token'
+        404:
+          description: Ответ на несуществущий аккаунт
+          content:
+            application/json:
+              schema:
+                $ref: '#/responses/errors/user/not_found'
+        403:
+          description: Ответ неавторизованных пользователей
+          content:
+            application/json:
+              schema:
+                $ref: '#/responses/errors/user/not_authorized'
