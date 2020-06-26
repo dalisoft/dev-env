@@ -12,7 +12,7 @@
         "type": "apiKey",
         "in": "cookie",
         "name": "access_token",
-        "description": "Токен авторизации"
+        "description": "Auth token"
       }
     }
   },
@@ -32,7 +32,7 @@
             "status": { "type": "string", "example": "error" },
             "message": {
               "type": "string",
-              "example": "Пользователь не существует"
+              "example": "User does not exist"
             }
           }
         },
@@ -42,7 +42,7 @@
             "status": { "type": "string", "example": "error" },
             "message": {
               "type": "string",
-              "example": "Пользователь уже существует"
+              "example": "User exist"
             }
           }
         },
@@ -52,7 +52,7 @@
             "status": { "type": "string", "example": "error" },
             "message": {
               "type": "string",
-              "example": "Пользователь не авторизован"
+              "example": "User is not authorized"
             }
           }
         },
@@ -62,41 +62,7 @@
             "status": { "type": "string", "example": "error" },
             "message": {
               "type": "string",
-              "example": "Подпись токена авторизации недействительна или повреждена"
-            }
-          }
-        }
-      },
-      "docs": {
-        "not_found": {
-          "type": "object",
-          "properties": {
-            "status": { "type": "string", "example": "error" },
-            "message": {
-              "type": "string",
-              "example": "MEDIA_ID does not exist in file storage"
-            }
-          }
-        },
-        "disallowed_files": {
-          "type": "object",
-          "properties": {
-            "status": { "type": "string", "example": "error" },
-            "message": {
-              "type": "string",
-              "example": "Неподдерживаемый формат контента выгрузки"
-            }
-          }
-        }
-      },
-      "code": {
-        "duplicated": {
-          "type": "object",
-          "properties": {
-            "status": { "type": "string", "example": "error" },
-            "message": {
-              "type": "string",
-              "example": "Этот код уже есть в БД, попробуйте другой код"
+              "example": "Token is invalid or marlformed"
             }
           }
         }
@@ -109,7 +75,7 @@
   "tags": [
     {
       "name": "auth",
-      "description": "Аутентификация пользователя"
+      "description": "User auth"
     }
   ],
   "paths": {}

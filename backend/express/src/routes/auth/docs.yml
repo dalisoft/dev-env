@@ -2,14 +2,14 @@
 path:
   /auth:
     get:
-      summary: Проверяет, авторизован ли пользователь
-      description: Нужно авторизоваться чтобы воспользоваться данной API
+      summary: Checks user is authorized
+      description: Should be login to use this route
       consumes: application/json
       produces: application/json
       tags: [auth]
       parameters:
         - in: headers
-          description: Тип контента
+          description: Content type
           name: content-type
           schema:
             type: string
@@ -17,13 +17,13 @@ path:
             enum:
               - application/json
         - in: cookie
-          description: Кук токена (обязательно)
+          description: Auth token cookie (required)
           name: access_token
           schema:
             type: string
       responses:
         200:
-          description: Ответ успешный проверку
+          description: Successful response
           content:
             application/json:
               schema:
@@ -44,33 +44,33 @@ path:
                         type: string
                         example: foo@bar.baz
         401:
-          description: Ответ авторизованных пользователей которые срок токена истек
+          description: Auth token expired response
           content:
             application/json:
               schema:
                 $ref: '#/responses/errors/user/invalid_token'
         404:
-          description: Ответ на несуществущий аккаунт
+          description: User not found response
           content:
             application/json:
               schema:
                 $ref: '#/responses/errors/user/not_found'
         403:
-          description: Ответ неавторизованных пользователей
+          description: Unauthorized user response
           content:
             application/json:
               schema:
                 $ref: '#/responses/errors/user/not_authorized'
   /auth/login:
     post:
-      summary: Авторизация пользователя
+      summary: User login
       consumes: application/json
       produces: application/json
       tags: [auth]
       security: []
       parameters:
         - in: headers
-          description: Тип контента
+          description: Content type
           name: content-type
           schema:
             type: string
@@ -78,7 +78,7 @@ path:
             enum:
               - application/json
       requestBody:
-        description: Учетные данные для входа
+        description: User data to login
         content:
           application/json:
             schema:
@@ -94,7 +94,7 @@ path:
                   type: string
       responses:
         200:
-          description: Ответ успешный авторизацию
+          description: Sucessfully auth response
           content:
             application/json:
               schema:
@@ -118,33 +118,33 @@ path:
                             type: string
                             example: foo@bar.baz
         401:
-          description: Ответ авторизованных пользователей которые срок токена истек
+          description: Auth token expired response
           content:
             application/json:
               schema:
                 $ref: '#/responses/errors/user/invalid_token'
         404:
-          description: Ответ на несуществущий аккаунт
+          description: User not found response
           content:
             application/json:
               schema:
                 $ref: '#/responses/errors/user/not_found'
         403:
-          description: Ответ неавторизованных пользователей
+          description: Unauthorized user response
           content:
             application/json:
               schema:
                 $ref: '#/responses/errors/user/not_authorized'
   /auth/register:
     post:
-      summary: Регистрация пользователя
+      summary: User register
       consumes: application/json
       produces: application/json
       tags: [auth]
       security: []
       parameters:
         - in: headers
-          description: Тип контента
+          description: Content type
           name: content-type
           schema:
             type: string
@@ -152,7 +152,7 @@ path:
             enum:
               - application/json
       requestBody:
-        description: Учетные данные для входа
+        description: User data to login
         content:
           application/json:
             schema:
@@ -168,7 +168,7 @@ path:
                   type: string
       responses:
         201:
-          description: Ответ будет таким если с регистрационные данные все в порядке и успешно создан пользователь
+          description: User registration success response
           content:
             application/json:
               schema:
@@ -192,20 +192,20 @@ path:
                             type: string
                             example: foo@bar.baz
         409:
-          description: Ответ будет таким если с регистрационные данные что-то не так
+          description: Registration data error
           content:
             application/json:
               schema:
                 $ref: '#/responses/errors/user/exists'
   /auth/logout:
     post:
-      summary: Де-авторизация пользователя
+      summary: User logout
       consumes: application/json
       produces: application/json
       tags: [auth]
       parameters:
         - in: headers
-          description: Тип контента
+          description: Content type
           name: content-type
           schema:
             type: string
@@ -213,13 +213,13 @@ path:
             enum:
               - application/json
         - in: cookie
-          description: Кук токена (обязательно)
+          description: Auth token cookie (required)
           name: access_token
           schema:
             type: string
       responses:
         200:
-          description: Ответ успешный логаут
+          description: Logout done response
           content:
             application/json:
               schema:
@@ -229,19 +229,19 @@ path:
                     type: string
                     example: success
         401:
-          description: Ответ авторизованных пользователей которые срок токена истек
+          description: Auth token expired response
           content:
             application/json:
               schema:
                 $ref: '#/responses/errors/user/invalid_token'
         404:
-          description: Ответ на несуществущий аккаунт
+          description: User not found response
           content:
             application/json:
               schema:
                 $ref: '#/responses/errors/user/not_found'
         403:
-          description: Ответ неавторизованных пользователей
+          description: Unauthorized user response
           content:
             application/json:
               schema:
