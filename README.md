@@ -19,6 +19,7 @@ There has 3 categories, ~5 on both frontend and backend and as bonus there Docke
 - [x] express
 - [x] graphql
 - [x] lambda-api
+- [x] nanoexpress
 - [x] uWebSockets.js
 
 ## Packages
@@ -33,7 +34,6 @@ This category should be accepted as archived repo
 ### Backend
 
 - [ ] fastify - Unmaintained due of a lot of old code and dependencies in this repo + no demand currently
-- [ ] nanoexpress - **nanoexpress** is deprecated and there no templates, PR and/or fix of template is welcome
 
 ## License
 
