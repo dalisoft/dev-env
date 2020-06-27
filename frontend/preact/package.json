@@ -38,13 +38,13 @@
     "webpack": "^4.43.0"
   },
   "dependencies": {
-    "@formatjs/intl-pluralrules": "^2.2.9",
-    "@formatjs/intl-relativetimeformat": "^5.2.9",
+    "@formatjs/intl-pluralrules": "^2.2.10",
+    "@formatjs/intl-relativetimeformat": "^5.2.10",
     "classnames": "^2.2.6",
     "intl": "^1.2.5",
     "preact": "^10.4.4",
     "preact-router": "^3.2.1",
-    "react-intl": "^4.7.2",
+    "react-intl": "^4.7.5",
     "unistore": "^3.5.2"
   },
   "browserslist": {

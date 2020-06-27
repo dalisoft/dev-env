@@ -32,7 +32,7 @@
   "author": "dalisoft",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.703.0",
+    "aws-sdk": "^2.706.0",
     "lambda-api": "^0.10.4"
   },
   "devDependencies": {
@@ -42,7 +42,7 @@
     "lint-staged": "^10.2.11",
     "netlify-lambda": "^1.6.3",
     "prettier": "^2.0.5",
-    "serverless": "^1.73.1",
+    "serverless": "^1.74.0",
     "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^6.4.0",
     "serverless-webpack": "^5.3.1",
