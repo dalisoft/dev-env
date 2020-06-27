@@ -1,6 +1,6 @@
 # Dev-Env templates
 
-There has 3 categories, 5+ on both frontend and backend and as bonus there Docker templates with Docker database expose template
+There has 3 categories, ~5 on both frontend and backend and as bonus there Docker templates with Docker database expose template
 
 ## Frontend
 
@@ -17,10 +17,8 @@ There has 3 categories, 5+ on both frontend and backend and as bonus there Docke
 ## Backend
 
 - [x] express
-- [ ] fastify
 - [x] graphql
 - [x] lambda-api
-- [ ] nanoexpress
 - [x] uWebSockets.js
 
 ## Packages
@@ -28,10 +26,14 @@ There has 3 categories, 5+ on both frontend and backend and as bonus there Docke
 - [x] docker-db-templates
 - [x] docker-fullstack-app-multistage
 
-## Notes
+## Backup
 
-- [x] this means template was upgraded, uses latest technologies as possible
-- [ ] uses old technology, when used, you have do upgrade and migration steps yourself
+This category should be accepted as archived repo
+
+### Backend
+
+- [ ] fastify - Unmaintained due of a lot of old code and dependencies in this repo + no demand currently
+- [ ] nanoexpress - **nanoexpress** is deprecated and there no templates, PR and/or fix of template is welcome
 
 ## License
 
