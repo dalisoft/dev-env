@@ -100,7 +100,7 @@ frontend/**/styleguide
 backend/**/.vercel
 backend/**/.webpack
 backend/**/.serverless
-backend/**/.functions-build
+backend/**/functions-build
 
 # own script
 npm-update.sh
