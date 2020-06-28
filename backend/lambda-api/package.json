@@ -12,13 +12,17 @@
     "lint:eslint": "eslint ./src",
     "lint:prettier": "prettier -c .",
     "lint": "npm run lint:eslint && npm run lint:prettier",
+    "start": "echo \"This script was deprecated. Please use npm run start:YOUR_CHOICE\" && exit 1",
+    "start:http-server": "node build/http-server.js",
     "dev": "echo \"This script was deprecated. Please use npm run dev:YOUR_CHOICE\" && exit 1",
     "dev:functions": "NODE_ENV=development netlify-lambda serve functions",
     "dev:serverless": "sls offline",
     "dev:vercel": "NODE_ENV=development vercel dev",
+    "dev:http-server": "NODE_ENV=development node --experimental-json-modules ./node_modules/.bin/rollup -c -w",
     "build": "echo \"This script was deprecated. Please use npm run build:YOUR_CHOICE\" && exit 1",
     "build:functions": "netlify-lambda build functions",
-    "build:serverless": "sls webpack"
+    "build:serverless": "sls webpack",
+    "build:http-server": "node --experimental-json-modules ./node_modules/.bin/rollup -c"
   },
   "keywords": [
     "lambda",
@@ -31,15 +35,18 @@
   "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.706.0",
+    "dotenv-safe": "^8.2.0",
     "lambda-api": "^0.10.4"
   },
   "devDependencies": {
+    "@rollup/plugin-run": "^2.0.2",
     "ava": "^3.9.0",
     "eslint": "^7.3.1",
     "husky": "^4.0.2",
     "lint-staged": "^10.2.11",
     "netlify-lambda": "^1.6.3",
     "prettier": "^2.0.5",
+    "rollup": "^2.18.1",
     "serverless": "^1.74.0",
     "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^6.4.0",

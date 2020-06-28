@@ -1,7 +1,7 @@
-import http from 'http';
-import httpHandler from './now-lambda.js';
+import { createServer } from 'http';
+import httpHandler from './vercel-lambda.js';
 
-const server = http.createServer(httpHandler);
+const server = createServer(httpHandler);
 
 const port = process.env.PORT || 3000;
 server.listen(port, () => {

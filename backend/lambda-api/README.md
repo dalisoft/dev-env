@@ -4,6 +4,7 @@ An modern development environment for Serverless development with Lambda API
 
 ## Features
 
+- HTTP Server mode supports
 - Env supported (create `.env` file and ship it to server securely)
 - Vercel serverless works out-of-the-box (tested)
 - Netlify Functions works out-of-the-box (tested)
