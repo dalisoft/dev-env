@@ -13,7 +13,7 @@
     "lint:prettier": "prettier -c .",
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "start": "echo \"This script was deprecated. Please use npm run start:YOUR_CHOICE\" && exit 1",
-    "start:http-server": "node build/http-server.js",
+    "start:http-server": "node --experimental-json-modules build/http-server.js",
     "dev": "echo \"This script was deprecated. Please use npm run dev:YOUR_CHOICE\" && exit 1",
     "dev:functions": "NODE_ENV=development netlify-lambda serve functions",
     "dev:serverless": "sls offline",
