@@ -1,4 +1,4 @@
-import Controller from './Default';
+import Controller from './Default.js';
 
 // HTTP Controller
 export default class Controller1 extends Controller {

@@ -1,5 +1,5 @@
-import { dbHelper } from '../../helpers';
-import * as Models from '../models';
+import { dbHelper } from '../../helpers/index.js';
+import * as Models from '../models/index.js';
 
 const Controllers = {};
 

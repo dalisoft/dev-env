@@ -1,6 +1,6 @@
 import fastifyRateLimit from 'fastify-rate-limit';
-import { dev } from '../config';
-import { keyGenerator } from '../helpers';
+import { dev } from '../config.js';
+import { keyGenerator } from '../helpers/index.js';
 
 export default async (fastify) =>
   fastify.register(fastifyRateLimit, {

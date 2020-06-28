@@ -1,10 +1,7 @@
 import route1 from './route1';
 
-const app = {
-  '/': {
-    get: async () => ({ status: 'success' })
-  },
-  route1
-};
+export default async (fastify) => {
+  fastify.get('/', async () => async () => ({ status: 'success' }));
 
-export default app;
+  fastify.register(route1, { prefix: '/route1' });
+};

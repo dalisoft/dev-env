@@ -20,13 +20,7 @@ module.exports = {
     }
   },
   module: {
-    rules: [
-      {
-        test: /.*/,
-        include: path.resolve('./node_modules/echomd/js'),
-        loader: 'shebang-loader'
-      }
-    ]
+    rules: []
   },
   plugins: [
     new webpack.DefinePlugin({

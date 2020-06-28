@@ -1,68 +1,27 @@
-import json from 'rollup-plugin-json';
-import commonjs from 'rollup-plugin-commonjs';
-import resolve from 'rollup-plugin-node-resolve';
-import run from 'rollup-plugin-run';
-import babel from 'rollup-plugin-babel';
-import { terser } from 'rollup-plugin-terser';
-
 import pkg from './package.json';
+import run from '@rollup/plugin-run';
 
-const dev = process.env.NODE_ENV === 'development';
-const watch = process.env.ROLLUP_WATCH;
+const builtinPackages = [
+  'http',
+  'https',
+  'fs',
+  'querystring',
+  'crypto',
+  'ws/lib/websocket-server.js'
+];
+const external = []
+  .concat(Object.keys(pkg.dependencies))
+  .concat(builtinPackages);
+
+console.log(external);
 
 export default {
   input: './src/server.js',
   output: {
-    format: 'cjs',
     file: './build/server.js',
-    esModule: false
+    format: 'cjs',
+    sourcemaps: true
   },
-  external: Object.keys(pkg.dependencies)
-    .concat(Object.keys(pkg.devDependencies))
-    .concat([
-      'console',
-      'consolemd',
-      'crypto',
-      'fs',
-      'events',
-      'url',
-      'http',
-      'https',
-      'http2',
-      'path',
-      'os',
-      'stream',
-      'tls',
-      'net',
-      'zlib'
-    ]),
-  plugins: [
-    json(),
-    resolve({
-      mainFields: ['module']
-    }),
-    commonjs({
-      sourceMap: false
-    }),
-    !dev &&
-      !watch &&
-      babel({
-        babelrc: true,
-        exclude: 'node_modules/**'
-      }),
-    dev
-      ? run()
-      : !watch &&
-        terser({
-          compress: {
-            unsafe_comps: true,
-            unsafe_math: true,
-            unsafe_methods: true,
-            unsafe_proto: true,
-            toplevel: true
-          },
-          mangle: true,
-          safari10: true
-        })
-  ]
+  external,
+  plugins: [run()]
 };

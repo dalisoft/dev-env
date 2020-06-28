@@ -1,4 +1,4 @@
-import { allHandler, notFoundHandler } from './handler';
+import { allHandler, notFoundHandler } from './handler/index.js';
 import wrapErrorHandler from 'fastify-plugin';
 
 export default wrapErrorHandler(async (fastify) => {

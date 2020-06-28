@@ -2,7 +2,7 @@ service: fastify-dev-env-serverless
 
 provider:
   name: aws
-  runtime: nodejs8
+  runtime: nodejs12.x
   websocketsApiRouteSelectionExpression: '$request.body.type'
 
 # Functions

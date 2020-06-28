@@ -1,4 +1,4 @@
-import en from './en';
-import ru from './ru';
+import en from './en/index.js';
+import ru from './ru/index.js';
 
 export { en, ru };

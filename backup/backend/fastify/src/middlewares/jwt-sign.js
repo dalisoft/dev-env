@@ -1,10 +1,10 @@
 import pick from 'lodash.pick';
-import { jwt, jwtSign } from '../config';
-import { keyGenerator } from '../helpers';
+import { jwt, jwtSign } from '../config.js';
+import { keyGenerator } from '../helpers/index.js';
 import crypto from 'crypto';
 
 const secureFields = ['email', 'role', 'clientSignature'];
-export default async function(req, _res, payload, next) {
+export default async function (req, _res, payload, next) {
   if (payload.status === 'success') {
     const clientSignature = crypto
       .createHash('sha256')

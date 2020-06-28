@@ -1,5 +1,5 @@
 import { ApolloServer } from 'apollo-server-fastify';
-import schema from '../graphql/schema';
+import schema from '../graphql/schema/index.js';
 import { dev, graphiql, corsWhitelist } from '../config.js';
 
 export default async (fastify) => {

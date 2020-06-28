@@ -1,4 +1,4 @@
-import DBControllers from '../db/controllers';
+import DBControllers from '../db/controllers/index.js';
 
 export default class Controller {
   get email() {

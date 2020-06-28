@@ -8,17 +8,17 @@
   "builds": [
     {
       "src": "src/now-lambda.js",
-      "use": "@now/node"
+      "use": "@vercel/node"
     },
     {
       "src": "public/*.html",
-      "use": "@now/static"
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/src/now-lambda.js"
+      "dest": "/src/vercel-lambda.js"
     }
   ]
 }

@@ -1,4 +1,5 @@
-import jwtSign from './jwt-sign';
 import jwtVerify from './jwt-verify';
 
-export { jwtSign, jwtVerify };
+export default async (fastify) => {
+  fastify.addHook('preHandler', jwtVerify);
+};

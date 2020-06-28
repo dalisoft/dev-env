@@ -1,4 +1,4 @@
-import * as translations from '../translations';
+import * as translations from '../translations/index.js';
 
 export default async (error, request) => {
   const { lang = 'en' } = request.headers;

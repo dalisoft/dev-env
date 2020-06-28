@@ -1,5 +1,5 @@
-import { consolemd } from '../../helpers';
-import * as translations from '../translations';
+/* eslint-disable indent */
+import * as translations from '../translations/index.js';
 
 export default async (error, request, res) => {
   if (
@@ -35,13 +35,12 @@ export default async (error, request, res) => {
 
   const stack = error.stack
     ? error.stack
-      .split('\n')
-      .map((e) => e.trim())
-      .filter((e, i, s) => s.indexOf(e) === i)
+        .split('\n')
+        .map((e) => e.trim())
+        .filter((e, i, s) => s.indexOf(e) === i)
     : error.stack_trace;
 
-  consolemd.log('#red([*Server*]: error was happened', '\n');
-  consolemd.log('#red(' + stack + ')');
+  console.log('[Server]: error was happened', '\n', stack);
 
   return {
     status: 'error',

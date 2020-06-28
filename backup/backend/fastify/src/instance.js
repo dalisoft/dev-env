@@ -1,13 +1,11 @@
 import fastify from 'fastify';
 import { dev } from './config';
 import fastifyConfig from './server-config';
-import fastifyPlugins from './fastify-plugins';
-import fastifyHandler from './errors';
+import fastifyPlugins from './fastify-plugins/index.js';
+import fastifyHandler from './errors/index.js';
 
-import { routePathsNormalizer } from './helpers';
-
-import appRoutes from './routes';
-import * as appMiddlewares from './middlewares';
+import appRoutes from './routes/index.js';
+import appMiddlewares from './middlewares/index.js';
 
 export default (serverFactory) => {
   if (serverFactory) {
@@ -23,14 +21,17 @@ export default (serverFactory) => {
     if (dev) {
       // Netlify Functions DEV-mode compatibility
       config.prefix = 'server';
-      app.register(routePathsNormalizer(appMiddlewares, appRoutes), config);
+      app.register(appMiddlewares);
+      app.register(appRoutes, config);
     } else {
       // Netlify Functions PROD-mode compatibility
       config.prefix = '.netlify/functions/server';
-      app.register(routePathsNormalizer(appMiddlewares, appRoutes), config);
+      app.register(appMiddlewares);
+      app.register(appRoutes, config);
     }
   } else {
-    app.register(routePathsNormalizer(appMiddlewares, appRoutes));
+    app.register(appMiddlewares);
+    app.register(appRoutes, config);
   }
 
   return app;

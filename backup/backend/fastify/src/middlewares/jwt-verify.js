@@ -1,7 +1,7 @@
-import { keyGenerator } from '../helpers';
+import { keyGenerator } from '../helpers/index.js';
 import crypto from 'crypto';
 
-export default async function(req) {
+export default async function (req) {
   const { headers } = req;
 
   if (!headers.authorization) {
