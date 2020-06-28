@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { GraphQLSchema, GraphQLObjectType } from 'graphql';
 
 import * as queries from './queries/index.js';

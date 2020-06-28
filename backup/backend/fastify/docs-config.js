@@ -1,5 +1,5 @@
 const { HTTPS, PORT, NODE_ENV, BACKEND_URL, TEST_BACKEND_URL } = process.env;
-const secure = HTTPS ? JSON.parse(HTTPS) : false;
+const secure = HTTPS && String(HTTPS).length > 0;
 const dev = NODE_ENV === 'development';
 
 export default {

@@ -19,8 +19,7 @@ export default {
   input: './src/server.js',
   output: {
     file: './build/server.js',
-    format: 'cjs',
-    sourcemaps: true
+    format: 'cjs'
   },
   external,
   plugins: [run()]

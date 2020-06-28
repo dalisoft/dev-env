@@ -1,17 +1,8 @@
-import http from 'http';
-import app from './instance';
+import init from './instance';
 
-let handleRequest = null;
-const serverFactory = (handler) => {
-  handleRequest = handler;
-  return http.createServer();
-};
+const app = init();
 
-const handler = app(serverFactory);
-
-export default (req, res) => {
-  handler.ready((err) => {
-    if (err) throw err;
-    handleRequest(req, res);
-  });
+module.exports = async function (req, res) {
+  await app.ready();
+  app.server.emit('request', req, res);
 };

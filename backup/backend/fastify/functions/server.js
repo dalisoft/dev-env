@@ -1,1 +1,1 @@
-export { handler } from '../lambda';
+export { default as handler } from '../handler';

@@ -3,12 +3,15 @@
   "env": {
     "secretKey": "some-secret-password-at-least-32-characters-long",
     "jwtSecretKey": "some-secret-password-at-least-32-characters-long-2",
-    "GRAPHIQL": true
+    "GRAPHIQL": "true"
   },
   "builds": [
     {
-      "src": "src/now-lambda.js",
-      "use": "@vercel/node"
+      "src": "src/vercel-lambda.js",
+      "use": "@vercel/node",
+      "config": {
+        "helpers": false
+      }
     },
     {
       "src": "public/*.html",

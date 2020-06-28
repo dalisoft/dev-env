@@ -8,19 +8,21 @@
     "node": ">=12.16"
   },
   "scripts": {
+    "postinstall": "netlify-lambda install functions",
     "test": "ava",
     "lint:eslint": "eslint ./src",
     "lint:prettier": "prettier -c .",
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "start": "echo \"This script was deprecated. Please use npm run start:YOUR_CHOICE\" && exit 1",
+    "start:functions": "node functions-build/server.js",
     "start:http-server": "node --experimental-json-modules build/server.js",
     "dev": "echo \"This script was deprecated. Please use npm run dev:YOUR_CHOICE\" && exit 1",
-    "dev:functions": "NODE_ENV=development netlify-lambda serve functions",
     "dev:serverless": "sls offline",
+    "dev:functions": "NODE_ENV=development netlify-lambda serve functions --config ./webpack.config.netlify.js",
     "dev:vercel": "NODE_ENV=development vercel dev",
     "dev:http-server": "NODE_ENV=development node --experimental-json-modules ./node_modules/.bin/rollup -c -w",
     "build": "echo \"This script was deprecated. Please use npm run build:YOUR_CHOICE\" && exit 1",
-    "build:functions": "netlify-lambda build functions",
+    "build:functions": "netlify-lambda build functions --config ./webpack.config.netlify.js",
     "build:serverless": "sls webpack",
     "build:http-server": "node --experimental-json-modules ./node_modules/.bin/rollup -c"
   },
@@ -33,7 +35,7 @@
   "license": "MIT",
   "dependencies": {
     "apollo-server-fastify": "^2.15.0",
-    "aws-serverless-express": "^3.3.6",
+    "aws-lambda-fastify": "^1.4.4",
     "dotenv-safe": "^8.2.0",
     "fastify": "^2.15.0",
     "fastify-compress": "^2.0.0",
@@ -45,8 +47,9 @@
     "fastify-oas": "^2.5.0",
     "fastify-plugin": "^1.5.0",
     "fastify-rate-limit": "^3.0.1",
-    "graphql": "^15.1.0",
-    "lodash.pick": "^4.4.0"
+    "graphql": "^14.6.0",
+    "lodash.pick": "^4.4.0",
+    "ws": "^7.3.0"
   },
   "devDependencies": {
     "@rollup/plugin-run": "^2.0.2",
@@ -62,6 +65,7 @@
     "serverless-offline": "^6.4.0",
     "serverless-webpack": "^5.3.0",
     "serverless-websockets-plugin": "^1.0.0",
+    "uglify-es": "^3.3.9",
     "vercel": "^19.1.1",
     "webpack-node-externals": "^1.7.2"
   },
@@ -69,7 +73,6 @@
     "bufferutil": "^4.0.1",
     "long": "^4.0.0",
     "pino-pretty": "^3.0.0",
-    "utf-8-validate": "^5.0.2",
-    "ws": "^7.0.0"
+    "utf-8-validate": "^5.0.2"
   }
 }

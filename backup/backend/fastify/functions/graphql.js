@@ -1,1 +1,1 @@
-export { handler } from './server';
+export { default as handler } from '../handler';

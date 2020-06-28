@@ -10,12 +10,6 @@ An modern development environment for Backend development with Fastify
 
 ## Note
 
-### Turbo mode
-
-When enabling turbo mode (up to 50% performance improvement), cluster-mode will be unavailable (`turbo-http` limit), so, your app should work in single thread to working properly and avoiding crash.
-For enabling turbo mode you should install `turbo-http` (i prefer this [fork](github:tinchoz49/turbo-http)).
-For Serverless/Lamba we don't recommend using `turbo` mode as turbo mode may not work properly or even crash
-
 ### Websocket and Lambda/Serverless
 
 When using Netlify, now.sh v2 (serverless) - WebSocket (and GraphQL subscription) may not work until providers implements WebSocket. I am sorry
@@ -30,7 +24,6 @@ WebSocket not working in Serverless mode (even on AWS/GCloud), even i tried to c
 - On Serverless servers (like AWS) should work (tested locally with Serverless)
 - Speeds-up your development time
 - Fast backend (very good performance)
-- Can be enable Turbo mode (by specify `TURBO_HTTP=true` env variable)
 - Async/Await support (with Fastify & Babel)
 - Validation / Serialization support (with Fastify)
 - Fast build with Rollup & Babel

@@ -95,12 +95,13 @@ __snapshots__
 .cache
 frontend/gatsby/public
 frontend/react-static/artifacts
-frontend/**/styleguide
+**/**/styleguide
 
-backend/**/.vercel
-backend/**/.webpack
-backend/**/.serverless
-backend/**/functions-build
+.vercel
+**/**/.vercel
+**/**/.webpack
+**/**/.serverless
+**/**/functions-build
 
 # own script
 npm-update.sh
