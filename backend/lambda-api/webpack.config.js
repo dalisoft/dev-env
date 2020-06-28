@@ -2,11 +2,11 @@ const slsw = require('serverless-webpack');
 const nodeExternals = require('webpack-node-externals');
 const path = require('path');
 
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = slsw.lib.webpack.isLocal;
 
 module.exports = {
   entry: slsw.lib.entries,
-  target: 'node',
+  target: 'async-node',
   output: {
     path: path.resolve('./.webpack/service'),
     filename: 'handler.js',
@@ -24,7 +24,7 @@ module.exports = {
   },
   performance: {
     // Turn off size warnings for entry points
-    hints: isDev
+    hints: isDev && 'warning'
   },
   // Run babel on all .js files and skip those in node_modules
   module: {

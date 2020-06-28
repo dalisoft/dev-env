@@ -12,7 +12,7 @@ functions:
     timeout: 30
     events:
       - http:
-          path: "{proxy+}"
+          path: '{proxy+}'
           method: any
           cors: true
 
@@ -31,3 +31,4 @@ custom:
   webpack:
     webpackConfig: ./webpack.config.js
     includeModules: true
+    excludeFiles: src/**/*.test.js
