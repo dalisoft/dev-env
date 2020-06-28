@@ -4,6 +4,10 @@
   "devDependencies": {
     "lerna": "^3.22.1"
   },
+  "scripts": {
+    "lint": "sh lint.sh",
+    "upgrade-deps": "sh npm-update.sh"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dalisoft/dev-env.git"
