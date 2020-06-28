@@ -12,10 +12,6 @@
       "config": {
         "helpers": false
       }
-    },
-    {
-      "src": "public/*.html",
-      "use": "@vercel/static"
     }
   ],
   "routes": [

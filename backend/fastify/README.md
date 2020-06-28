@@ -2,19 +2,12 @@
 
 An modern development environment for Backend development with Fastify
 
-## Requires
-
-- Fastify
-- Node.js server / Machine supports Node.js
-- An good developer (like you) that already know about Fastify and ES6 Syntax
-
 ## Note
 
 ### Websocket and Lambda/Serverless
 
-When using Netlify, now.sh v2 (serverless) - WebSocket (and GraphQL subscription) may not work until providers implements WebSocket. I am sorry
-
-WebSocket not working in Serverless mode (even on AWS/GCloud), even i tried to configure, but can't get it work. PR is welcome
+- WebSocket feature missing on **Netlify** and **Vercel**
+- Serverless AWS in local WebSocket did not work because of endpoint is mismatching, PR is Welcome
 
 ## Features
 

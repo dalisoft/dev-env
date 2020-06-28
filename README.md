@@ -17,6 +17,7 @@ There has 3 categories, ~5 on both frontend and backend and as bonus there Docke
 ## Backend
 
 - [x] express
+- [x] fastify
 - [x] graphql
 - [x] lambda-api
 - [x] nanoexpress
@@ -26,14 +27,6 @@ There has 3 categories, ~5 on both frontend and backend and as bonus there Docke
 
 - [x] docker-db-templates
 - [x] docker-fullstack-app-multistage
-
-## Backup
-
-This category should be accepted as archived repo
-
-### Backend
-
-- [ ] fastify - Unmaintained due of a lot of old code and dependencies in this repo + no demand currently
 
 ## License
 
