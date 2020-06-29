@@ -8,10 +8,7 @@
   "builds": [
     {
       "src": "src/vercel-lambda.js",
-      "use": "@vercel/node",
-      "config": {
-        "helpers": false
-      }
+      "use": "@vercel/node"
     }
   ],
   "routes": [
