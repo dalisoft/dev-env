@@ -39,5 +39,4 @@ A clear and concise description of what you expected to happen (or code).
 Add any other context about the problem here. If applicable, add screenshots to help explain.
 
 **Note**
-
 Any bug report which modified by user will be closed without any futher discussion nor fixes
