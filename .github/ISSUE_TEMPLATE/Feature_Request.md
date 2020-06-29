@@ -9,6 +9,12 @@ assignees: ''
 
 ## Feature Request
 
+**Is you sponsoring this project**
+
+<!-- Type Yes or No depending on your sponsorship -->
+
+**No**
+
 **Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I have an issue when [...]
 

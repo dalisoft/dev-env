@@ -9,6 +9,12 @@ assignees: ''
 
 ## Bug Report
 
+**Is you sponsoring this project**
+
+<!-- Type Yes or No depending on your sponsorship -->
+
+**No**
+
 **Select template category**
 
 - [ ] Frontend
