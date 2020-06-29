@@ -29,7 +29,7 @@
     "dotenv-safe": "^8.2.0",
     "express-graphql": "^0.9.0",
     "graphql": "^15.1.0",
-    "nanoexpress-pro": "^1.12.3"
+    "nanoexpress-pro": "^2.1.0"
   },
   "devDependencies": {
     "ava": "^3.9.0",
