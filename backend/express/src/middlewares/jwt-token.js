@@ -6,6 +6,7 @@ let middleware = (_, res, next) => next();
 if (process.env.TOKEN_SECRET) {
   middleware = expressJwt({
     secret: process.env.TOKEN_SECRET,
+    algorithms: ['HS512'],
     getToken(req) {
       if (req && req.cookies && req.cookies.access_token) {
         return req.cookies.access_token;

@@ -42,11 +42,7 @@ const jwt = {
 };
 const jwtSign = {
   secret: jwtSecretKey,
-  sign: {
-    algorithm: 'HS512',
-    issuer: 'api.domain.tld'
-  },
-  verify: { issuer: 'api.domain.tld', secret: secretKey }
+  algorithms: ['HS512']
 };
 const cookie = {
   httpOnly: true,
