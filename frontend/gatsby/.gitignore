@@ -146,16 +146,24 @@ askpass.sh
 #################
 
 dist
+build
 build/Release
 functions-build
 
 ## Make sure subfolders also does not exist
 **/dist
+**/build
 **/build/Release
 **/functions-build
 
 ## Bundle files
 public
+
+## Assets files
+## Build files for
+## some frameworks
+assets/js/bundle*
+assets/css/bundle*
 
 ## Minified CSS files
 *.min.css

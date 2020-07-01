@@ -43,7 +43,7 @@ const jwt = {
 const jwtSign = {
   secret: jwtSecretKey,
   sign: {
-    algorithm: 'HS512',
+    algorithm: 'HS256',
     issuer: 'api.domain.tld'
   },
   verify: { issuer: 'api.domain.tld', secret: secretKey }

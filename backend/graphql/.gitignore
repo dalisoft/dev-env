@@ -146,11 +146,13 @@ askpass.sh
 #################
 
 dist
+build
 build/Release
 functions-build
 
 ## Make sure subfolders also does not exist
 **/dist
+**/build
 **/build/Release
 **/functions-build
 
