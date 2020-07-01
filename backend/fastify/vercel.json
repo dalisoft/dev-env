@@ -7,14 +7,12 @@
   },
   "builds": [
     {
-      "src": "src/vercel-lambda.js",
-      "use": "@vercel/node"
+      "src": "api/serverless.js",
+      "use": "@vercel/node",
+      "config": {
+        "helpers": false
+      }
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/src/vercel-lambda.js"
-    }
-  ]
+  "routes": [{ "src": "/.*", "dest": "/api/serverless.js" }]
 }

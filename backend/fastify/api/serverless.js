@@ -1,4 +1,4 @@
-import init from './instance';
+import init from '../src/instance';
 
 const app = init();
 
