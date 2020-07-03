@@ -27,7 +27,7 @@
     "react-dom": "^16.13.1",
     "react-form": "^4.0.1",
     "react-helmet": "^6.1.0",
-    "react-intl": "^4.7.6",
+    "react-intl": "^5.0.2",
     "react-redux": "^7.2.0",
     "redaction": "^5.1.1",
     "redux": "^4.0.5",
