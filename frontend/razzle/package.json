@@ -18,7 +18,7 @@
     "@formatjs/intl-relativetimeformat": "^5.2.11",
     "@nanoexpress/middlewares": "github:nanoexpress/middlewares",
     "@nanoexpress/pro-slim": "github:nanoexpress/pro-slim",
-    "ajv": "^6.10.2",
+    "ajv": "^6.12.3",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.6.1",
     "cookie": "^0.4.0",
@@ -43,10 +43,10 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
-    "eslint": "^7.3.1",
+    "eslint": "^7.4.0",
     "eslint-plugin-react": "^7.20.3",
-    "razzle": "^3.1.4",
-    "razzle-plugin-scss": "^3.1.4",
+    "razzle": "^3.1.5",
+    "razzle-plugin-scss": "^3.1.5",
     "react-styleguidist": "^11.0.8",
     "react-test-renderer": "^16.13.1"
   },
