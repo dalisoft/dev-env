@@ -5,7 +5,7 @@
   "sideEffects": false,
   "dependencies": {
     "@formatjs/intl-pluralrules": "^2.2.11",
-    "@formatjs/intl-relativetimeformat": "^5.2.11",
+    "@formatjs/intl-relativetimeformat": "^6.0.2",
     "classnames": "^2.2.6",
     "intl": "^1.2.5",
     "isomorphic-unfetch": "^3.0.0",

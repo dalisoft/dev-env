@@ -6,7 +6,7 @@
   "author": "dalisoft",
   "dependencies": {
     "@formatjs/intl-pluralrules": "^2.2.11",
-    "@formatjs/intl-relativetimeformat": "^5.2.11",
+    "@formatjs/intl-relativetimeformat": "^6.0.2",
     "classnames": "^2.2.6",
     "core-js": "^3.6.5",
     "gatsby": "^2.23.20",
