@@ -22,7 +22,7 @@
     "classnames": "^2.2.6",
     "connected-react-router": "^6.6.1",
     "cookie": "^0.4.0",
-    "fast-json-stringify": "^2.2.1",
+    "fast-json-stringify": "^2.2.2",
     "history": "^4.10.1",
     "intl": "^1.2.5",
     "isomorphic-unfetch": "^3.0.0",

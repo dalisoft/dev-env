@@ -27,13 +27,13 @@
     "express-cors": "0.0.3",
     "express-jwt": "^6.0.0",
     "express-rate-limit": "^5.1.1",
-    "fast-json-stringify": "^2.2.1",
+    "fast-json-stringify": "^2.2.2",
     "helmet": "^3.23.3",
     "lodash.pick": "^4.4.0",
     "nanoexpress-pro": "^2.1.1"
   },
   "devDependencies": {
-    "ava": "^3.9.0",
+    "ava": "^3.10.1",
     "cross-env": "^7.0.2",
     "dotenv-safe": "^8.2.0",
     "eslint": "^7.4.0",
