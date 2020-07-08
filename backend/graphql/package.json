@@ -27,7 +27,7 @@
     "@nanoexpress/middlewares": "github:nanoexpress/middlewares",
     "cors": "^2.8.5",
     "dotenv-safe": "^8.2.0",
-    "express-graphql": "^0.9.0",
+    "express-graphql": "^0.11.0",
     "graphql": "^15.3.0",
     "nanoexpress-pro": "^2.1.0"
   },
