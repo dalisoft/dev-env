@@ -45,7 +45,7 @@
     "fastify-jwt": "^1.2.1",
     "fastify-normalize-request-reply": "^2.1.0",
     "fastify-oas": "^2.7.1",
-    "fastify-plugin": "^1.5.0",
+    "fastify-plugin": "^2.0.0",
     "fastify-rate-limit": "^3.0.1",
     "graphql": "^15.3.0",
     "lodash.pick": "^4.4.0",
