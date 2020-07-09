@@ -67,7 +67,7 @@
     "serverless-websockets-plugin": "^1.0.0",
     "uglify-es": "^3.3.9",
     "vercel": "^19.1.1",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-node-externals": "^2.3.0"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.1",
