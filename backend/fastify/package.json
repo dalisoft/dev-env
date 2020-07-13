@@ -72,7 +72,7 @@
   "optionalDependencies": {
     "bufferutil": "^4.0.1",
     "long": "^4.0.0",
-    "pino-pretty": "^3.0.0",
+    "pino-pretty": "^4.0.1",
     "utf-8-validate": "^5.0.2"
   }
 }
