@@ -46,7 +46,7 @@
     "fastify-normalize-request-reply": "^2.1.0",
     "fastify-oas": "^2.7.1",
     "fastify-plugin": "^1.5.0",
-    "fastify-rate-limit": "^3.0.1",
+    "fastify-rate-limit": "^4.0.2",
     "graphql": "^15.3.0",
     "lodash.pick": "^4.4.0",
     "ws": "^7.3.1"
