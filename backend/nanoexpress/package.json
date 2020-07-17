@@ -30,7 +30,7 @@
     "fast-json-stringify": "^2.2.2",
     "helmet": "^3.23.3",
     "lodash.pick": "^4.4.0",
-    "nanoexpress-pro": "^2.2.0"
+    "nanoexpress-pro": "^2.2.3"
   },
   "devDependencies": {
     "ava": "^3.10.1",

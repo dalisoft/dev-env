@@ -36,7 +36,7 @@
   "author": "dalisoft",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.712.0",
+    "aws-sdk": "^2.714.2",
     "dotenv-safe": "^8.2.0",
     "lambda-api": "^0.10.4"
   },
@@ -49,11 +49,11 @@
     "netlify-lambda": "^1.6.3",
     "prettier": "^2.0.5",
     "rollup": "^2.21.0",
-    "serverless": "^1.74.1",
+    "serverless": "^1.75.1",
     "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^6.4.0",
     "serverless-webpack": "^5.3.1",
-    "vercel": "^19.1.1",
+    "vercel": "^19.1.2",
     "webpack-node-externals": "^1.7.2"
   }
 }
