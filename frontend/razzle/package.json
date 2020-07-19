@@ -22,7 +22,7 @@
     "classnames": "^2.2.6",
     "connected-react-router": "^6.6.1",
     "cookie": "^0.4.0",
-    "fast-json-stringify": "^2.2.2",
+    "fast-json-stringify": "^2.2.3",
     "history": "^4.10.1",
     "intl": "^1.2.5",
     "isomorphic-unfetch": "^3.0.0",
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
-    "eslint": "^7.4.0",
+    "eslint": "^7.5.0",
     "eslint-plugin-react": "^7.20.3",
     "razzle": "^3.1.5",
     "razzle-plugin-scss": "^3.1.5",
