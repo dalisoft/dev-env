@@ -57,7 +57,7 @@
     "eslint": "^7.5.0",
     "husky": "^4.0.2",
     "lint-staged": "^10.2.11",
-    "netlify-lambda": "^1.6.3",
+    "netlify-lambda": "^2.0.1",
     "prettier": "^2.0.5",
     "rollup": "^2.22.1",
     "serverless": "^1.75.1",
