@@ -14,7 +14,7 @@
     "docs": "styleguidist build"
   },
   "dependencies": {
-    "@formatjs/intl-pluralrules": "^2.2.11",
+    "@formatjs/intl-pluralrules": "^3.2.5",
     "@formatjs/intl-relativetimeformat": "^5.2.11",
     "@nanoexpress/middlewares": "github:nanoexpress/middlewares",
     "@nanoexpress/pro-slim": "github:nanoexpress/pro-slim",

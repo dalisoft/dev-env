@@ -4,7 +4,7 @@
   "private": true,
   "sideEffects": false,
   "dependencies": {
-    "@formatjs/intl-pluralrules": "^2.2.11",
+    "@formatjs/intl-pluralrules": "^3.2.5",
     "@formatjs/intl-relativetimeformat": "^5.2.11",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.5.0",

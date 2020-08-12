@@ -38,7 +38,7 @@
     "webpack": "^4.44.1"
   },
   "dependencies": {
-    "@formatjs/intl-pluralrules": "^2.2.11",
+    "@formatjs/intl-pluralrules": "^3.2.5",
     "@formatjs/intl-relativetimeformat": "^5.2.11",
     "classnames": "^2.2.6",
     "intl": "^1.2.5",
