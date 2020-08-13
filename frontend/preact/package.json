@@ -44,7 +44,7 @@
     "intl": "^1.2.5",
     "preact": "^10.4.7",
     "preact-router": "^3.2.1",
-    "react-intl": "^4.7.6",
+    "react-intl": "^5.4.8",
     "unistore": "^3.5.2"
   },
   "browserslist": {
