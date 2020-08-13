@@ -33,10 +33,10 @@
     "nanoexpress-pro": "^2.2.3"
   },
   "devDependencies": {
-    "ava": "^3.10.1",
+    "ava": "^3.11.1",
     "cross-env": "^7.0.2",
     "dotenv-safe": "^8.2.0",
-    "eslint": "^7.5.0",
+    "eslint": "^7.6.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.1"

@@ -30,8 +30,8 @@
     "uWebSockets.js": "github:uNetworking/uWebSockets.js#v18.3.0"
   },
   "devDependencies": {
-    "ava": "^3.10.1",
-    "eslint": "^7.5.0",
+    "ava": "^3.11.1",
+    "eslint": "^7.6.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "nodemon": "^2.0.4",
