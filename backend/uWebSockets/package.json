@@ -27,7 +27,7 @@
     "@sifrr/server": "0.0.6",
     "cookie": "^0.4.1",
     "dotenv-safe": "^8.2.0",
-    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v18.3.0"
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v18.4.0"
   },
   "devDependencies": {
     "ava": "^3.11.1",
