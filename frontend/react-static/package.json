@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "babel-eslint": "10.x",
-    "eslint": "^7.6.0",
+    "eslint": "^7.8.1",
     "eslint-config-react-app": "^5.2.1",
     "eslint-config-react-tools": "1.x.x",
     "eslint-plugin-flowtype": "^5.2.0",
@@ -47,8 +47,8 @@
     "eslint-plugin-react": "^7.20.6",
     "gh-pages": "^3.1.0",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.1.1",
     "react-hot-loader": "^4.12.21",
     "react-scripts": "^3.4.3",
     "react-static": "^7.4.2",
@@ -57,10 +57,10 @@
     "react-static-plugin-sass": "^7.3.0",
     "react-static-plugin-sitemap": "^7.4.2",
     "react-static-plugin-source-filesystem": "^7.4.2",
-    "react-styleguidist": "^11.0.8",
+    "react-styleguidist": "^11.0.10",
     "react-test-renderer": "^16.13.1",
     "serve": "11.3.2",
-    "stylelint": "^13.6.1",
-    "stylelint-config-sass-guidelines": "^7.0.0"
+    "stylelint": "^13.7.0",
+    "stylelint-config-sass-guidelines": "^7.1.0"
   }
 }

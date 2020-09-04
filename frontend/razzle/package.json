@@ -43,11 +43,11 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
-    "eslint": "^7.6.0",
+    "eslint": "^7.8.1",
     "eslint-plugin-react": "^7.20.6",
-    "razzle": "^3.1.6",
-    "razzle-plugin-scss": "^3.1.6",
-    "react-styleguidist": "^11.0.8",
+    "razzle": "^3.1.7",
+    "razzle-plugin-scss": "^3.1.7",
+    "react-styleguidist": "^11.0.10",
     "react-test-renderer": "^16.13.1"
   },
   "browserslist": {

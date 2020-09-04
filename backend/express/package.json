@@ -25,14 +25,14 @@
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.6.0",
+    "eslint": "^7.8.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "husky": "^4.2.5",
-    "jest": "^26.4.0",
-    "lint-staged": "^10.2.11",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.3.0",
     "nodemon": "^2.0.4",
-    "prettier": "^2.0.5"
+    "prettier": "^2.1.1"
   },
   "dependencies": {
     "@dalisoft/jwt": "0.0.8",
