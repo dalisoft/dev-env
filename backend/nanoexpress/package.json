@@ -21,24 +21,24 @@
   "author": "dalisoft",
   "license": "MIT",
   "dependencies": {
-    "ajv": "^6.12.3",
+    "ajv": "^6.12.5",
     "consolemd": "^0.2.1",
     "cookie": "^0.4.0",
     "express-cors": "0.0.3",
     "express-jwt": "^6.0.0",
     "express-rate-limit": "^5.1.1",
-    "fast-json-stringify": "^2.2.3",
+    "fast-json-stringify": "^2.2.7",
     "helmet": "^3.23.3",
     "lodash.pick": "^4.4.0",
     "nanoexpress-pro": "^2.2.3"
   },
   "devDependencies": {
-    "ava": "^3.11.1",
+    "ava": "^3.12.1",
     "cross-env": "^7.0.2",
     "dotenv-safe": "^8.2.0",
-    "eslint": "^7.6.0",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.2.11",
-    "prettier": "^2.0.1"
+    "eslint": "^7.10.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2"
   }
 }

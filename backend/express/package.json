@@ -25,14 +25,14 @@
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.8.1",
+    "eslint": "^7.10.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
-    "husky": "^4.2.5",
+    "husky": "^4.3.0",
     "jest": "^26.4.2",
-    "lint-staged": "^10.3.0",
+    "lint-staged": "^10.4.0",
     "nodemon": "^2.0.4",
-    "prettier": "^2.1.1"
+    "prettier": "^2.1.2"
   },
   "dependencies": {
     "@dalisoft/jwt": "0.0.8",
@@ -48,7 +48,7 @@
     "file-type": "^14.7.1",
     "lodash.omit": "^4.5.0",
     "lodash.pick": "^4.4.0",
-    "swagger-jsdoc": "^4.0.0",
+    "swagger-jsdoc": "^4.2.0",
     "swagger-ui-express": "^4.1.4",
     "uuid": "^8.x"
   }

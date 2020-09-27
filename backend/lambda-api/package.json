@@ -36,23 +36,23 @@
   "author": "dalisoft",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.732.0",
+    "aws-sdk": "^2.761.0",
     "dotenv-safe": "^8.2.0",
     "lambda-api": "^0.10.4"
   },
   "devDependencies": {
     "@rollup/plugin-run": "^2.0.2",
-    "ava": "^3.11.1",
-    "eslint": "^7.6.0",
-    "husky": "^4.0.2",
-    "lint-staged": "^10.2.11",
+    "ava": "^3.12.1",
+    "eslint": "^7.10.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
     "netlify-lambda": "^1.6.3",
-    "prettier": "^2.0.5",
-    "rollup": "^2.23.1",
-    "serverless": "^1.78.1",
+    "prettier": "^2.1.2",
+    "rollup": "^2.28.2",
+    "serverless": "^1.83.0",
     "serverless-dotenv-plugin": "^2.1.1",
-    "serverless-offline": "^6.5.0",
-    "serverless-webpack": "^5.3.1",
+    "serverless-offline": "^6.8.0",
+    "serverless-webpack": "^5.3.5",
     "vercel": "^19.1.2",
     "webpack-node-externals": "^1.7.2"
   }
