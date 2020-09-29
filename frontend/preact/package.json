@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@formatjs/intl-pluralrules": "^2.2.11",
-    "@formatjs/intl-relativetimeformat": "^5.2.11",
+    "@formatjs/intl-relativetimeformat": "^6.2.4",
     "classnames": "^2.2.6",
     "intl": "^1.2.5",
     "preact": "^10.5.2",
