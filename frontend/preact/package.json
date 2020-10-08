@@ -33,7 +33,7 @@
     "preact-render-to-string": "^5.1.10",
     "prettier": "^2.1.2",
     "react-styleguidist": "^11.1.0",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^10.0.2",
     "stylelint": "^13.7.2",
     "webpack": "^4.44.2"
   },
