@@ -53,7 +53,7 @@
     "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^6.8.0",
     "serverless-webpack": "^5.3.5",
-    "vercel": "^19.1.2",
+    "vercel": "^20.1.2",
     "webpack-node-externals": "^1.7.2"
   }
 }
