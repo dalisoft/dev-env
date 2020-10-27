@@ -8,6 +8,7 @@ for pkg in $(ls frontend); do
   # npm audit
   npm outdated
   npm update
+  npm audit fix
   done
 
 cd "$pwd_cache";
@@ -18,6 +19,7 @@ for pkg in $(ls backend); do
   # npm audit
   npm outdated
   npm update
+  npm audit fix
   done
 
 cd "$pwd_cache";
