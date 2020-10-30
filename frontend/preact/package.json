@@ -35,7 +35,7 @@
     "react-styleguidist": "^11.1.1",
     "sass-loader": "^8.0.2",
     "stylelint": "^13.7.2",
-    "webpack": "^4.44.2"
+    "webpack": "^5.3.2"
   },
   "dependencies": {
     "@formatjs/intl-pluralrules": "^2.2.11",
