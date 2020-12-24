@@ -1,6 +1,6 @@
 {
   "name": "@dalisoft/react-static-dev-env",
-  "private": true,
+  "version": "0.1.0",
   "scripts": {
     "clean": "rm -rf dist artifacts tmp",
     "start": "npm run clean && react-static start",

@@ -1,6 +1,11 @@
 {
   "name": "@dalisoft/dev-env-templates",
-  "npmClient": "npm",
+  "private": true,
+  "workspaces": [
+    "frontend/*",
+    "backend/*",
+    "packages/*"
+  ],
   "devDependencies": {
     "lerna": "^3.22.1"
   },
